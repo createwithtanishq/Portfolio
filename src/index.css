@@ -58,6 +58,23 @@
   font-weight: 300;
 }
 
+.project-content .text-white,
+.project-content p.text-white {
+  color: #fff;
+}
+
+.project-content .condition-dark-card {
+  color: #f4efe6;
+}
+
+.project-content .condition-dark-card__eyebrow {
+  color: rgba(244, 239, 230, 0.45);
+}
+
+.project-content .condition-dark-card__title {
+  color: #f4efe6;
+}
+
 .project-content strong {
   color: #0D0D0D;
   font-weight: 600;

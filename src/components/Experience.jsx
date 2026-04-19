@@ -49,9 +49,16 @@ const Experience = () => {
                     </div>
                     <span className="text-2xl text-[#0D0D0D]/20 group-hover:text-[#0D0D0D]/60 group-hover:translate-x-1 transition-all duration-200 shrink-0">→</span>
                   </div>
-                  <p className="text-base font-light text-[#0D0D0D]/65 leading-relaxed">
-                    {exp.description}
-                  </p>
+                  {exp.descriptionHtml ? (
+                    <p
+                      className="text-base font-light text-[#0D0D0D]/65 leading-relaxed [&_a]:font-medium [&_a]:text-[#0D0D0D] [&_a]:underline [&_a]:underline-offset-3 hover:[&_a]:text-[#0D0D0D]"
+                      dangerouslySetInnerHTML={{ __html: exp.descriptionHtml }}
+                    />
+                  ) : (
+                    <p className="text-base font-light text-[#0D0D0D]/65 leading-relaxed">
+                      {exp.description}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
