@@ -588,25 +588,46 @@
   experience: [
     {
       id: 1,
-      role: "MA Games Design Student & Ambassador",
+      role: "MA Games Design Student",
       company: "Canterbury Christ Church University",
       year: "Current",
-      description: "Pursuing a Master's degree in Games Design while serving as a student ambassador for the university."
+      description: "Currently pursuing an MA in Games Design at Canterbury Christ Church University."
     },
     {
       id: 2,
+      role: "Student Ambassador",
+      company: "Canterbury Christ Church University",
+      year: "Current",
+      description: "Representing the university through student-facing engagement, events, and community support."
+    },
+    {
+      id: 3,
+      role: "Amber Student Ambassador",
+      company: "Amber",
+      year: "Current",
+      description: "Supporting student community engagement and ambassador initiatives through Amber."
+    },
+    {
+      id: 4,
+      role: "Pilgrim Skincare Brand Ambassador",
+      company: "Pilgrim",
+      year: "Previous",
+      description: "Worked as a brand ambassador supporting Pilgrim skincare campaigns and promotional activity."
+    },
+    {
+      id: 5,
       role: "Top 10 Finalist",
       company: "iQOO Chief Gaming Officer Hunt India",
       year: "2023",
       description: "Selected as a top 10 finalist out of 60,000+ applicants for the Chief Gaming Officer position in India."
     },
     {
-      id: 3,
-      role: "Brand & Content Collaborator",
+      id: 6,
+      role: "Featured Brand Collaboration",
       company: "Various Brands",
       year: "Previous",
       description: "Partnered with major brands including Samsung Galaxy, Intel Gamer Days, Amazon miniTV x StreamO, and TVS Raider.",
-      descriptionHtml: "Partnered with major brands including <a href=\"https://www.instagram.com/reel/DMS18wrzQ5h/?igsh=MXJxZWRpeHVtdXFlZQ==\" target=\"_blank\" rel=\"noopener noreferrer\">Samsung Galaxy</a>, <a href=\"https://www.instagram.com/p/Cw0fFkGxpdV/?igsh=MTJkZDhqMmw1NnowNw==\" target=\"_blank\" rel=\"noopener noreferrer\">Intel Gamer Days</a>, <a href=\"https://www.instagram.com/p/C48iKkJITJc/?igsh=M253NzVhc3o5M2ky\" target=\"_blank\" rel=\"noopener noreferrer\">Amazon miniTV x StreamO</a>, and <a href=\"https://www.instagram.com/p/CzLLg8DviWi/?igsh=YXJjcjIzMjE5anFr\" target=\"_blank\" rel=\"noopener noreferrer\">TVS Raider</a>."
+      descriptionHtml: "Partnered with major brands including <a href=\"https://www.instagram.com/p/Cw0fFkGxpdV/?igsh=MTJkZDhqMmw1NnowNw==\" target=\"_blank\" rel=\"noopener noreferrer\">Samsung Galaxy</a>, <a href=\"https://www.instagram.com/p/C48iKkJITJc/?igsh=M253NzVhc3o5M2ky\" target=\"_blank\" rel=\"noopener noreferrer\">Intel Gamer Days</a>, <a href=\"https://www.instagram.com/p/CzLLg8DviWi/?igsh=YXJjcjIzMjE5anFr\" target=\"_blank\" rel=\"noopener noreferrer\">Amazon miniTV x StreamO</a>, and <a href=\"https://www.instagram.com/reel/DMS18wrzQ5h/?igsh=MXJxZWRpeHVtdXFlZQ==\" target=\"_blank\" rel=\"noopener noreferrer\">TVS Raider</a>."
     }
   ],
   socials: [

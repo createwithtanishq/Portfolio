@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const navLinks = [
   { label: 'Work', href: '#work' },
@@ -20,63 +20,67 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNavClick = (e, href) => {
-    e.preventDefault();
+  const handleNavClick = (event, href) => {
+    event.preventDefault();
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
         document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
       }, 120);
-    } else {
-      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+      return;
     }
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 bg-[#F4EFE6] border-b-2 border-[#0D0D0D] transition-shadow duration-200"
-      style={{ boxShadow: scrolled ? '0 4px 0 #0D0D0D' : 'none' }}
-      initial={{ y: -70 }}
+      className="fixed top-0 left-0 right-0 z-50"
+      initial={{ y: -80 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-16">
-        <a
-          href="/"
-          className="font-heading font-bold text-lg uppercase tracking-tight hover:text-[#F4EFE6] hover:bg-[#0D0D0D] px-2 py-0.5 transition-all duration-150"
-        >
-          TA.
-        </a>
+      <div className="border-b-[3px] border-[#111111] bg-[#F5EAD7]/95 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 h-18 flex items-center justify-between gap-4">
+          <a
+            href="/"
+            className={`font-heading font-black text-lg md:text-xl uppercase tracking-[-0.06em] border-[3px] border-[#111111] px-4 py-2 transition-all ${
+              scrolled ? 'bg-[#111111] text-[#FFF8EF] rotate-[-2deg]' : 'bg-[#FFD84D] text-[#111111] rotate-[1deg]'
+            }`}
+          >
+            TA LIVE
+          </a>
 
-        <div className="hidden md:flex items-center gap-0">
-          {navLinks.map((link, i) => (
-            <motion.a
-              key={link.label}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="relative px-5 py-4 text-xs font-mono font-bold uppercase tracking-widest border-l-2 border-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-[#F4EFE6] transition-colors duration-150 last:border-r-2"
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 + i * 0.07 }}
-            >
-              {link.label}
-            </motion.a>
-          ))}
-        </div>
+          <div className="hidden md:flex items-center gap-2">
+            {navLinks.map((link, index) => (
+              <motion.a
+                key={link.label}
+                href={link.href}
+                onClick={(event) => handleNavClick(event, link.href)}
+                className="border-[3px] border-[#111111] bg-[#FFF8EF] px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-[0.22em] hover:bg-[#F04E23] hover:text-[#FFF8EF] transition-colors"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: 0.12 + index * 0.06 }}
+              >
+                {link.label}
+              </motion.a>
+            ))}
+          </div>
 
-        <div className="md:hidden flex items-center gap-4">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="text-[10px] font-mono font-bold uppercase tracking-widest hover:text-[#F0E040] transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          <div className="md:hidden flex items-center gap-2">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(event) => handleNavClick(event, link.href)}
+                className="border-2 border-[#111111] bg-[#FFF8EF] px-2 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.18em]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
+      <div className="poster-divider" />
     </motion.nav>
   );
 };

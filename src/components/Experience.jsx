@@ -4,66 +4,66 @@ import { portfolioData } from '../data/portfolioData';
 
 const Experience = () => {
   return (
-    <section id="experience" className="border-b-2 border-[#0D0D0D] bg-[#F4EFE6]">
-
-      {/* Section header */}
-      <div className="border-b-2 border-[#0D0D0D] px-6 md:px-12 py-5 flex justify-between items-center">
-        <div className="flex items-center gap-6">
-          <span className="font-mono font-bold text-4xl text-[#0D0D0D]/10 leading-none select-none">03</span>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl uppercase tracking-tight">Experience</h2>
+    <section id="experience" className="border-b-[3px] border-[#111111] py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8">
+          <div>
+            <span className="tape-tag">Track List / Experience</span>
+            <h2 className="mt-4 font-heading font-black text-4xl md:text-6xl uppercase tracking-[-0.08em]">
+              A timeline with
+              <br />
+              stage lights on it.
+            </h2>
+          </div>
+          <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#111111]/55">
+            Education, competition, collaboration
+          </p>
         </div>
-        <span className="font-mono text-xs uppercase tracking-widest text-[#0D0D0D]/40 hidden md:block">Timeline</span>
-      </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12">
-        {portfolioData.experience.map((exp, index) => (
-          <motion.div
-            key={exp.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.08 }}
-            className="group"
-          >
-            <div className="brut-card bg-white mb-6 p-0 overflow-hidden">
-              {/* Top accent */}
-              <div
-                className="h-1.5 w-full"
-                style={{ background: index === 0 ? '#F0E040' : index === 1 ? '#0D0D0D' : '#F4EFE6', border: index === 2 ? '1px solid #0D0D0D' : 'none' }}
-              />
-              <div className="flex flex-col md:flex-row gap-0">
-                {/* Year column */}
-                <div className="md:w-40 shrink-0 border-b-2 md:border-b-0 md:border-r-2 border-[#0D0D0D] px-6 py-6 flex md:flex-col justify-between md:justify-start items-start gap-2">
-                  <span className="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50">Year</span>
-                  <span className="font-mono font-bold text-lg text-[#0D0D0D]">{exp.year}</span>
+        <div className="space-y-5">
+          {portfolioData.experience.map((exp, index) => (
+            <motion.div
+              key={exp.id}
+              className="poster-panel bg-[#FFF8EF] p-0 overflow-hidden"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.55, delay: index * 0.08 }}
+            >
+              <div className="grid md:grid-cols-[160px_1fr]">
+                <div className={`border-b-[3px] md:border-b-0 md:border-r-[3px] border-[#111111] p-6 ${index === 1 ? 'bg-[#F04E23] text-[#FFF8EF]' : index === 2 ? 'bg-[#FFD84D]' : 'bg-[#111111] text-[#FFF8EF]'}`}>
+                  <p className="font-mono text-[11px] uppercase tracking-[0.24em] opacity-60 mb-3">Year</p>
+                  <p className="font-heading font-black text-3xl uppercase tracking-[-0.06em]">{exp.year}</p>
                 </div>
 
-                {/* Content */}
-                <div className="flex-1 px-6 py-6">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-3">
+                <div className="p-6 md:p-8 bg-[#FFF8EF]">
+                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
                     <div>
-                      <h3 className="font-heading font-bold text-2xl md:text-3xl leading-tight group-hover:text-[#0D0D0D] transition-colors">
+                      <h3 className="font-heading font-black text-2xl md:text-4xl uppercase tracking-[-0.06em] leading-none">
                         {exp.role}
                       </h3>
-                      <p className="font-mono text-sm text-[#0D0D0D]/50 mt-1 uppercase tracking-wider">{exp.company}</p>
+                      <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#111111]/55">{exp.company}</p>
                     </div>
-                    <span className="text-2xl text-[#0D0D0D]/20 group-hover:text-[#0D0D0D]/60 group-hover:translate-x-1 transition-all duration-200 shrink-0">→</span>
+                    <span className="border-[3px] border-[#111111] px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.22em]">
+                      Entry 0{index + 1}
+                    </span>
                   </div>
+
                   {exp.descriptionHtml ? (
                     <p
-                      className="text-base font-light text-[#0D0D0D]/65 leading-relaxed [&_a]:font-medium [&_a]:text-[#0D0D0D] [&_a]:underline [&_a]:underline-offset-3 hover:[&_a]:text-[#0D0D0D]"
+                      className="text-base md:text-lg font-light text-[#111111]/72 leading-relaxed [&_a]:font-semibold [&_a]:underline [&_a]:underline-offset-3"
                       dangerouslySetInnerHTML={{ __html: exp.descriptionHtml }}
                     />
                   ) : (
-                    <p className="text-base font-light text-[#0D0D0D]/65 leading-relaxed">
+                    <p className="text-base md:text-lg font-light text-[#111111]/72 leading-relaxed">
                       {exp.description}
                     </p>
                   )}
                 </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,7 +1,9 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
+
+const posterBackgrounds = ['#fff8ef', '#f6b4b0', '#ffd84d'];
 
 const Work = () => {
   const trackRef = useRef(null);
@@ -9,116 +11,107 @@ const Work = () => {
   const [canRight, setCanRight] = useState(true);
 
   const updateButtons = () => {
-    const el = trackRef.current;
-    if (!el) return;
-    setCanLeft(el.scrollLeft > 4);
-    setCanRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4);
+    const element = trackRef.current;
+    if (!element) return;
+    setCanLeft(element.scrollLeft > 4);
+    setCanRight(element.scrollLeft < element.scrollWidth - element.clientWidth - 4);
   };
 
   useEffect(() => {
-    const el = trackRef.current;
-    if (!el) return;
+    const element = trackRef.current;
+    if (!element) return;
     updateButtons();
-    el.addEventListener('scroll', updateButtons, { passive: true });
-    return () => el.removeEventListener('scroll', updateButtons);
+    element.addEventListener('scroll', updateButtons, { passive: true });
+    return () => element.removeEventListener('scroll', updateButtons);
   }, []);
 
-  const scroll = (dir) => {
-    const el = trackRef.current;
-    if (!el) return;
-    const card = el.querySelector('.work-card');
-    const amount = (card?.offsetWidth ?? 580) + 24;
-    el.scrollBy({ left: dir === 'left' ? -amount : amount, behavior: 'smooth' });
+  const scroll = (direction) => {
+    const element = trackRef.current;
+    if (!element) return;
+    const card = element.querySelector('.work-card');
+    const amount = (card?.offsetWidth ?? 560) + 24;
+    element.scrollBy({ left: direction === 'left' ? -amount : amount, behavior: 'smooth' });
   };
 
-  const categoryColors = ['#F0E040', '#0D0D0D', '#F4EFE6'];
-  const categoryText  = ['#0D0D0D', '#F0E040', '#0D0D0D'];
-
   return (
-    <section id="work" className="border-b-2 border-[#0D0D0D] bg-[#F4EFE6]">
-
-      {/* Section header */}
-      <div className="border-b-2 border-[#0D0D0D] px-6 md:px-12 py-5 flex justify-between items-center">
-        <div className="flex items-center gap-6">
-          <span className="font-mono font-bold text-4xl text-[#0D0D0D]/10 leading-none select-none">01</span>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl uppercase tracking-tight">Selected Work</h2>
-        </div>
-
-        {/* Prev / Next buttons */}
-        <div className="flex items-center gap-0">
-          <button
-            onClick={() => scroll('left')}
-            disabled={!canLeft}
-            className="brut-btn border-2 border-[#0D0D0D] bg-white w-12 h-12 flex items-center justify-center font-mono font-bold text-lg disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#0D0D0D] hover:text-[#F4EFE6] transition-colors duration-150"
-            aria-label="Previous"
-          >
-            ←
-          </button>
-          <button
-            onClick={() => scroll('right')}
-            disabled={!canRight}
-            className="brut-btn border-2 border-l-0 border-[#0D0D0D] bg-white w-12 h-12 flex items-center justify-center font-mono font-bold text-lg disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#0D0D0D] hover:text-[#F4EFE6] transition-colors duration-150"
-            aria-label="Next"
-          >
-            →
-          </button>
-        </div>
-      </div>
-
-      {/* Scrollable track */}
-      <div
-        ref={trackRef}
-        className="flex gap-6 overflow-x-auto px-6 md:px-12 py-10 hide-scrollbar"
-        style={{ scrollSnapType: 'x mandatory' }}
-      >
-        {portfolioData.work.map((item, index) => (
-          <div
-            key={item.id}
-            className="work-card w-[85vw] md:w-130 lg:w-155 shrink-0"
-            style={{ scrollSnapAlign: 'start' }}
-          >
-            <Link to={`/project/${item.id}`} className="block h-full group">
-              <div
-                className="brut-card h-full flex flex-col p-8 relative overflow-hidden"
-                style={{ borderTopWidth: '6px', borderTopColor: categoryColors[index] }}
-              >
-                {/* Number + Category */}
-                <div className="flex justify-between items-start mb-6">
-                  <span className="font-mono font-bold text-[7rem] leading-none text-[#0D0D0D]/6 select-none group-hover:text-[#0D0D0D]/12 transition-colors duration-500">
-                    0{index + 1}
-                  </span>
-                  <span
-                    className="text-[10px] font-mono font-bold tracking-widest uppercase px-3 py-1.5 border-2 border-[#0D0D0D] shrink-0 mt-2"
-                    style={{ background: categoryColors[index], color: categoryText[index] }}
-                  >
-                    {item.category}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h3 className="font-heading font-bold text-3xl md:text-4xl leading-tight tracking-tight mb-4 group-hover:translate-x-1.5 transition-transform duration-300">
-                  {item.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-base text-[#0D0D0D]/60 font-light leading-relaxed mb-8 flex-1">
-                  {item.description}
-                </p>
-
-                {/* CTA */}
-                <div className="flex items-center gap-3 text-xs font-mono font-bold tracking-widest uppercase border-t-2 border-[#0D0D0D] pt-6 mt-auto">
-                  <span>Explore Project</span>
-                  <motion.span
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut', delay: index * 0.3 }}
-                  >
-                    →
-                  </motion.span>
-                </div>
-              </div>
-            </Link>
+    <section id="work" className="border-b-[3px] border-[#111111] py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div className="space-y-4">
+            <span className="tape-tag">Side A / Selected Work</span>
+            <h2 className="font-heading font-black text-4xl md:text-6xl uppercase tracking-[-0.08em]">
+              Projects like
+              <br />
+              printed covers.
+            </h2>
           </div>
-        ))}
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => scroll('left')}
+              disabled={!canLeft}
+              className="brut-btn bg-[#FFF8EF] w-14 h-14 font-mono text-lg font-bold disabled:opacity-30"
+              aria-label="Previous"
+            >
+              {'<'}
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              disabled={!canRight}
+              className="brut-btn bg-[#F04E23] text-[#FFF8EF] w-14 h-14 font-mono text-lg font-bold disabled:opacity-30"
+              aria-label="Next"
+            >
+              {'>'}
+            </button>
+          </div>
+        </div>
+
+        <div ref={trackRef} className="flex gap-6 overflow-x-auto hide-scrollbar pb-4">
+          {portfolioData.work.map((item, index) => (
+            <div
+              key={item.id}
+              className="work-card w-[88vw] md:w-[32rem] lg:w-[38rem] shrink-0"
+              style={{ scrollSnapAlign: 'start' }}
+            >
+              <Link to={`/project/${item.id}`} className="block h-full">
+                <motion.div
+                  className="poster-panel h-full p-6 md:p-8 flex flex-col"
+                  style={{ background: posterBackgrounds[index % posterBackgrounds.length] }}
+                  whileHover={{ rotate: index % 2 === 0 ? -1 : 1, y: -4 }}
+                  transition={{ duration: 0.18 }}
+                >
+                  <div className="flex items-start justify-between gap-4 mb-8">
+                    <span className="font-heading font-black text-7xl md:text-8xl leading-none tracking-[-0.08em] text-[#111111]/15">
+                      0{index + 1}
+                    </span>
+                    <span className="border-[3px] border-[#111111] bg-[#111111] text-[#FFF8EF] px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.22em]">
+                      {item.category}
+                    </span>
+                  </div>
+
+                  <h3 className="font-heading font-black text-3xl md:text-5xl uppercase tracking-[-0.06em] leading-[0.92] mb-5">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-base md:text-lg leading-relaxed text-[#111111]/72 flex-1 mb-8">
+                    {item.description}
+                  </p>
+
+                  <div className="flex items-center justify-between gap-4 border-t-[3px] border-[#111111] pt-5">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.24em]">Open Case Study</span>
+                    <motion.span
+                      className="font-heading font-black text-3xl"
+                      animate={{ x: [0, 6, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut', delay: index * 0.2 }}
+                    >
+                      {'>'}
+                    </motion.span>
+                  </div>
+                </motion.div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
