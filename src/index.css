@@ -3,55 +3,110 @@
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
   --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "Space Mono", "Courier New", monospace;
 }
 
 @layer base {
   html {
-    scroll-behavior: auto; /* Lenis handles smooth scroll */
+    scroll-behavior: auto;
   }
 
   body {
-    @apply bg-white text-black font-sans antialiased selection:bg-black selection:text-white;
-    cursor: none; /* Custom cursor takes over */
+    background-color: #F4EFE6;
+    color: #0D0D0D;
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
-  a, button, [role="button"] {
-    cursor: none;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-heading tracking-tight;
+  ::selection {
+    background: #F0E040;
+    color: #0D0D0D;
   }
 
-  /* Minimal custom scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
-
   ::-webkit-scrollbar-track {
-    background: #fff;
+    background: #F4EFE6;
   }
-
   ::-webkit-scrollbar-thumb {
-    background: #e5e5e5;
+    background: #0D0D0D;
+    border: 2px solid #F4EFE6;
   }
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: #000;
-  }
+/* Project detail page content styles */
+.project-heading {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  border-left: 4px solid #F0E040;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-content p {
+  color: rgba(13, 13, 13, 0.78);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.project-content strong {
+  color: #0D0D0D;
+  font-weight: 600;
+}
+
+.project-content em {
+  font-style: italic;
+}
+
+.project-content a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: #0D0D0D;
+}
+.project-content a:hover {
+  background: #F0E040;
 }
 
 @layer utilities {
   .hide-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  .brut-card {
+    background: #fff;
+    border: 2px solid #0D0D0D;
+    box-shadow: 4px 4px 0 #0D0D0D;
+    transition: box-shadow 0.12s ease, transform 0.12s ease;
+  }
+  .brut-card:hover {
+    box-shadow: 6px 6px 0 #0D0D0D;
+    transform: translate(-1px, -1px);
+  }
+
+  .brut-btn {
+    border: 2px solid #0D0D0D;
+    box-shadow: 4px 4px 0 #0D0D0D;
+    transition: box-shadow 0.12s ease, transform 0.12s ease, background-color 0.12s ease, color 0.12s ease;
+  }
+  .brut-btn:hover {
+    box-shadow: 2px 2px 0 #0D0D0D;
+    transform: translate(2px, 2px);
+  }
+  .brut-btn:active {
+    box-shadow: 0 0 0 #0D0D0D;
+    transform: translate(4px, 4px);
   }
 }

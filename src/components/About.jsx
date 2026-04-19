@@ -2,79 +2,65 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
-};
-
-const lineVariants = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
-};
-
 const About = () => {
   return (
-    <section id="about" className="py-32 px-6 max-w-6xl mx-auto w-full border-t border-black/10 overflow-hidden">
+    <section id="about" className="border-b-2 border-[#0D0D0D] bg-[#0D0D0D] text-[#F4EFE6]">
 
-      {/* Header */}
-      <motion.div
-        className="flex flex-col md:flex-row justify-between md:items-end mb-20 gap-6"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      >
-        <h2 className="text-4xl md:text-5xl font-bold">About</h2>
-        <span className="text-sm font-medium tracking-widest uppercase text-black/40">02 // Info</span>
-      </motion.div>
+      {/* Section header bar */}
+      <div className="border-b-2 border-[#F4EFE6]/20 px-6 md:px-12 py-5 flex justify-between items-center">
+        <div className="flex items-center gap-6">
+          <span className="font-mono font-bold text-4xl text-[#F4EFE6]/10 leading-none select-none">02</span>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl uppercase tracking-tight">About</h2>
+        </div>
+        <span className="font-mono text-xs uppercase tracking-widest text-[#F4EFE6]/40 hidden md:block">Info & Capabilities</span>
+      </div>
 
-      {/* Body grid */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-20">
 
-        {/* Pitch text — large editorial style */}
+        {/* Pitch */}
         <motion.div
           className="md:col-span-7"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed">
+          <p className="text-2xl md:text-3xl font-light leading-relaxed text-[#F4EFE6]/80">
             {portfolioData.about.pitch}
           </p>
+          <div className="mt-12 inline-block bg-[#F0E040] text-[#0D0D0D] border-2 border-[#F0E040] px-6 py-3 font-mono font-bold text-xs uppercase tracking-widest">
+            Open to Opportunities
+          </div>
         </motion.div>
 
-        {/* Skills list with stagger */}
+        {/* Skills */}
         <div className="md:col-span-5">
-          <motion.h3
-            className="text-xs uppercase tracking-[0.3em] font-semibold mb-8 text-black/40"
+          <motion.p
+            className="font-mono text-xs uppercase tracking-[0.3em] text-[#F4EFE6]/40 mb-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5 }}
           >
             Core Capabilities
-          </motion.h3>
-          <motion.ul
-            className="flex flex-col"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-40px' }}
-          >
+          </motion.p>
+          <ul className="flex flex-col border-t-2 border-[#F4EFE6]/20">
             {portfolioData.about.skills.map((skill, index) => (
               <motion.li
                 key={index}
-                variants={lineVariants}
-                className="group flex items-center justify-between py-4 border-b border-black/10 last:border-b-0"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="group flex items-center justify-between py-5 border-b-2 border-[#F4EFE6]/20 hover:bg-[#F0E040] hover:text-[#0D0D0D] hover:px-4 transition-all duration-150"
               >
-                <span className="text-lg font-medium group-hover:translate-x-2 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
-                  {skill}
+                <span className="font-heading font-bold text-lg">{skill}</span>
+                <span className="font-mono text-xs text-[#F4EFE6]/30 group-hover:text-[#0D0D0D]/50">
+                  0{index + 1}
                 </span>
-                <span className="text-xs text-black/30 font-mono">0{index + 1}</span>
               </motion.li>
             ))}
-          </motion.ul>
+          </ul>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const navLinks = [
   { label: 'Work', href: '#work' },
@@ -9,52 +10,70 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const { scrollY } = useScroll();
+  const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    const unsub = scrollY.on('change', (v) => setIsScrolled(v > 50));
-    return () => unsub();
-  }, [scrollY]);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 py-5 transition-all duration-500"
-      style={{
-        backgroundColor: isScrolled ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0)',
-        backdropFilter: isScrolled ? 'blur(12px)' : 'none',
-        borderBottom: isScrolled ? '1px solid rgba(0,0,0,0.08)' : '1px solid transparent',
-      }}
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+      className="fixed top-0 left-0 right-0 z-50 bg-[#F4EFE6] border-b-2 border-[#0D0D0D] transition-shadow duration-200"
+      style={{ boxShadow: scrolled ? '0 4px 0 #0D0D0D' : 'none' }}
+      initial={{ y: -70 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-        {/* Logo */}
-        <motion.a
-          href="#"
-          className="text-lg font-heading font-bold tracking-tighter uppercase relative group"
-          whileHover={{ scale: 1.03 }}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-16">
+        <a
+          href="/"
+          className="font-heading font-bold text-lg uppercase tracking-tight hover:text-[#F4EFE6] hover:bg-[#0D0D0D] px-2 py-0.5 transition-all duration-150"
         >
-          <span>Tanishq Aryan.</span>
-          <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-black group-hover:w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
-        </motion.a>
+          TA.
+        </a>
 
-        {/* Nav links */}
-        <div className="hidden md:flex items-center gap-10 text-sm font-medium tracking-wide">
+        <div className="hidden md:flex items-center gap-0">
           {navLinks.map((link, i) => (
             <motion.a
               key={link.label}
               href={link.href}
-              className="relative group py-1"
-              initial={{ opacity: 0, y: -10 }}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="relative px-5 py-4 text-xs font-mono font-bold uppercase tracking-widest border-l-2 border-[#0D0D0D] hover:bg-[#0D0D0D] hover:text-[#F4EFE6] transition-colors duration-150 last:border-r-2"
+              initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
+              transition={{ duration: 0.4, delay: 0.1 + i * 0.07 }}
             >
-              <span className="relative z-10 group-hover:text-black transition-colors">{link.label}</span>
-              {/* Underline slide-in on hover */}
-              <span className="absolute bottom-0 left-0 w-0 h-px bg-black group-hover:w-full transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+              {link.label}
             </motion.a>
+          ))}
+        </div>
+
+        <div className="md:hidden flex items-center gap-4">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="text-[10px] font-mono font-bold uppercase tracking-widest hover:text-[#F0E040] transition-colors"
+            >
+              {link.label}
+            </a>
           ))}
         </div>
       </div>
