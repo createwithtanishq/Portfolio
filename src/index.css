@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Bricolage Grotesque", system-ui, sans-serif;
   --font-heading: "Space Grotesk", system-ui, sans-serif;
   --font-mono: "Space Mono", "Courier New", monospace;
 }
@@ -14,7 +14,7 @@
   body {
     background-color: #F4EFE6;
     color: #0D0D0D;
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
 
