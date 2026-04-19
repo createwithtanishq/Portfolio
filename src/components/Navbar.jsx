@@ -47,7 +47,7 @@ const Navbar = () => {
               scrolled ? 'bg-[#111111] text-[#FFF8EF] rotate-[-2deg]' : 'bg-[#FFD84D] text-[#111111] rotate-[1deg]'
             }`}
           >
-            TA LIVE
+            TA
           </a>
 
           <div className="hidden md:flex items-center gap-2">
