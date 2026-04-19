@@ -39,9 +39,22 @@ const Experience = () => {
                 <div className="p-6 md:p-8 bg-[#FFF8EF]">
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
                     <div>
-                      <h3 className="font-heading font-black text-2xl md:text-4xl uppercase tracking-[-0.06em] leading-none">
-                        {exp.role}
-                      </h3>
+                      {exp.roleUrl ? (
+                        <h3 className="font-heading font-black text-2xl md:text-4xl uppercase tracking-[-0.06em] leading-none">
+                          <a
+                            href={exp.roleUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline underline-offset-4 decoration-[3px]"
+                          >
+                            {exp.role}
+                          </a>
+                        </h3>
+                      ) : (
+                        <h3 className="font-heading font-black text-2xl md:text-4xl uppercase tracking-[-0.06em] leading-none">
+                          {exp.role}
+                        </h3>
+                      )}
                       <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[#111111]/55">{exp.company}</p>
                     </div>
                     <span className="border-[3px] border-[#111111] px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.22em]">
