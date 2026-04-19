@@ -612,7 +612,7 @@
       id: 4,
       role: "Pilgrim Skincare Brand Ambassador",
       company: "Pilgrim",
-      year: "Previous",
+      year: "Current",
       roleUrl: "https://discoverpilgrim.com/discount/TAN2025?ref=tanishqaryan10847",
       description: "Worked as a brand ambassador supporting Pilgrim skincare campaigns and promotional activity. Use code TAN2025.",
       descriptionHtml: "Worked as a brand ambassador supporting Pilgrim skincare campaigns and promotional activity. Use code <a href=\"https://discoverpilgrim.com/discount/TAN2025?ref=tanishqaryan10847\" target=\"_blank\" rel=\"noopener noreferrer\">TAN2025</a>."
