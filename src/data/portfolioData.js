@@ -16,55 +16,10 @@
     microStrip: "7+ Years Experience | Esports Systems | Tournament Design | Performance Frameworks",
     cta: "Contact / Collaborate"
   },
-  finalProject: {
-    eyebrow: "Final Project (In Progress)",
-    title: "Esports Education and Employment Pathways",
-    label: "Research Project",
-    status: "Status: Ongoing Research Project (Final Major Project)",
-    body: [
-      "This project develops a structured, research-informed model to explain how individuals transition from esports education into professional roles within the industry.",
-      "While esports programmes are expanding globally, there remains limited clarity regarding how acquired skills translate into defined roles and sustainable career progression.",
-      "This work builds on prior analysis of esports systems, including organisational sustainability, tournament operations, and performance structures, in order to contextualise how careers develop within these environments."
-    ],
-    relationshipIntro: "This project addresses this gap by examining the relationship between:",
-    relationships: [
-      "education",
-      "skill development",
-      "role specialisation",
-      "career progression"
-    ],
-    stage: "The project is currently in the research and model development phase.",
-    researchQuestion: "How can a structured framework improve alignment between esports education and career pathways?",
-    methodology: [
-      "qualitative research methods",
-      "semi-structured interviews",
-      "thematic analysis",
-      "document and role analysis"
-    ],
-    whyThisProject: [
-      "Limited standardisation of roles within esports",
-      "Weak alignment between academic programmes and industry expectations",
-      "Fragmented understanding of career progression pathways",
-      "Limited academic models addressing esports employment structures"
-    ],
-    currentFocus: [
-      "Identifying role clusters within esports",
-      "Mapping relationships between skills and roles",
-      "Examining gaps between education and applied practice",
-      "Developing a structured pathway model"
-    ],
-    caseStudiesTitle: "Applied Case Studies",
-    caseStudiesIntro: "This research is supported by applied systems work across esports environments:",
-    caseStudies: [
-      "Organisational Systems -> Sustainability Model",
-      "Operational Systems -> Tournament System",
-      "Performance Systems -> Mental Performance Standard"
-    ]
-  },
   work: [
     {
       id: 1,
-      displayOrder: 2,
+      displayOrder: 3,
       title: "Conceptual Model for Sustainable Esports Organisations with Reference to India",
       description: "Research-driven framework analysing structural risks in esports organisations.",
       impact: "Identifies structural risks affecting long-term esports organisation stability.",
@@ -283,7 +238,7 @@
     },
     {
       id: 2,
-      displayOrder: 1,
+      displayOrder: 2,
       title: "Tekken 8 Collegiate Tournament System Design",
       description: "A structured collegiate esports tournament designed for scalability, accessibility, and competitive integrity.",
       impact: "Designed as a scalable tournament system for repeat use across competitive environments.",
@@ -516,7 +471,7 @@
     },
     {
       id: 3,
-      displayOrder: 3,
+      displayOrder: 4,
       title: "Mental Performance Operating Standard for Esports",
       description: "Operational framework defining mental performance as a system-level requirement in esports environments.",
       impact: "Applies system thinking to improve performance consistency and reduce burnout risk.",
@@ -743,6 +698,76 @@
               <li>Ahn, H.A. (2024) 'Burnout in professional esports players: psychological and behavioural implications', <em>Frontiers in Psychology</em>, 15, Article 11172082.</li>
               <li>Ashford, M., Taylor, J., Payne, J., Waldouck, D. and Collins, D. (2023) 'Getting on the same page: enhancing team performance with shared mental models', <em>Frontiers in Sports and Active Living</em>, 5, Article 1057143.</li>
               <li>Leis, O., Lautenbach, F., Zinner, C. and Leis, R. (2024) 'Stress factors and coping strategies in esports: a systematic review', <em>International Review of Sport and Exercise Psychology</em>. Available at: <a href="https://eprints.chi.ac.uk/7811/" target="_blank" rel="noopener noreferrer">https://eprints.chi.ac.uk/7811/</a></li>
+            </ul>
+          </section>
+        </div>
+      `
+    },
+    {
+      id: 4,
+      displayOrder: 1,
+      title: "Esports Education and Employment Pathways",
+      description: "Research-informed model examining how esports education aligns with professional roles and long-term career progression.",
+      impact: "Develops a structured pathway model connecting education, skills, roles, and employment outcomes in esports.",
+      category: "Current",
+      fullContent: `
+        <div class="space-y-14">
+          <section class="space-y-5">
+            <h3 class="project-heading">Project Status</h3>
+            <p>Status: Ongoing Research Project (Final Major Project)</p>
+            <p>This project develops a structured, research-informed model to explain how individuals transition from esports education into professional roles within the industry.</p>
+            <p>While esports programmes are expanding globally, there remains limited clarity regarding how acquired skills translate into defined roles and sustainable career progression.</p>
+            <p>The project is currently in the research and model development phase.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Research Focus</h3>
+            <p>This project addresses the relationship between education, skill development, role specialisation, and career progression.</p>
+            <p>This work builds on prior analysis of esports systems, including organisational sustainability, tournament operations, and performance structures, in order to contextualise how careers develop within these environments.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Research Question</h3>
+            <p>How can a structured framework improve alignment between esports education and career pathways?</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Methodology Preview</h3>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>qualitative research methods</li>
+              <li>semi-structured interviews</li>
+              <li>thematic analysis</li>
+              <li>document and role analysis</li>
+            </ul>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Why This Project</h3>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>Limited standardisation of roles within esports</li>
+              <li>Weak alignment between academic programmes and industry expectations</li>
+              <li>Fragmented understanding of career progression pathways</li>
+              <li>Limited academic models addressing esports employment structures</li>
+            </ul>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Current Focus</h3>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>Identifying role clusters within esports</li>
+              <li>Mapping relationships between skills and roles</li>
+              <li>Examining gaps between education and applied practice</li>
+              <li>Developing a structured pathway model</li>
+            </ul>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Applied Case Study Support</h3>
+            <p>This research is supported by applied systems work across esports environments:</p>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>Organisational Systems -> Sustainability Model</li>
+              <li>Operational Systems -> Tournament System</li>
+              <li>Performance Systems -> Mental Performance Standard</li>
             </ul>
           </section>
         </div>

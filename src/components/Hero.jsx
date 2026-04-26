@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 
 const Hero = () => {
-  const { eyebrow, subtitle, supporting, focus, microStrip, cta } = portfolioData.hero;
+  const { subtitle, supporting, focus, microStrip, cta } = portfolioData.hero;
 
   return (
     <section className="pt-28 md:pt-34 pb-10 md:pb-16 border-b-[3px] border-[#111111]">
@@ -15,17 +15,6 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-5 md:mb-6">
-              <span className="tape-tag">Poster Brutalism</span>
-              <span className="border-[3px] border-[#111111] bg-[#111111] text-[#FFF8EF] px-2.5 sm:px-3 py-2 font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.24em]">
-                Portfolio 2026
-              </span>
-            </div>
-
-            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-[#111111]/55 mb-4">
-              {eyebrow}
-            </p>
-
             <motion.h1
               className="font-heading font-black uppercase leading-[0.82] tracking-[-0.08em] text-[19vw] sm:text-[18vw] md:text-[11rem] lg:text-[12rem] text-[#111111]"
               initial={{ opacity: 0, scale: 0.96 }}
@@ -72,7 +61,7 @@ const Hero = () => {
                 className="brut-btn bg-[#FFF8EF] text-[#111111] text-center px-5 sm:px-8 py-3.5 sm:py-4 font-heading font-black uppercase tracking-[0.15em] sm:tracking-[0.18em] text-xs sm:text-sm"
                 whileTap={{ scale: 0.98 }}
               >
-                Selected Work
+                My Work
               </motion.a>
             </div>
           </motion.div>

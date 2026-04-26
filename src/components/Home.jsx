@@ -1,20 +1,18 @@
 import React from 'react';
 import Hero from './Hero';
-import FinalProject from './FinalProject';
-import Work from './Work';
 import About from './About';
-import Experience from './Experience';
 import Contact from './Contact';
+import Work from './Work';
+import Experience from './Experience';
 
 const Home = () => {
   return (
     <main>
       <Hero />
-      <FinalProject />
       <About />
+      <Contact />
       <Work />
       <Experience />
-      <Contact />
     </main>
   );
 };

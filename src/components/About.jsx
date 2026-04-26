@@ -106,16 +106,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid xl:grid-cols-[1fr_1fr] gap-6 md:gap-8">
-          <div className="poster-panel bg-[#FFF8EF] text-[#111111] p-4 sm:p-6 md:p-8">
-            <span className="tape-tag">Selected Impact</span>
-            <ul className="mt-6 space-y-3 text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78">
-              {about.selectedImpact.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
+        <div className="grid xl:grid-cols-[1fr] gap-6 md:gap-8">
           <div className="poster-panel bg-[#FFF8EF] text-[#111111] p-4 sm:p-6 md:p-8">
             <span className="tape-tag">How I Think</span>
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
@@ -129,16 +120,6 @@ const About = () => {
           </div>
         </div>
 
-        <div className="poster-panel bg-[#FFF8EF] text-[#111111] p-4 sm:p-6 md:p-8">
-          <span className="tape-tag">Accessibility</span>
-          <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm sm:text-base leading-relaxed text-[#111111]/78">
-            {about.accessibility.map((item) => (
-              <li key={item} className="border-[3px] border-[#111111] bg-[#F5EAD7] px-4 py-3">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </section>
   );

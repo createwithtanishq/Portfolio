@@ -39,11 +39,11 @@ const Work = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
           <div className="space-y-4">
-            <span className="tape-tag">Selected Work (Case Studies)</span>
+            <span className="tape-tag">My Work</span>
             <h2 className="font-heading font-black text-3xl sm:text-4xl md:text-6xl uppercase tracking-[-0.08em]">
-              Systems-led
+              Selected esports
               <br />
-              case studies.
+              project work.
             </h2>
             <p className="max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/72">
               {portfolioData.workIntro.supporting}

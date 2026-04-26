@@ -44,7 +44,7 @@ const Contact = () => {
     <section id="contact" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8">
         <div className="poster-panel bg-[#FFF8EF] p-4 sm:p-6 md:p-8 mb-8">
-          <span className="tape-tag">Connector Block</span>
+          <span className="tape-tag">Research Continuity</span>
           <div className="mt-6 space-y-4 text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78">
             {portfolioData.connector.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
