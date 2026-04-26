@@ -41,9 +41,7 @@ const Work = () => {
           <div className="space-y-4">
             <span className="tape-tag">My Work</span>
             <h2 className="font-heading font-black text-3xl sm:text-4xl md:text-6xl uppercase tracking-[-0.08em]">
-              Selected esports
-              <br />
-              project work.
+              My work.
             </h2>
             <p className="max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/72">
               {portfolioData.workIntro.supporting}

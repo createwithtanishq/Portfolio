@@ -43,15 +43,6 @@ const Contact = () => {
   return (
     <section id="contact" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8">
-        <div className="poster-panel bg-[#FFF8EF] p-4 sm:p-6 md:p-8 mb-8">
-          <span className="tape-tag">Research Continuity</span>
-          <div className="mt-6 space-y-4 text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78">
-            {portfolioData.connector.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-start">
           <motion.div
             className="space-y-5"
@@ -64,7 +55,7 @@ const Contact = () => {
               <span className="border-[3px] border-[#FFF8EF] text-[#FFF8EF] inline-block px-3 py-2 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.24em] mb-5 sm:mb-6">
                 Contact / Collaborate
               </span>
-              <h2 className="text-[#FFF8EF] font-heading font-black text-3xl sm:text-4xl md:text-6xl uppercase tracking-[-0.08em] leading-[0.9]">
+              <h2 className="text-[#FFF8EF] font-heading font-black text-2xl sm:text-3xl md:text-5xl uppercase tracking-[-0.08em] leading-[0.9]">
                 {portfolioData.contactIntro.title}
               </h2>
               <p className="mt-5 text-sm sm:text-base md:text-lg leading-relaxed text-[#FFF8EF]/82">

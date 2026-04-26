@@ -774,30 +774,6 @@
       `
     }
   ],
-  systemsApproach: {
-    paragraphs: [
-      "Esports is often approached through performance, content, or competition. However, recurring instability across the industry suggests that underlying structural systems are not fully defined or aligned.",
-      "This work focuses on analysing esports through three interconnected levels:"
-    ],
-    levels: [
-      {
-        title: "Organisational Systems",
-        description: "How teams and organisations maintain long-term stability"
-      },
-      {
-        title: "Operational Systems",
-        description: "How tournaments and events are structured and executed"
-      },
-      {
-        title: "Performance Systems",
-        description: "How players and teams sustain consistent performance under pressure"
-      }
-    ],
-    closing: [
-      "Each project examines one of these layers. Together, they provide a structured perspective on esports as an interconnected system rather than a set of isolated activities.",
-      "This approach developed iteratively, moving from broad exploration to a more focused systems-based analysis."
-    ]
-  },
   about: {
     pitch: "This work is informed by a combination of academic literature, practical observation, and iterative analysis.",
     developmentApproach: "Due to the limited availability of structured literature within esports, the approach emphasises pattern identification across sources, comparative analysis, and the development of system-level interpretations rather than reliance on a single established framework.",
@@ -846,24 +822,6 @@
       "Produced research-based models addressing esports organisational sustainability",
       "Applied system-level analysis to performance consistency within team environments",
       "Identified cross-layer structural patterns across organisational, operational, and performance systems"
-    ],
-    thinking: [
-      {
-        title: "Systems Over Surface",
-        description: "Prioritising structure over isolated outputs"
-      },
-      {
-        title: "Performance Under Pressure",
-        description: "Designing for real competitive conditions rather than ideal scenarios"
-      },
-      {
-        title: "Scalability First",
-        description: "Ensuring systems function beyond single events or contexts"
-      },
-      {
-        title: "Structure Before Output",
-        description: "Recognising that outcomes are determined by underlying systems"
-      }
     ],
     accessibility: [
       "WCAG 2.2 AA",
@@ -959,13 +917,6 @@
     { platform: "YouTube", url: "https://youtube.com/@thetanishqaryan?si=EEdYkbTCiVYDNFbv" },
     { platform: "Instagram", url: "https://www.instagram.com/thetanishqaryan?igsh=dHVkeTZzZ3pqYjQx&utm_source=qr" }
   ],
-  connector: {
-    paragraphs: [
-      "These projects are not isolated outputs.",
-      "They reflect a progression from broad exploration to structured systems analysis across esports environments.",
-      "Together, they establish a foundation for ongoing research into how individuals develop, operate, and progress within esports systems."
-    ]
-  },
   contactIntro: {
     title: "Currently exploring opportunities in esports systems, event operations, and performance-focused environments.",
     subtitle: "Open to roles, collaborations, and research-led work within esports and related industries."
