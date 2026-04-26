@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from './Hero';
+import FinalProject from './FinalProject';
 import Work from './Work';
 import About from './About';
 import Experience from './Experience';
@@ -9,6 +10,7 @@ const Home = () => {
   return (
     <main>
       <Hero />
+      <FinalProject />
       <About />
       <Work />
       <Experience />

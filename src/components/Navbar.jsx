@@ -40,10 +40,10 @@ const Navbar = () => {
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="border-b-[3px] border-[#111111] bg-[#F5EAD7]/95 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 h-18 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 min-h-18 py-3 flex items-center justify-between gap-3 md:gap-4">
           <a
             href="/"
-            className={`font-heading font-black text-lg md:text-xl uppercase tracking-[-0.06em] border-[3px] border-[#111111] px-4 py-2 transition-all ${
+            className={`shrink-0 font-heading font-black text-base sm:text-lg md:text-xl uppercase tracking-[-0.06em] border-[3px] border-[#111111] px-3 sm:px-4 py-2 transition-all ${
               scrolled ? 'bg-[#111111] text-[#FFF8EF] rotate-[-2deg]' : 'bg-[#FFD84D] text-[#111111] rotate-[1deg]'
             }`}
           >
@@ -66,17 +66,19 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex-1 min-w-0">
+            <div className="flex justify-end gap-1.5 overflow-x-auto hide-scrollbar pb-1">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={(event) => handleNavClick(event, link.href)}
-                className="border-2 border-[#111111] bg-[#FFF8EF] px-2 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.18em]"
+                className="shrink-0 border-2 border-[#111111] bg-[#FFF8EF] px-2.5 py-1.5 font-mono text-[9px] font-bold uppercase tracking-[0.14em]"
               >
                 {link.label}
               </a>
             ))}
+            </div>
           </div>
         </div>
       </div>

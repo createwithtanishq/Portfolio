@@ -1,15 +1,74 @@
 ﻿export const portfolioData = {
+  portfolioObjective: {
+    title: "Portfolio Objective",
+    paragraphs: [
+      "This portfolio presents a structured exploration of esports systems across organisational, operational, and performance levels.",
+      "Rather than treating projects as isolated outputs, the work reflects an iterative process of analysis, refinement, and application within esports environments.",
+      "These case studies collectively inform an ongoing research project focused on esports education and career pathways."
+    ]
+  },
   hero: {
+    eyebrow: "Portfolio - Systems, Esports, Performance",
     title: "Tanishq Aryan",
-    subtitle: "Seven years of experience bridging competitive esports management and versatile digital content creation.",
-    cta: "View Work"
+    subtitle: "I develop structured approaches to esports performance, tournament systems, and competitive environments",
+    supporting: "From event operations to performance frameworks, this work focuses on systems that remain effective under real competitive conditions",
+    focus: "Focus: Esports Systems and Event Operations",
+    microStrip: "7+ Years Experience | Esports Systems | Tournament Design | Performance Frameworks",
+    cta: "Contact / Collaborate"
+  },
+  finalProject: {
+    eyebrow: "Final Project (In Progress)",
+    title: "Esports Education and Employment Pathways",
+    label: "Research Project",
+    status: "Status: Ongoing Research Project (Final Major Project)",
+    body: [
+      "This project develops a structured, research-informed model to explain how individuals transition from esports education into professional roles within the industry.",
+      "While esports programmes are expanding globally, there remains limited clarity regarding how acquired skills translate into defined roles and sustainable career progression.",
+      "This work builds on prior analysis of esports systems, including organisational sustainability, tournament operations, and performance structures, in order to contextualise how careers develop within these environments."
+    ],
+    relationshipIntro: "This project addresses this gap by examining the relationship between:",
+    relationships: [
+      "education",
+      "skill development",
+      "role specialisation",
+      "career progression"
+    ],
+    stage: "The project is currently in the research and model development phase.",
+    researchQuestion: "How can a structured framework improve alignment between esports education and career pathways?",
+    methodology: [
+      "qualitative research methods",
+      "semi-structured interviews",
+      "thematic analysis",
+      "document and role analysis"
+    ],
+    whyThisProject: [
+      "Limited standardisation of roles within esports",
+      "Weak alignment between academic programmes and industry expectations",
+      "Fragmented understanding of career progression pathways",
+      "Limited academic models addressing esports employment structures"
+    ],
+    currentFocus: [
+      "Identifying role clusters within esports",
+      "Mapping relationships between skills and roles",
+      "Examining gaps between education and applied practice",
+      "Developing a structured pathway model"
+    ],
+    caseStudiesTitle: "Applied Case Studies",
+    caseStudiesIntro: "This research is supported by applied systems work across esports environments:",
+    caseStudies: [
+      "Organisational Systems -> Sustainability Model",
+      "Operational Systems -> Tournament System",
+      "Performance Systems -> Mental Performance Standard"
+    ]
   },
   work: [
     {
       id: 1,
-      title: "Sustainable Esports Model",
-      description: "A six-pillar conceptual model covering revenue diversification, competitive portfolio design, brand systems, and talent development â€” with reference to India.",
-      category: "Research / Strategy",
+      displayOrder: 2,
+      title: "Conceptual Model for Sustainable Esports Organisations with Reference to India",
+      description: "Research-driven framework analysing structural risks in esports organisations.",
+      impact: "Identifies structural risks affecting long-term esports organisation stability.",
+      category: "Organisational System",
       fullContent: `
         <div class="space-y-14">
 
@@ -178,20 +237,31 @@
 
           <section class="space-y-5">
             <h3 class="project-heading">6. Critical Commentary</h3>
-            <p>The model has limitations. It assumes organisations have the capacity to implement multiple structural improvements simultaneously, which may not always be realistic for smaller teams. It also does not eliminate publisher dependence â€” external control remains a defining feature of esports ecosystems, meaning that even well-structured organisations remain vulnerable to external decisions.</p>
-            <p>There is also a balance between structure and flexibility. Excessive formalisation may reduce adaptability in fast-changing environments. This reflects a broader limitation within esports research, where structural instability is recognised but not yet fully resolved through institutional development.</p>
+            <p>The model assumes organisations have the capacity to implement structural changes, which may not always be realistic for smaller teams. It also does not eliminate publisher dependence, which remains a defining feature of esports ecosystems.</p>
+            <p>Additionally, excessive formalisation may reduce adaptability in rapidly changing environments.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">7. Reflection</h3>
-            <p>My experience in esports environments influenced how this model developed. Observing teams in competitive settings showed that instability often reflects deeper structural issues rather than performance alone. What initially appeared as operational challenges often connected to broader organisational weaknesses, particularly in decision-making and coordination.</p>
-            <p>This shift from viewing instability as an operational issue to understanding it as a structural problem was the most significant conceptual development in this project. The project also demonstrated the importance of linking practical experience with academic research to strengthen analysis.</p>
+            <p>Practical experience in esports environments influenced the development of this model. Observations of team behaviour under pressure suggested that instability is often linked to structural issues rather than performance alone.</p>
+            <p>A key insight was the shift from viewing instability as an operational issue to understanding it as a structural problem.</p>
+            <p>The project demonstrates the value of integrating practical experience with academic research, although further validation through real-world application remains necessary.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">8. Conclusion</h3>
-            <p>Esports organisations operate within a rapidly growing but structurally unstable environment. Growth alone does not guarantee sustainability. Publisher control, fragile revenue models, governance gaps, and infrastructure limitations create ongoing challenges.</p>
-            <p>Sustainability requires a structured approach where organisational systems align with external ecosystem constraints. The model does not provide a definitive solution, but it offers a structured framework for understanding and managing sustainability challenges in esports organisations.</p>
+            <h3 class="project-heading">8. Positioning Within a Systems Approach to Esports</h3>
+            <p>This project forms part of a broader systems-based approach to esports, where performance, operations, and organisational sustainability are treated as interconnected components.</p>
+            <p>At the organisational level, sustainability depends on structural design. At the operational level, tournaments require scalable and repeatable systems. At the performance level, mental conditions must be structured rather than left to individuals.</p>
+            <p>Together, these layers demonstrate that consistency in esports is achieved through systems rather than isolated success.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">9. Conclusion</h3>
+            <p>Esports organisations operate within a rapidly growing but structurally unstable environment.</p>
+            <p>Publisher control, unstable revenue models, governance limitations, and infrastructure gaps contribute to ongoing challenges. These pressures do not operate in isolation, but interact to shape organisational outcomes.</p>
+            <p>Short-term performance can exist without structural stability, but long-term sustainability cannot exist without it.</p>
+            <p>Sustainability therefore depends on aligning organisational systems with these structural constraints rather than relying on performance alone. This shifts the focus of esports development from performance optimisation to system design, with implications for how organisations, educators, and industry stakeholders approach long-term planning.</p>
+            <p>While the model provides a structured framework for understanding these challenges, further research is required to test its application within real-world organisational settings.</p>
           </section>
 
           <section class="space-y-5 pt-10 mt-12 border-t-2 border-[#0D0D0D]">
@@ -213,9 +283,11 @@
     },
     {
       id: 2,
-      title: "Tekken 8 Collegiate Tournament",
-      description: "A repeatable, industry-ready tournament model featuring double elimination brackets, winner-lock character rules, and centralised organiser control.",
-      category: "Event Management",
+      displayOrder: 1,
+      title: "Tekken 8 Collegiate Tournament System Design",
+      description: "A structured collegiate esports tournament designed for scalability, accessibility, and competitive integrity.",
+      impact: "Designed as a scalable tournament system for repeat use across competitive environments.",
+      category: "Operational System",
       fullContent: `
         <div class="space-y-14">
 
@@ -387,42 +459,56 @@
 
           <section class="space-y-5">
             <h3 class="project-heading">Risk and Contingency Planning</h3>
-            <ul class="space-y-3 text-base text-[#0D0D0D]/75">
-              <li class="flex items-start gap-4 border-b border-[#0D0D0D]/10 pb-3"><span class="font-mono font-bold text-xs text-[#0D0D0D]/40 shrink-0 pt-0.5">01</span>Equipment tested in advance, with backup devices available</li>
-              <li class="flex items-start gap-4 border-b border-[#0D0D0D]/10 pb-3"><span class="font-mono font-bold text-xs text-[#0D0D0D]/40 shrink-0 pt-0.5">02</span>Registration caps used to manage attendance and bracket adjustments</li>
-              <li class="flex items-start gap-4 border-b border-[#0D0D0D]/10 pb-3"><span class="font-mono font-bold text-xs text-[#0D0D0D]/40 shrink-0 pt-0.5">03</span>Organiser-controlled scheduling reduces delays and downtime</li>
-              <li class="flex items-start gap-4"><span class="font-mono font-bold text-xs text-[#0D0D0D]/40 shrink-0 pt-0.5">04</span>Clear rules ensure consistent conduct and dispute resolution</li>
-            </ul>
+            <p>Key risks in this model include equipment failure, attendance variability, and scheduling delays.</p>
+            <p>Mitigation strategies include backup devices, capped registration, and organiser-controlled match calls. These measures reduce the likelihood of disruption and help maintain overall event stability.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">Reflection</h3>
-            <p>This project required balancing structure, feasibility, and competitive integrity within a limited timeframe. One key decision was prioritising a controlled venue over a larger space to ensure reliability and reduce logistical complexity. Another important consideration was the marketing timeframe â€” a shorter promotion window improved engagement by maintaining relevance within student communication cycles.</p>
-            <p>One challenge was balancing simplicity with competitive integrity, as increasing structure improves fairness but also adds organisational complexity. Through this process, I developed a clearer understanding of how tournament systems function in practice, particularly the importance of organiser control, structured planning, and decision-making under constraints. If developed further, the project would benefit from live testing and participant feedback.</p>
+            <h3 class="project-heading">13. Reflection</h3>
+            <p>A central realisation in this project was that tournament success is often attributed to format, when in practice it depends more heavily on execution. Early attempts to replicate standard tournament structures revealed how quickly systems break down under constraint. What appears efficient at scale does not translate directly to smaller environments.</p>
+            <p>The shift toward system design allowed these issues to be addressed more directly. By focusing on control, flow, and predictability, the tournament becomes easier to manage without compromising competitive integrity.</p>
+            <p>Given that this project was developed within a limited timeframe during the first trimester, the focus remained on structural clarity rather than empirical validation. This supports the broader argument that execution stability in esports is determined by system design rather than format replication.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">Limitations</h3>
+            <h3 class="project-heading">14. Limitations</h3>
+            <p>This project has several limitations:</p>
             <ul class="space-y-2 text-base text-[#0D0D0D]/70 list-disc list-outside pl-6">
-              <li>No live execution data</li>
-              <li>No audience or engagement metrics</li>
-              <li>Limited staffing model</li>
-              <li>Indicative sponsorship assumptions</li>
+              <li>no live event testing</li>
+              <li>no audience engagement data</li>
+              <li>limited staffing considerations</li>
+              <li>sponsorship assumptions not empirically validated</li>
             </ul>
+            <p>A further limitation is that the model assumes a level of organiser control that may not always be achievable in informal or volunteer-led environments. In such cases, the system may require simplification to remain effective.</p>
+            <p>Additionally, the model assumes a relatively stable participation flow, which may not hold in more informal or drop-in style university events. Future work should involve real-world implementation within university settings to evaluate system effectiveness.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">Summary</h3>
-            <p>This project presents a structured Tekken 8 tournament prototype designed for collegiate esports environments. By prioritising organiser control, scalability, and competitive clarity, the model provides a practical framework for small-scale competitive events. This model reflects broader trends in esports event design, where scalable and low-cost formats are increasingly important within collegiate and grassroots ecosystems. The result is a realistic and adaptable tournament structure suitable for academic evaluation and future implementation.</p>
+            <h3 class="project-heading">15. Positioning Within a Systems Approach to Esports</h3>
+            <p>This project forms part of a broader systems-based approach to esports, where performance, operations, and organisational sustainability are treated as interconnected components.</p>
+            <p>At the organisational level, sustainability depends on structural design. At the operational level, tournaments require scalable and repeatable systems. At the performance level, mental conditions must be structured rather than left to individuals.</p>
+            <p>Together, these layers suggest that consistency in esports is achieved through systems rather than isolated success.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">16. Practical Takeaway</h3>
+            <p>This model is designed for low-cost, repeatable execution across collegiate and grassroots esports environments.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">17. Summary</h3>
+            <p>This project presents a scalable tournament system tailored for university esports environments. Its effectiveness lies in structured design, repeatability, low operational cost, and adaptability across venues.</p>
+            <p>Rather than focusing on individual events, the model provides a framework for consistent tournament delivery under constrained conditions. This suggests that traditional tournament design approaches are often misaligned with environments where resources, coordination, and control are limited.</p>
           </section>
 
           <section class="space-y-5 pt-10 mt-12 border-t-2 border-[#0D0D0D]">
             <h3 class="font-mono font-bold text-sm uppercase tracking-widest text-[#0D0D0D]/50 mb-6">Bibliography</h3>
             <ul class="text-sm space-y-4 leading-relaxed text-[#0D0D0D]/70">
-              <li>Bandai Namco Entertainment (2024) <em>Tekken World Tour â€“ Official Rules</em>.</li>
-              <li>Esports World Cup Foundation (2024) <em>Esports World Cup â€“ Official Site</em>.</li>
-              <li>Start.gg (2024) <em>Tournament Hosting Platform</em>.</li>
-              <li>Challonge (2024) <em>Tournament Bracket Platform</em>.</li>
+              <li>Bandai Namco Entertainment (2024) <em>Tekken World Tour Official Rules</em>. Available at: <a href="https://www.bandainamcoent.com/legal/community-events/official-rules-twt" target="_blank" rel="noopener noreferrer">https://www.bandainamcoent.com/legal/community-events/official-rules-twt</a>.</li>
+              <li>Esports World Cup Foundation (2024) <em>Esports World Cup Official Site</em>. Available at: <a href="https://esportsworldcup.com" target="_blank" rel="noopener noreferrer">https://esportsworldcup.com</a>.</li>
+              <li>Start.gg (2024) <em>Tournament Hosting Platform</em>. Available at: <a href="https://www.start.gg" target="_blank" rel="noopener noreferrer">https://www.start.gg</a>.</li>
+              <li>Challonge (2024) <em>Tournament Bracket Platform</em>. Available at: <a href="https://challonge.com" target="_blank" rel="noopener noreferrer">https://challonge.com</a>.</li>
+              <li>SideQuest Canterbury (2024) <em>Gaming Venue</em>. Available at: <a href="https://www.sidequesthub.co.uk" target="_blank" rel="noopener noreferrer">https://www.sidequesthub.co.uk</a>.</li>
             </ul>
           </section>
         </div>
@@ -430,73 +516,93 @@
     },
     {
       id: 3,
-      title: "Mental Performance Standard",
-      description: "Redefines mental performance as an organisational responsibility. Establishes three core conditions: Mental Readiness, Mental Alignment, and Decision Clarity.",
-      category: "Consulting / Research",
+      displayOrder: 3,
+      title: "Mental Performance Operating Standard for Esports",
+      description: "Operational framework defining mental performance as a system-level requirement in esports environments.",
+      impact: "Applies system thinking to improve performance consistency and reduce burnout risk.",
+      category: "Performance System",
       fullContent: `
         <div class="space-y-14">
           <section class="space-y-5">
-            <h3 class="project-heading">Development Process and Design Rationale</h3>
-            <p>This project developed from my experience within esports environments, particularly in coaching and team-based competitive settings where performance inconsistency was often visible despite strong mechanical skill. A recurring pattern was that players and teams were able to perform effectively in controlled situations but struggled to maintain stability under sustained pressure, especially across long sessions or tournaments.</p>
-            <p>Initially, the focus was on individual mental performance, particularly areas such as confidence, emotional control, and decision-making under stress. However, after reviewing existing research and comparing this with observed team dynamics, it became clear that these issues were not isolated to individuals. Instead, they appeared to reflect a broader structural gap in how mental performance is defined and supported within esports environments.</p>
-            <p>This led to a shift in approach. Rather than treating mental performance as an individual skill or optional support area, the project evolved towards defining it as a shared operating condition. Existing outputs such as frameworks or toolkits were considered but rejected, as they often rely on voluntary adoption and inconsistent application. In contrast, an operating standard establishes baseline expectations that apply across all participants within a system.</p>
-            <p>The final structure of this work was shaped through the integration of research on stress, burnout, and team coordination, combined with practical observation. The result is a model that defines mental performance not as an outcome, but as a set of conditions that must be maintained for consistent competitive execution.</p>
+            <h3 class="project-heading">Development Process and Author Contribution</h3>
+            <p>This project developed from observing performance inconsistency within esports environments, particularly under high-pressure competitive conditions. Initial assumptions focused on individual mindset and resilience as the primary drivers of performance. However, this perspective became difficult to sustain when similar patterns of inconsistency appeared across different team environments.</p>
+            <p>Engagement with academic research on stress, burnout, and team coordination shifted the focus away from individual traits and toward structural conditions. It became increasingly clear that performance inconsistency often emerges from unmanaged cognitive load, lack of shared understanding within teams, and the absence of defined recovery systems.</p>
+            <p>The project evolved from a general framework into an operational standard. This shift reflects a move away from optional guidance toward clearly defined baseline conditions that can be implemented consistently across teams and organisations. The model was developed iteratively, combining academic literature with practical observations from esports settings.</p>
+            <p>All analysis, interpretation, and model development were carried out independently by the author.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">Context</h3>
-            <p>This document defines a mental performance operating standard for esports environments. It is intended for use by esports teams, performance staff, and organisations seeking to stabilise competitive performance under pressure and support player sustainability across extended competitive cycles. This work contributes to emerging research on esports performance by positioning mental performance as a system-level operational requirement rather than an individual psychological trait, extending existing literature on stress, burnout, and team coordination within competitive environments.</p>
+            <p>This study develops an operational standard for mental performance in esports environments. It is intended for teams, support staff, and organisations aiming to maintain consistent performance under competitive pressure while supporting long-term player wellbeing.</p>
+            <p>Rather than treating mental resilience as an individual attribute, the study positions it as a system-level function embedded within organisational structures. The approach draws on research into stress, burnout, and team coordination, while addressing the gap between theoretical understanding and practical application in esports.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">1. Scope and Application</h3>
-            <p>This operating standard sets out the mental performance conditions required for esports athletes and teams to perform reliably under conditions of competitive pressure and to sustain performance across prolonged competitive periods. It establishes shared expectations relating to mental readiness, team alignment, physical regulation, and burnout prevention within esports contexts.</p>
-            <p>The standard is intentionally game-agnostic and applicable across competitive titles and formats.</p>
-            <p>The objectives of this work are threefold. First, it identifies mental performance demands that are distinctive to esports competition. Second, it examines why prevailing industry practices are insufficient in stabilising performance under sustained pressure. Third, it defines a set of shared mental operating conditions that can be applied consistently across teams and organisational contexts. These objectives are addressed through research synthesis, critical evaluation of existing practice, and the articulation of an operational standard.</p>
-            <p>While existing research addresses stress, burnout, and performance psychology in esports, there is limited work translating these findings into structured, enforceable operating conditions at the organisational level. This work addresses that gap.</p>
+            <p>This standard defines how esports players and teams maintain consistent mental function during high-pressure competition and extended play cycles. It outlines baseline expectations for:</p>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>psychological readiness</li>
+              <li>team coordination</li>
+              <li>physical regulation</li>
+              <li>burnout prevention</li>
+            </ul>
+            <p>The model is designed to be adaptable across different esports titles and competitive formats. It does not depend on game-specific mechanics but instead focuses on structural conditions that influence performance across environments.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">2. The Mental Performance Challenge in Esports</h3>
-            <p>Performance instability in esports is commonly attributed to mechanical execution errors or tactical misjudgements. While such factors are visible during competition, existing research indicates that esports participation places athletes under sustained psychological and cognitive load, and that performance breakdowns frequently occur even when technical skill and game knowledge are well developed (Leis et al., 2024).</p>
-            <p>Observed patterns include delayed or impulsive decision-making under pressure, inconsistent responses across similar scenarios, emotional escalation following mistakes, performance decline across extended competitive sessions, and early indicators of burnout among high-volume competitors.</p>
-            <p>Leis et al. (2024) demonstrate that sustained cognitive load directly affects decision consistency in esports athletes. This contributes to variability in performance execution, particularly in high-pressure scenarios. The implication is that instability is not solely a function of skill deficit, but of reduced cognitive regulation under sustained demand.</p>
-            <p>These patterns indicate that mental performance is often treated as an assumed individual capacity rather than as a condition requiring explicit definition and structured support.</p>
+            <p>Performance inconsistency in esports is often attributed to mechanical errors or strategic mistakes. However, research suggests that underlying causes are frequently linked to cognitive strain, decision fatigue, and coordination breakdowns under pressure.</p>
+            <p>Sustained cognitive load affects reaction time, decision-making, and emotional regulation. Under extended periods of stress, even highly skilled players may demonstrate reduced consistency in performance (Leis et al., 2024). This suggests that instability is not solely a function of skill, but also of how mental conditions are managed over time.</p>
+            <p>Team-based esports also require shared understanding under time constraints. When players interpret situations differently, performance becomes unpredictable (Ashford et al., 2023). This indicates that performance is not only individual, but also collective and structural.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Core Problem</h3>
+            <p>Esports systems tend to prioritise mechanics and strategy, while leaving mental operating conditions undefined. This creates environments where performance is optimised technically, but not sustained cognitively.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">3. Limitations of Current Industry Practice</h3>
-            <p>Mental performance within esports organisations is typically addressed through mechanical repetition, post-match review, motivational interventions, and optional psychological support. While these approaches may provide short-term improvement, they are largely reactive and insufficient in stabilising performance under sustained pressure (Leis et al., 2024).</p>
-            <p>These practices prioritise individual coping strategies rather than shared team-level expectations. As a result, teams frequently enter competitive environments without a consistent understanding of how pressure should be interpreted, managed, or recovered from.</p>
-            <p>Unlike frameworks or toolkits, which rely on voluntary and often inconsistent application, operating standards function as enforceable baseline conditions. This distinction is critical in esports environments where performance variability emerges from systemic misalignment rather than isolated individual behaviour.</p>
+            <p>Current esports environments primarily rely on:</p>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>mechanical training and repetition</li>
+              <li>post-match analysis</li>
+              <li>informal mental support</li>
+            </ul>
+            <p>While these approaches contribute to performance improvement, they are typically reactive rather than preventative.</p>
+            <p>Mental performance is often treated as an individual responsibility rather than a structured organisational requirement. As a result, teams operate without consistent standards, leading to variability in performance, particularly under sustained pressure.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">4. Evidence of a Structural Gap</h3>
-            <p><strong>4.1 Psychological Stress and Coping in Esports</strong></p>
-            <p>A systematic review of esports stressors identifies persistent psychological demands including performance pressure, uncertainty, public scrutiny, and emotional regulation challenges (Leis et al., 2024). The study highlights variation in coping responses, which contributes to inconsistent performance outcomes across teams.</p>
-            <p>This suggests that reliance on individual coping mechanisms is insufficient in coordinated competitive environments.</p>
-            <p><strong>4.2 Burnout as a Systemic Risk</strong></p>
-            <p>Research on professional esports athletes identifies burnout as a recurring condition characterised by emotional exhaustion, reduced motivation, and performance decline (Ahn, 2024). These outcomes are linked to sustained cognitive load, intensive training schedules, and inadequate recovery systems.</p>
-            <p>Burnout therefore represents a systemic risk arising from unmanaged performance environments rather than an individual failure.</p>
+            <p><strong>4.1 Stress and Cognitive Load</strong></p>
+            <p>Competitive gaming environments expose players to continuous pressure and uncertainty. Leis et al. (2024) identify cognitive load as a key factor affecting decision consistency in esports, which supports the argument that performance decline under pressure is linked to sustained mental strain rather than isolated mistakes.</p>
+            <p><strong>4.2 Burnout as a Structural Outcome</strong></p>
+            <p>Burnout in esports is characterised by fatigue, reduced motivation, and declining performance. Ahn (2024) links burnout to prolonged cognitive strain and insufficient recovery periods.</p>
+            <p>This suggests that burnout should be understood not as an individual weakness, but as a structural outcome of unmanaged workload and recovery systems.</p>
             <p><strong>4.3 Coordination and Shared Mental Models</strong></p>
-            <p>Research in elite sport demonstrates that teams perform more effectively under pressure when they possess shared mental models relating to roles, expectations, and responses (Ashford et al., 2023). These shared models enable coordinated decision-making in environments where communication is limited.</p>
-            <p>In esports, the absence of shared expectations leads to increased misalignment under pressure, reducing performance consistency.</p>
+            <p>Team performance depends on shared understanding of roles, timing, and responses. Ashford et al. (2023) demonstrate that shared mental models improve coordination and decision-making under pressure.</p>
+            <p>Where alignment is absent, teams are more likely to experience inconsistencies and breakdowns during critical moments.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">5. Implications for Esports Performance</h3>
-            <p>The evidence indicates that esports performance is shaped by sustained cognitive demand, emotional regulation, and coordinated team execution. Individual psychological traits alone do not sufficiently explain performance outcomes.</p>
-            <p>Unmanaged cognitive load contributes directly to burnout (Ahn, 2024), while lack of shared team structure leads to inconsistency in decision-making (Ashford et al., 2023).</p>
-            <p>For example, professional teams competing in multi-day tournaments often demonstrate performance decline despite stable mechanical ability, suggesting that cognitive fatigue and misalignment, rather than skill degradation, drive inconsistency.</p>
-            <p>Mental performance cannot therefore be stabilised through individual resilience alone. It requires structured operating conditions supported at the organisational level.</p>
+            <h3 class="project-heading">5. Impact on Competitive Outcomes</h3>
+            <p>Performance in esports is influenced by:</p>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>cognitive load</li>
+              <li>emotional regulation</li>
+              <li>coordination across team members</li>
+              <li>recovery systems</li>
+            </ul>
+            <p>Unmanaged mental conditions can result in inconsistent decision-making and increased error rates. Even highly skilled teams may experience performance decline during extended competition due to mental fatigue.</p>
+            <p>If these conditions consistently influence outcomes, then the way they are managed becomes critical. This suggests that performance stability depends on structured mental systems rather than individual resilience alone.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">6. Mental Performance as an Operating Requirement</h3>
-            <p>Mental performance is better understood as a set of operating conditions rather than a personal attribute or optional support mechanism. An operating standard was selected instead of frameworks or toolkits because it defines non-optional baseline expectations for performance.</p>
-            <p>Frameworks provide guidance, but do not ensure consistent implementation. In contrast, an operating standard establishes enforceable conditions that apply across the entire performance environment.</p>
-            <p>This shifts responsibility for mental performance from individuals to organisational systems.</p>
+            <h3 class="project-heading">6. Mental Performance as an Operating Standard</h3>
+            <p>Mental performance can be understood as a required operating condition rather than an optional personal attribute.</p>
+            <p>An operating standard establishes minimum conditions that must be met across environments, reducing variability and ensuring consistency in how teams prepare and perform. While individual differences in resilience remain relevant, they may not fully account for consistent performance variation across structured environments.</p>
+            <p>Responsibility for maintaining these conditions therefore extends beyond individual players and into organisational design.</p>
           </section>
 
           <section class="space-y-5">
@@ -506,85 +612,275 @@
               <div class="border-2 border-[#0D0D0D] bg-[#F0E040] p-6">
                 <p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/60 mb-3">Condition 01</p>
                 <h4 class="font-heading font-bold text-xl mb-3">Mental Readiness</h4>
-                <p class="text-sm text-[#0D0D0D]/75 leading-relaxed">Mental readiness refers to the ability to enter high-pressure situations with controlled emotional state, focused attention, and stable decision-making. Under stress, reduced readiness is associated with hesitation or impulsive execution (Leis et al., 2024).</p>
+                <p class="text-sm text-[#0D0D0D]/75 leading-relaxed">Controlled entry into performance under pressure, maintaining focus and emotional regulation.</p>
               </div>
               <div class="condition-dark-card border-2 border-[#0D0D0D] bg-[#0D0D0D] text-[#F4EFE6] p-6">
                 <p class="condition-dark-card__eyebrow font-mono font-bold text-xs uppercase tracking-widest mb-3">Condition 02</p>
                 <h4 class="condition-dark-card__title font-heading font-bold text-xl mb-3">Mental Alignment</h4>
-                <p class="text-sm text-white leading-relaxed">Mental alignment describes shared team expectations regarding how pressure situations are interpreted and managed. Teams with aligned expectations demonstrate stronger coordination and faster recovery following errors (Ashford et al., 2023).</p>
+                <p class="text-sm text-white leading-relaxed">Shared understanding across team members, enabling coordinated responses during competition.</p>
               </div>
               <div class="border-2 border-[#0D0D0D] bg-white p-6">
                 <p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-3">Condition 03</p>
                 <h4 class="font-heading font-bold text-xl mb-3">Decision Clarity</h4>
-                <p class="text-sm text-[#0D0D0D]/75 leading-relaxed">Decision clarity refers to understanding when action is required, what level of certainty is sufficient, and how commitment is executed. Clear decision structures reduce cognitive load and support consistent execution under pressure.</p>
+                <p class="text-sm text-[#0D0D0D]/75 leading-relaxed">Defined decision-making processes that reduce cognitive load and support consistent execution.</p>
               </div>
             </div>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">8. Physical Regulation as Mental Performance Infrastructure</h3>
-            <p>Although esports performance is primarily cognitive, it remains closely linked to physical state. Prolonged sedentary behaviour, continuous screen exposure, and limited movement contribute to cognitive fatigue and reduced emotional regulation.</p>
-            <p>Ahn (2024) highlights that insufficient recovery and physical disengagement increase burnout risk. This indicates that physical regulation functions as an essential component of mental performance.</p>
-            <p>Effective performance environments therefore require structured breaks, physical movement, posture resets, and clear boundaries between performance and recovery.</p>
+            <h3 class="project-heading">Where This Applies</h3>
+            <p>This standard is applicable within:</p>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>team environments</li>
+              <li>coaching systems</li>
+              <li>competitive preparation structures</li>
+            </ul>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">9. Burnout Prevention as an Organisational Responsibility</h3>
-            <p>Burnout develops through sustained cognitive load, emotional strain, and inadequate recovery (Ahn, 2024). Once established, it reduces learning capacity, emotional control, and performance consistency.</p>
-            <p>Preventing burnout requires organisational regulation of training volume, recovery structures, and cognitive demand. Responsibility for burnout prevention must therefore be embedded within organisational systems rather than delegated to individuals.</p>
+            <h3 class="project-heading">8. Physical Regulation</h3>
+            <p>Mental performance is influenced by physical conditions such as fatigue, posture, and recovery cycles.</p>
+            <p>Extended sedentary behaviour and insufficient breaks can contribute to cognitive decline. Ahn (2024) highlights the importance of recovery and physical regulation in maintaining performance stability.</p>
+            <p>Structured recovery protocols and physical regulation strategies therefore play a role in supporting mental consistency.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">9. Burnout Prevention</h3>
+            <p>Burnout emerges from sustained cognitive and emotional strain without adequate recovery.</p>
+            <p>Preventing burnout requires organisational control over:</p>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>workload distribution</li>
+              <li>training intensity</li>
+              <li>recovery periods</li>
+            </ul>
+            <p>This suggests that burnout prevention is shaped more by system design than by individual endurance.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">10. Roles and Responsibilities</h3>
             <ul class="space-y-4">
-              <li class="border-2 border-[#0D0D0D] bg-white p-5"><strong class="font-mono text-xs uppercase tracking-widest block mb-2">Players</strong> Players are responsible for monitoring readiness, identifying fatigue, and communicating overload at an early stage.</li>
-              <li class="border-2 border-[#0D0D0D] bg-white p-5"><strong class="font-mono text-xs uppercase tracking-widest block mb-2">Teams</strong> Teams are responsible for maintaining alignment under pressure, avoiding blame-based responses, and supporting collective recovery.</li>
-              <li class="border-2 border-[#0D0D0D] bg-[#F0E040] p-5"><strong class="font-mono text-xs uppercase tracking-widest block mb-2">Performance Staff and Leadership</strong> Performance staff and leadership are responsible for defining mental operating conditions, enforcing recovery structures, and intervening when cognitive or emotional load becomes unsustainable.</li>
+              <li class="border-2 border-[#0D0D0D] bg-white p-5"><strong class="font-mono text-xs uppercase tracking-widest block mb-2">Players</strong> monitor mental readiness, communicate fatigue, and maintain awareness under pressure.</li>
+              <li class="border-2 border-[#0D0D0D] bg-white p-5"><strong class="font-mono text-xs uppercase tracking-widest block mb-2">Teams</strong> ensure alignment, support coordination, and maintain communication standards.</li>
+              <li class="border-2 border-[#0D0D0D] bg-[#F0E040] p-5"><strong class="font-mono text-xs uppercase tracking-widest block mb-2">Organisations</strong> design mental performance systems, regulate workload and recovery, and enforce operational standards.</li>
             </ul>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">11. Implementation Considerations</h3>
-            <p>The adoption of this operating standard requires integration into daily training and competitive routines. This includes structured monitoring of cognitive load, defined recovery protocols, and regular alignment sessions within teams.</p>
-            <p>Coaches and performance staff play a central role in reinforcing these conditions and ensuring consistency in application. Without active enforcement, operating standards risk reverting to discretionary practices.</p>
+            <p>The operating standard can be integrated into:</p>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>training routines</li>
+              <li>match preparation</li>
+              <li>performance review processes</li>
+            </ul>
+            <p>This may include:</p>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>regular mental performance check-ins</li>
+              <li>structured recovery systems</li>
+              <li>defined performance expectations</li>
+            </ul>
+            <p>Consistency in application is necessary for the standard to have practical effect.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">12. Industry Value and Practical Impact</h3>
-            <p>This operating standard addresses a gap between the mental demands of esports competition and existing support practices. By reframing mental performance as an organisational requirement, it introduces a structural approach to performance stability.</p>
-            <p>Formalising mental readiness, alignment, physical regulation, and sustainability reduces reliance on reactive interventions and supports consistent execution under pressure.</p>
+            <h3 class="project-heading">12. Industry Value and Application</h3>
+            <p>This standard addresses the gap between increasing competitive demands in esports and the limited development of structured mental performance systems.</p>
+            <p>By formalising mental performance as an operational requirement, organisations may improve consistency in results, reduce burnout risk, and enhance team coordination. This suggests that structured mental systems could contribute to long-term performance sustainability.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">13. Reflection</h3>
-            <p>This project required translating research and practical observation into a structured operational model. A key challenge was moving beyond individual-focused interpretations of performance towards a system-level understanding.</p>
-            <p>One limitation of this work is its reliance on secondary research and observational insight rather than empirical testing within live team environments. While the model is theoretically grounded, its effectiveness requires validation through applied implementation.</p>
-            <p>The process highlighted that performance instability in esports is often a product of systemic misalignment rather than individual deficiency, reinforcing the need for organisational responsibility in mental performance.</p>
+            <p>This project highlights the importance of shifting from individual-based explanations of performance toward system-based design.</p>
+            <p>A key insight was recognising that performance inconsistency is often linked to structural conditions rather than capability alone. This reframing influenced how problems were approached throughout the project.</p>
+            <p>While the model is supported by academic literature, it has not yet been tested in live esports environments. Future work would involve applying the standard within teams and evaluating its effectiveness in practice.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">14. Conclusion</h3>
-            <p>Esports performance is shaped by cognitive load, emotional regulation, team coordination, and recovery systems. Growth in competitive performance does not ensure stability without structured support systems.</p>
-            <p>Publisher-driven environments, intensive training demands, and limited recovery structures contribute to ongoing instability.</p>
-            <p>This operating standard provides a structured framework for addressing these challenges by defining mental performance as an organisational requirement. While not a definitive solution, it offers a foundation for improving performance stability and supporting long-term player sustainability.</p>
+            <h3 class="project-heading">14. Positioning Within a Systems Approach to Esports</h3>
+            <p>This project forms part of a broader systems-based approach to esports, where performance, operations, and organisational sustainability are treated as interconnected components.</p>
+            <p>At the organisational level, sustainability depends on structural design. At the operational level, tournaments require scalable and repeatable systems. At the performance level, mental conditions must be structured rather than left to individuals.</p>
+            <p>Together, these layers suggest that consistency in esports is achieved through systems rather than isolated performance.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">15. Why This Matters</h3>
+            <p>Without structured mental systems, teams rely on individual resilience, which can lead to inconsistency and increased risk of burnout over time.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Operating System Model</h3>
+            <div class="border-2 border-[#0D0D0D] bg-white p-6">
+              <p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-4">Performance Flow</p>
+              <div class="space-y-3 text-sm text-[#0D0D0D]/80">
+                <p>Mental Readiness</p>
+                <p>Mental Alignment</p>
+                <p>Decision Clarity</p>
+                <p class="font-mono text-xs uppercase tracking-widest text-[#0D0D0D]/40">Down</p>
+                <p>Physical Regulation</p>
+                <p class="font-mono text-xs uppercase tracking-widest text-[#0D0D0D]/40">Down</p>
+                <p>Burnout Prevention</p>
+                <p class="font-mono text-xs uppercase tracking-widest text-[#0D0D0D]/40">Down</p>
+                <p class="font-bold">Performance Stability</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Practical Takeaway</h3>
+            <p>This framework reframes mental performance from an individual responsibility into a shared team and organisational standard.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">16. Conclusion</h3>
+            <p>Esports performance is shaped by cognitive load, emotional regulation, team coordination, and recovery systems.</p>
+            <p>Skill development alone does not ensure consistent performance. Structured mental performance systems may be necessary to maintain stability under competitive conditions.</p>
+            <p>This operating standard provides a structured approach to understanding these challenges, while also highlighting the need for further applied research.</p>
           </section>
 
           <section class="space-y-5 pt-10 mt-12 border-t-2 border-[#0D0D0D]">
-            <h3 class="font-mono font-bold text-sm uppercase tracking-widest text-[#0D0D0D]/50 mb-6">References</h3>
+            <h3 class="font-mono font-bold text-sm uppercase tracking-widest text-[#0D0D0D]/50 mb-6">Bibliography</h3>
             <ul class="text-sm space-y-4 leading-relaxed text-[#0D0D0D]/70">
-              <li>Ahn, H.A. (2024) 'An exploratory study on the conceptualisation of burnout among professional esports athletes', <em>Frontiers in Psychology</em>, 15. Available at: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11172082/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC11172082/</a></li>
-              <li>Ashford, M., Taylor, J., Payne, J., Waldouck, D. and Collins, D. (2023) 'Getting on the same page: enhancing team performance with shared mental models', <em>Frontiers in Sports and Active Living</em>, 5, 1057143. Available at: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10266230/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC10266230/</a></li>
-              <li>Leis, O., Lautenbach, F., Zinner, C. and Leis, R. (2024) 'Stressors and coping strategies in esports: a systematic review', <em>International Review of Sport and Exercise Psychology</em>. Available at: <a href="https://eprints.chi.ac.uk/7811/" target="_blank" rel="noopener noreferrer">https://eprints.chi.ac.uk/7811/</a></li>
+              <li>Ahn, H.A. (2024) 'Burnout in professional esports players: psychological and behavioural implications', <em>Frontiers in Psychology</em>, 15, Article 11172082.</li>
+              <li>Ashford, M., Taylor, J., Payne, J., Waldouck, D. and Collins, D. (2023) 'Getting on the same page: enhancing team performance with shared mental models', <em>Frontiers in Sports and Active Living</em>, 5, Article 1057143.</li>
+              <li>Leis, O., Lautenbach, F., Zinner, C. and Leis, R. (2024) 'Stress factors and coping strategies in esports: a systematic review', <em>International Review of Sport and Exercise Psychology</em>. Available at: <a href="https://eprints.chi.ac.uk/7811/" target="_blank" rel="noopener noreferrer">https://eprints.chi.ac.uk/7811/</a></li>
             </ul>
           </section>
         </div>
       `
     }
   ],
-  about: {
-    pitch: "I am a Games Design student working across content, events, and competitive environments. My background encompasses operations, esports coaching, tournament execution, and student-facing ambassador roles supporting community engagement. I am currently building towards a career in event management and operations, bridging hands-on practical experience with systems-focused thinking.",
-    skills: ["Esports Coaching", "Event Management", "Content Creation", "Tournament Operations", "Games Design", "Community Engagement"]
+  systemsApproach: {
+    paragraphs: [
+      "Esports is often approached through performance, content, or competition. However, recurring instability across the industry suggests that underlying structural systems are not fully defined or aligned.",
+      "This work focuses on analysing esports through three interconnected levels:"
+    ],
+    levels: [
+      {
+        title: "Organisational Systems",
+        description: "How teams and organisations maintain long-term stability"
+      },
+      {
+        title: "Operational Systems",
+        description: "How tournaments and events are structured and executed"
+      },
+      {
+        title: "Performance Systems",
+        description: "How players and teams sustain consistent performance under pressure"
+      }
+    ],
+    closing: [
+      "Each project examines one of these layers. Together, they provide a structured perspective on esports as an interconnected system rather than a set of isolated activities.",
+      "This approach developed iteratively, moving from broad exploration to a more focused systems-based analysis."
+    ]
   },
+  about: {
+    pitch: "This work is informed by a combination of academic literature, practical observation, and iterative analysis.",
+    developmentApproach: "Due to the limited availability of structured literature within esports, the approach emphasises pattern identification across sources, comparative analysis, and the development of system-level interpretations rather than reliance on a single established framework.",
+    whatIDo: [
+      {
+        title: "Esports Systems and Strategy",
+        description: "Developing structured approaches for organisations, teams, and competitive environments"
+      },
+      {
+        title: "Tournament and Event Operations",
+        description: "Designing and analysing competitive formats, brackets, and event systems"
+      },
+      {
+        title: "Performance and Mental Frameworks",
+        description: "Examining conditions required for consistent decision-making and performance"
+      }
+    ],
+    skills: [
+      {
+        title: "Esports Event Operations",
+        description: "Design and evaluation of tournament systems and execution processes"
+      },
+      {
+        title: "Tournament Systems Design",
+        description: "Bracket structures, rulesets, and participant flow"
+      },
+      {
+        title: "Competitive Team Strategy",
+        description: "Coordination systems and performance alignment"
+      },
+      {
+        title: "Applied Esports Research",
+        description: "Translating academic insight into structured models and practical systems"
+      },
+      {
+        title: "Performance Systems",
+        description: "Frameworks addressing consistency, decision-making, and mental stability"
+      },
+      {
+        title: "Community and Ecosystem Engagement",
+        description: "Understanding grassroots participation and engagement structures"
+      }
+    ],
+    selectedImpact: [
+      "Developed structured tournament systems for controlled and repeatable execution",
+      "Produced research-based models addressing esports organisational sustainability",
+      "Applied system-level analysis to performance consistency within team environments",
+      "Identified cross-layer structural patterns across organisational, operational, and performance systems"
+    ],
+    thinking: [
+      {
+        title: "Systems Over Surface",
+        description: "Prioritising structure over isolated outputs"
+      },
+      {
+        title: "Performance Under Pressure",
+        description: "Designing for real competitive conditions rather than ideal scenarios"
+      },
+      {
+        title: "Scalability First",
+        description: "Ensuring systems function beyond single events or contexts"
+      },
+      {
+        title: "Structure Before Output",
+        description: "Recognising that outcomes are determined by underlying systems"
+      }
+    ],
+    accessibility: [
+      "WCAG 2.2 AA",
+      "Default / Dark / Minimal",
+      "localStorage theme",
+      "prefers-color-scheme",
+      "reduced motion",
+      "keyboard navigation",
+      "focus states",
+      "alt text",
+      "200% zoom safe"
+    ]
+  },
+  workIntro: {
+    heading: "Selected Work (Case Studies)",
+    supporting: "Each project represents a specific layer of esports systems analysis.",
+    additional: "These case studies were developed iteratively, evolving from broader exploratory concepts into structured system-focused work."
+  },
+  experienceSummary: [
+    {
+      title: "Esports Coaching and Competitive Environments",
+      description: "Operated within team environments focusing on coordination, structure, and execution"
+    },
+    {
+      title: "Tournament and Event Systems",
+      description: "Designed and analysed competitive formats and operational workflows"
+    },
+    {
+      title: "Content and Audience Systems",
+      description: "Explored engagement structures within gaming ecosystems"
+    },
+    {
+      title: "Research and Strategic Projects",
+      description: "Developed structured models addressing sustainability and performance"
+    }
+  ],
+  actualWork: [
+    "Worked within competitive team environments focusing on coordination and execution",
+    "Designed structured tournament systems for controlled competitive play",
+    "Developed research-informed models addressing sustainability and performance",
+    "Refined broad esports concepts into system-level analytical frameworks"
+  ],
   experience: [
     {
       id: 1,
@@ -637,5 +933,21 @@
     { platform: "LinkedIn", url: "https://www.linkedin.com/in/tanishq-aryan-463009399" },
     { platform: "YouTube", url: "https://youtube.com/@thetanishqaryan?si=EEdYkbTCiVYDNFbv" },
     { platform: "Instagram", url: "https://www.instagram.com/thetanishqaryan?igsh=dHVkeTZzZ3pqYjQx&utm_source=qr" }
-  ]
+  ],
+  connector: {
+    paragraphs: [
+      "These projects are not isolated outputs.",
+      "They reflect a progression from broad exploration to structured systems analysis across esports environments.",
+      "Together, they establish a foundation for ongoing research into how individuals develop, operate, and progress within esports systems."
+    ]
+  },
+  contactIntro: {
+    title: "Currently exploring opportunities in esports systems, event operations, and performance-focused environments.",
+    subtitle: "Open to roles, collaborations, and research-led work within esports and related industries."
+  },
+  footer: {
+    title: "Tanishq Aryan",
+    subtitle: "Systems, Esports, Performance",
+    note: "Built for clarity, structure, and real-world application"
+  }
 };

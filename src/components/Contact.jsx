@@ -42,7 +42,16 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8">
+        <div className="poster-panel bg-[#FFF8EF] p-4 sm:p-6 md:p-8 mb-8">
+          <span className="tape-tag">Connector Block</span>
+          <div className="mt-6 space-y-4 text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78">
+            {portfolioData.connector.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-8 items-start">
           <motion.div
             className="space-y-5"
@@ -51,34 +60,35 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="poster-panel bg-[#111111] text-[#FFF8EF] p-6 md:p-8">
-              <span className="border-[3px] border-[#FFF8EF] text-[#FFF8EF] inline-block px-3 py-2 font-mono text-[11px] uppercase tracking-[0.24em] mb-6">
-                Contact / Book the Gig
+            <div className="poster-panel bg-[#111111] text-[#FFF8EF] p-4 sm:p-6 md:p-8">
+              <span className="border-[3px] border-[#FFF8EF] text-[#FFF8EF] inline-block px-3 py-2 font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.24em] mb-5 sm:mb-6">
+                Contact / Collaborate
               </span>
-              <h2 className="text-[#FFF8EF] font-heading font-black text-4xl md:text-6xl uppercase tracking-[-0.08em] leading-[0.9]">
-                Let&apos;s build
-                <br />
-                something loud.
+              <h2 className="text-[#FFF8EF] font-heading font-black text-3xl sm:text-4xl md:text-6xl uppercase tracking-[-0.08em] leading-[0.9]">
+                {portfolioData.contactIntro.title}
               </h2>
+              <p className="mt-5 text-sm sm:text-base md:text-lg leading-relaxed text-[#FFF8EF]/82">
+                {portfolioData.contactIntro.subtitle}
+              </p>
             </div>
 
-            <div className="poster-panel p-6 bg-[#F6B4B0]">
+            <div className="poster-panel p-4 sm:p-6 bg-[#F6B4B0]">
               <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#111111]/55 mb-3">Email</p>
-              <a href="mailto:createwithtanishq@gmail.com" className="font-heading font-black text-2xl md:text-3xl uppercase tracking-[-0.05em] underline">
+              <a href="mailto:createwithtanishq@gmail.com" className="font-heading font-black text-lg sm:text-2xl md:text-3xl uppercase tracking-[-0.05em] underline break-all">
                 createwithtanishq@gmail.com
               </a>
             </div>
 
-            <div className="poster-panel p-6 bg-[#FFF8EF]">
+            <div className="poster-panel p-4 sm:p-6 bg-[#FFF8EF]">
               <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#111111]/55 mb-4">Socials</p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {portfolioData.socials.map((social) => (
                   <a
                     key={social.platform}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="brut-btn bg-[#FFD84D] text-[#111111] px-4 py-3 font-mono text-[11px] font-bold uppercase tracking-[0.2em]"
+                    className="brut-btn bg-[#FFD84D] text-[#111111] px-3 sm:px-4 py-2.5 sm:py-3 font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] sm:tracking-[0.2em]"
                   >
                     {social.platform}
                   </a>
@@ -89,7 +99,7 @@ const Contact = () => {
 
           <motion.form
             onSubmit={handleSubmit}
-            className="poster-panel p-6 md:p-8 bg-[#FFF8EF] space-y-6"
+            className="poster-panel p-4 sm:p-6 md:p-8 bg-[#FFF8EF] space-y-5 sm:space-y-6"
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -104,7 +114,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className="mt-3 w-full border-[3px] border-[#111111] bg-[#F5EAD7] px-4 py-4 text-lg font-light focus:outline-none"
+                  className="mt-3 w-full border-[3px] border-[#111111] bg-[#F5EAD7] px-4 py-3.5 sm:py-4 text-base sm:text-lg font-light focus:outline-none"
                 />
               </label>
 
@@ -116,7 +126,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
-                  className="mt-3 w-full border-[3px] border-[#111111] bg-[#F5EAD7] px-4 py-4 text-lg font-light focus:outline-none"
+                  className="mt-3 w-full border-[3px] border-[#111111] bg-[#F5EAD7] px-4 py-3.5 sm:py-4 text-base sm:text-lg font-light focus:outline-none"
                 />
               </label>
             </div>
@@ -128,8 +138,8 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Tell me what you want to build..."
-                rows="8"
-                className="mt-3 w-full border-[3px] border-[#111111] bg-[#F5EAD7] px-4 py-4 text-lg font-light resize-none focus:outline-none"
+                rows="7"
+                className="mt-3 w-full border-[3px] border-[#111111] bg-[#F5EAD7] px-4 py-3.5 sm:py-4 text-base sm:text-lg font-light resize-none focus:outline-none"
               />
             </label>
 
@@ -148,7 +158,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={status.submitting}
-              className="brut-btn bg-[#F04E23] text-[#FFF8EF] px-8 py-4 font-heading font-black uppercase tracking-[0.18em] text-sm disabled:opacity-40"
+              className="brut-btn bg-[#F04E23] text-[#FFF8EF] w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 font-heading font-black uppercase tracking-[0.15em] sm:tracking-[0.18em] text-xs sm:text-sm disabled:opacity-40"
             >
               {status.submitting ? 'Sending...' : 'Send Message'}
             </button>

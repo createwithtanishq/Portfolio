@@ -4,6 +4,7 @@ import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import ProjectDetails from './components/ProjectDetails';
+import { portfolioData } from './data/portfolioData';
 
 function App() {
   useEffect(() => {
@@ -32,26 +33,29 @@ function App() {
 
       <footer className="border-t-[3px] border-[#111111] bg-[#111111] text-[#FFF8EF]">
         <div className="poster-divider" />
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-14 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-12 py-8 sm:py-10 md:py-14 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 sm:gap-8">
           <div className="space-y-3">
-            <span className="tape-tag">Loud. Live. Built.</span>
-            <p className="font-heading font-black text-3xl md:text-5xl uppercase tracking-[-0.06em]">
-              Tanishq Aryan.
+            <span className="tape-tag">{portfolioData.footer.note}</span>
+            <p className="font-heading font-black text-2xl sm:text-3xl md:text-5xl uppercase tracking-[-0.06em]">
+              {portfolioData.footer.title}
+            </p>
+            <p className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.14em] sm:tracking-[0.22em] text-[#FFF8EF]/60">
+              {portfolioData.footer.subtitle}
             </p>
           </div>
 
-          <span className="font-mono text-xs uppercase tracking-[0.24em] text-[#FFF8EF]/60">
+          <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.14em] sm:tracking-[0.24em] text-[#FFF8EF]/60">
             &copy; {new Date().getFullYear()} All Rights Reserved
           </span>
 
-          <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.18em] font-bold">
-            <a href="#work" className="border-2 border-[#FFF8EF] px-4 py-2 hover:bg-[#F04E23] transition-colors">
+          <div className="flex flex-wrap gap-2 sm:gap-3 text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.18em] font-bold">
+            <a href="#work" className="border-2 border-[#FFF8EF] px-3 sm:px-4 py-2 hover:bg-[#F04E23] transition-colors">
               Work
             </a>
-            <a href="#about" className="border-2 border-[#FFF8EF] px-4 py-2 hover:bg-[#F04E23] transition-colors">
+            <a href="#about" className="border-2 border-[#FFF8EF] px-3 sm:px-4 py-2 hover:bg-[#F04E23] transition-colors">
               About
             </a>
-            <a href="#contact" className="border-2 border-[#FFF8EF] px-4 py-2 hover:bg-[#F04E23] transition-colors">
+            <a href="#contact" className="border-2 border-[#FFF8EF] px-3 sm:px-4 py-2 hover:bg-[#F04E23] transition-colors">
               Contact
             </a>
           </div>

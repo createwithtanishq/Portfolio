@@ -126,6 +126,7 @@
   color: rgba(17, 17, 17, 0.8);
   line-height: 1.8;
   font-weight: 300;
+  overflow-wrap: anywhere;
 }
 
 .project-content h4,
@@ -163,6 +164,17 @@
 
 .project-content a:hover {
   background: var(--color-butter);
+}
+
+.project-content table {
+  min-width: 640px;
+}
+
+.project-content img,
+.project-content video,
+.project-content iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 @layer utilities {
