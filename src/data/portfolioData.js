@@ -772,6 +772,112 @@
           </section>
         </div>
       `
+    },
+    {
+      id: 5,
+      displayOrder: 5,
+      title: "Coin Ledger",
+      description: "A real-time progressive web app that kept three people honest about money, coins and trust while reselling in-game currency.",
+      impact: "Ran a live three-person operation for its whole life with a confirmable trail on every order.",
+      category: "Product System",
+      devContext: [
+        "I built Coin Ledger solo: product, design, engineering, backend and operations. It ran live between three real people, not as a demo.",
+        "Decisions were made against real use. Every change shipped to phones already relying on it, so correctness and clear states mattered more than polish."
+      ],
+      devApproach: [
+        "The build stayed deliberately small. Vanilla JavaScript, hand-written CSS, one Supabase project, deployed as static files with no bundler.",
+        "Trust was the core design problem. Each order carries a confirmable trail and screenshot proof, so no one has to argue over who paid or which coins arrived."
+      ],
+      positioning: {
+        label: "Positioning Within the Work",
+        paragraphs: [
+          "Coin Ledger sits alongside the esports systems work as the hands-on engineering layer: a small product taken from idea to live operation and back to a clean retirement.",
+          "It applies the same systems thinking to software. Clear states, honest numbers, and a design that holds up under real, shared, day-to-day use."
+        ]
+      },
+      fullContent: `
+        <div class="space-y-14">
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Overview</h3>
+            <p class="text-sm sm:text-base leading-relaxed text-[#0D0D0D]/75">Coin Ledger is a real-time progressive web app that tracked a coin-reselling operation between three people: two buyers and one seller, trading in-game currency through shared accounts. I built, designed and ran it solo, with no framework and no build step.</p>
+            <p class="text-sm sm:text-base leading-relaxed text-[#0D0D0D]/75">Money, coins and IOUs moved in several directions at once, tracked over chat and screenshots. The ledger replaced that with one shared source of truth: every order has a confirmable lifecycle, the balance stays current in three currencies, and profit is counted properly instead of guessed.</p>
+          </section>
+
+          <section class="space-y-5">
+            <p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-4">By the numbers</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">22</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">orders tracked</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">143k</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">coins purchased</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">3</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">people, 2 roles</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">4</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">shared game IDs</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">12</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">days live</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4 bg-[#F0E040]"><span class="block font-heading font-black text-3xl leading-none">0</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">frameworks used</span></div>
+            </div>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Stack</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Vanilla JavaScript</span>
+              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Hand-written CSS</span>
+              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">PWA</span>
+              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Supabase Postgres</span>
+              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Row Level Security</span>
+              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Edge Functions</span>
+              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Realtime</span>
+              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Vercel</span>
+              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Telegram + WhatsApp</span>
+            </div>
+            <p class="text-sm leading-relaxed text-[#0D0D0D]/70">No bundler, no framework. The client is static files served as-is; everything behind it is one Supabase project.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Architecture</h3>
+            <div class="space-y-3">
+              <div class="border-2 border-[#0D0D0D] bg-[#F0E040] p-5"><p class="font-heading font-bold text-lg mb-1">Installed PWA, one per person</p><p class="text-sm text-[#0D0D0D]/75">HTML shell plus four CSS and nine JS modules. Each person opens a one-time personal link and the device remembers them.</p></div>
+              <p class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/45 text-center">every request signed with a per-person key header</p>
+              <div class="border-2 border-[#0D0D0D] bg-white p-5"><p class="font-heading font-bold text-lg mb-1">Supabase Postgres with RLS</p><p class="text-sm text-[#0D0D0D]/75">Six tables, policies on all of them. Identity is resolved server-side from the key. No passwords, no public read.</p></div>
+              <p class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/45 text-center">on every write</p>
+              <div class="border-2 border-[#0D0D0D] bg-white p-5"><p class="font-heading font-bold text-lg mb-1">Edge Function and Realtime</p><p class="text-sm text-[#0D0D0D]/75">Handles screenshot upload and view, and fires Telegram and WhatsApp alerts. A database trigger broadcasts a changed ping so every open app refreshes instantly.</p></div>
+            </div>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">What it does</h3>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Order lifecycle</p><p class="text-sm text-[#0D0D0D]/75">Buy, sell and settle-up flows with screenshot proof and not-paid to paid to confirmed states, plus dispute handling.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Needs-you queue</p><p class="text-sm text-[#0D0D0D]/75">Home shows only the next action this specific person owes, derived per order from role and status.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Live balance</p><p class="text-sm text-[#0D0D0D]/75">Who owes whom, always current, shown in rupees, USDT or coins with on-the-fly conversion.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Insights</p><p class="text-sm text-[#0D0D0D]/75">Realised profit, margin, cost of coins sold, stock value and an eight-week cash-flow chart.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Inventory</p><p class="text-sm text-[#0D0D0D]/75">Per game-ID stock, with a guard that blocks selling more coins than are actually on hand.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Search and export</p><p class="text-sm text-[#0D0D0D]/75">Filter orders by amount, ID, note or status, and export the whole ledger to CSV.</p></div>
+            </div>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Engineering decisions</h3>
+            <ul class="list-disc list-outside pl-6 space-y-3 text-[#0D0D0D]/75">
+              <li><b>Real-time without weakening security.</b> Row-level realtime cannot see the custom auth header, so a Postgres trigger broadcasts a contentless changed ping on a public channel and each client re-fetches through its own secured connection. Instant updates, nothing sensitive on the wire.</li>
+              <li><b>Profit that tells the truth.</b> Net first subtracted every purchase, so a big buy looked like a loss. I moved it to realised profit, revenue minus the average cost of the coins actually sold, and show unsold coins as stock value rather than a loss.</li>
+              <li><b>Cannot sell what you do not have.</b> The sell form computes coins on hand per game ID and refuses to oversell, closing the most obvious way to corrupt the books.</li>
+              <li><b>Never-stale installed app.</b> A network-only service worker means every deploy appears on next open with no reinstall, the right trade for a shared live ledger.</li>
+              <li><b>Deploys verified by hash.</b> The site ships to Vercel over the API, and after each deploy the live file hashes are checked against local ones, so the running code is provably what was written.</li>
+            </ul>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">How the money math works</h3>
+            <p class="text-sm leading-relaxed text-[#0D0D0D]/75">Every order is reduced to what actually happened, not what was promised. A payment counts only once it is marked, and coins only once delivery is confirmed. One function rolls all live orders into the balance with the seller, the coins still due, and cash in and out. Realised profit pairs each sale against a running average buy cost, and inventory is simply confirmed-received minus sold, per game ID. The same rules drive the app and the alerts, so the two never disagree.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Outcome</h3>
+            <p class="text-sm leading-relaxed text-[#0D0D0D]/75">Coin Ledger ran the operation cleanly for its whole life: 22 orders across 4 shared IDs, no arguments about who paid. When the reselling stopped, the app was retired to a simple placeholder, with the data archived and the project kept for whatever gets built on it next.</p>
+          </section>
+
+        </div>
+      `
     }
   ],
   about: {

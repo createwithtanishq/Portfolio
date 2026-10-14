@@ -33,6 +33,23 @@ const ProjectDetails = () => {
   const background = backgrounds[index] ?? '#FFF8EF';
   const nextProject = orderedProjects[(index + 1) % orderedProjects.length];
 
+  const devContext = project.devContext ?? [
+    'This project was developed through iterative research, practical observation, and ongoing academic feedback.',
+    'Initial concepts were refined into a structured case study, focusing on system-level analysis rather than surface-level description.',
+  ];
+  const devApproach = project.devApproach ?? [
+    'This work is informed by a combination of academic literature, practical observation, and iterative analysis.',
+    'Due to the limited availability of structured literature within esports, the approach emphasises pattern identification across sources, comparative analysis, and the development of system-level interpretations rather than reliance on a single established framework.',
+  ];
+  const positioning = project.positioning ?? {
+    label: 'Positioning Within a Systems Approach to Esports',
+    paragraphs: [
+      'This project represents one layer of a broader systems-based approach to esports.',
+      'Organisational systems define stability, operational systems define execution, and performance systems define consistency.',
+      'Together, these layers form the foundation for understanding how esports environments function and how individuals operate within them.',
+    ],
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -74,22 +91,20 @@ const ProjectDetails = () => {
         <div className="mt-6 sm:mt-8 grid lg:grid-cols-2 gap-6">
           <div className="poster-panel p-4 sm:p-6 md:p-8 bg-[#111111] text-[#FFF8EF]">
             <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#FFF8EF]/55 mb-4">Development Context</p>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-[#FFF8EF]/82">
-              This project was developed through iterative research, practical observation, and ongoing academic feedback.
-            </p>
-            <p className="mt-4 text-sm sm:text-base md:text-lg leading-relaxed text-[#FFF8EF]/82">
-              Initial concepts were refined into a structured case study, focusing on system-level analysis rather than surface-level description.
-            </p>
+            {devContext.map((text, i) => (
+              <p key={i} className={`${i ? 'mt-4 ' : ''}text-sm sm:text-base md:text-lg leading-relaxed text-[#FFF8EF]/82`}>
+                {text}
+              </p>
+            ))}
           </div>
 
           <div className="poster-panel p-4 sm:p-6 md:p-8 bg-[#FFF8EF] text-[#111111]">
             <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#111111]/55 mb-4">Development Approach</p>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78">
-              This work is informed by a combination of academic literature, practical observation, and iterative analysis.
-            </p>
-            <p className="mt-4 text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/72">
-              Due to the limited availability of structured literature within esports, the approach emphasises pattern identification across sources, comparative analysis, and the development of system-level interpretations rather than reliance on a single established framework.
-            </p>
+            {devApproach.map((text, i) => (
+              <p key={i} className={`${i ? 'mt-4 ' : ''}text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78`}>
+                {text}
+              </p>
+            ))}
           </div>
         </div>
 
@@ -103,17 +118,13 @@ const ProjectDetails = () => {
 
         <div className="mt-6 sm:mt-8 poster-panel p-4 sm:p-6 md:p-8 bg-[#F5EAD7] text-[#111111]">
           <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#111111]/55 mb-4">
-            Positioning Within a Systems Approach to Esports
+            {positioning.label}
           </p>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78">
-            This project represents one layer of a broader systems-based approach to esports.
-          </p>
-          <p className="mt-4 text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78">
-            Organisational systems define stability, operational systems define execution, and performance systems define consistency.
-          </p>
-          <p className="mt-4 text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78">
-            Together, these layers form the foundation for understanding how esports environments function and how individuals operate within them.
-          </p>
+          {positioning.paragraphs.map((text, i) => (
+            <p key={i} className={`${i ? 'mt-4 ' : ''}text-sm sm:text-base md:text-lg leading-relaxed text-[#111111]/78`}>
+              {text}
+            </p>
+          ))}
         </div>
 
         {nextProject && (
