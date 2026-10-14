@@ -707,68 +707,61 @@
       id: 4,
       displayOrder: 1,
       title: "Esports Education and Employment Pathways",
-      description: "Research-informed model examining how esports education aligns with professional roles and long-term career progression.",
-      impact: "Develops a structured pathway model connecting education, skills, roles, and employment outcomes in esports.",
-      category: "Current",
+      description: "My MA Games Design final dissertation (12,000 words): how UK undergraduate esports education constructs employability in relation to the real structure of the esports job market.",
+      impact: "A reflexive thematic analysis across a census of 22 undergraduate programmes, surfacing how education frames careers versus how the industry is actually structured.",
+      category: "Dissertation",
       fullContent: `
         <div class="space-y-14">
           <section class="space-y-5">
             <h3 class="project-heading">Project Status</h3>
-            <p>Status: Ongoing Research Project (Final Major Project)</p>
-            <p>This project develops a structured, research-informed model to explain how individuals transition from esports education into professional roles within the industry.</p>
-            <p>While esports programmes are expanding globally, there remains limited clarity regarding how acquired skills translate into defined roles and sustainable career progression.</p>
-            <p>The project is currently in the research and model development phase.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Research Focus</h3>
-            <p>This project addresses the relationship between education, skill development, role specialisation, and career progression.</p>
-            <p>This work builds on prior analysis of esports systems, including organisational sustainability, tournament operations, and performance structures, in order to contextualise how careers develop within these environments.</p>
+            <p>Status: Completed. MA Games Design final project (60-credit dissertation), submitted September 2026 at Canterbury Christ Church University. Supervisor: Tom Apperley.</p>
+            <p>A 12,000-word study examining how UK undergraduate esports education constructs employability in relation to the real structural conditions of the esports occupational ecosystem.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">Research Question</h3>
-            <p>How can a structured framework improve alignment between esports education and career pathways?</p>
+            <p>In what ways do formal esports education materials construct employability in relation to the structural conditions of the esports occupational ecosystem?</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">Methodology Preview</h3>
+            <h3 class="project-heading">Objectives</h3>
             <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
-              <li>qualitative research methods</li>
-              <li>semi-structured interviews</li>
-              <li>thematic analysis</li>
-              <li>document and role analysis</li>
+              <li>Examine the roles and professional identities education constructs</li>
+              <li>Analyse how knowledge, experience and capability are framed</li>
+              <li>Assess student responsibility and career agency</li>
+              <li>Surface the structural conditions of the esports labour market</li>
+              <li>Position cross-boundary (transferable) capability</li>
             </ul>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">Why This Project</h3>
+            <h3 class="project-heading">Method</h3>
+            <p>Qualitative interpretive document analysis combined with reflexive thematic analysis of formal esports education materials, rather than self-reported interview data. The approach reads what programmes publish and promise, then compares it against how the industry is actually structured.</p>
+            <div class="border-2 border-[#0D0D0D] bg-white p-6 my-4">
+              <p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-2">Census</p>
+              <p class="text-sm text-[#0D0D0D]/80">22 undergraduate programmes across 15 providers (recorded as at 22 August 2026).</p>
+            </div>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Analytical Themes</h3>
             <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
-              <li>Limited standardisation of roles within esports</li>
-              <li>Weak alignment between academic programmes and industry expectations</li>
-              <li>Fragmented understanding of career progression pathways</li>
-              <li>Limited academic models addressing esports employment structures</li>
+              <li>Professional identities</li>
+              <li>Evidence of capability</li>
+              <li>Career agency</li>
+              <li>Structural literacy</li>
+              <li>Occupational portability</li>
             </ul>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">Current Focus</h3>
-            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
-              <li>Identifying role clusters within esports</li>
-              <li>Mapping relationships between skills and roles</li>
-              <li>Examining gaps between education and applied practice</li>
-              <li>Developing a structured pathway model</li>
-            </ul>
+            <h3 class="project-heading">Programme Cases</h3>
+            <p>Named programme cases drawn into the analysis included the University of Suffolk (2026-27 definitive record), Keele (2026-27 specification), Staffordshire (BA and variants) and Norwich (2026 entry / Clearing).</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">Applied Case Study Support</h3>
-            <p>This research is supported by applied systems work across esports environments:</p>
-            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
-              <li>Organisational Systems -> Sustainability Model</li>
-              <li>Operational Systems -> Tournament System</li>
-              <li>Performance Systems -> Mental Performance Standard</li>
-            </ul>
+            <h3 class="project-heading">Positioning Within the Work</h3>
+            <p>This dissertation is the research capstone above the applied systems case studies: organisational sustainability, tournament operations and mental performance. Where those design the systems, this examines how education prepares people to work inside them, and where that preparation and the real occupational structure diverge.</p>
           </section>
         </div>
       `
@@ -876,6 +869,171 @@
             <p class="text-sm leading-relaxed text-[#0D0D0D]/75">Coin Ledger ran the operation cleanly for its whole life: 22 orders across 4 shared IDs, no arguments about who paid. When the reselling stopped, the app was retired to a simple placeholder, with the data archived and the project kept for whatever gets built on it next.</p>
           </section>
 
+        </div>
+      `
+    },
+    {
+      id: 6,
+      displayOrder: 6,
+      title: "FLANT — Co-op Sci-Fi Survival Concept",
+      description: "A third-person cooperative sci-fi survival game set on the bioluminescent world of Aura-7, developed as a collaborative MA Games Design project.",
+      impact: "A specialist-role co-op loop built around exploration, research and base-building inside an alien ecosystem that adapts to the player.",
+      category: "Game Design",
+      fullContent: `
+        <div class="space-y-14">
+          <section class="space-y-5">
+            <h3 class="project-heading">Overview</h3>
+            <p>FLANT is a collaborative MA Games Design project: a third-person cooperative sci-fi survival adventure set on Aura-7, a photorealistic, bioluminescent alien world. My contribution was on planning and collaborative documentation within the team.</p>
+            <p>It was approached prototype-first, proving the core loop and feel before scoping the larger systems.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Setting</h3>
+            <p>Aura-7 is a living, bioluminescent ecosystem rather than a static backdrop. The world reacts and adapts, so survival is about reading and responding to the environment, not simply fighting it.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Core Loop</h3>
+            <p>Explore the ecosystem, gather resources, research and unlock new capability, build and fortify, and adapt as the environment changes, carried by a story that frames why the team is on Aura-7.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Specialist Roles</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-2">
+              <div class="border-2 border-[#0D0D0D] bg-white p-6"><p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-3">Engineer</p><p class="text-sm text-[#0D0D0D]/75">Building, fortification and systems.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-[#F0E040] p-6"><p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/60 mb-3">Scientist</p><p class="text-sm text-[#0D0D0D]/75">Research, unlocks and reading the ecosystem.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-white p-6"><p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-3">Commando</p><p class="text-sm text-[#0D0D0D]/75">Defence, traversal and threat response.</p></div>
+            </div>
+            <p>Playable single-player with AI allies, with a proposed three-player co-op mode where the roles are interdependent rather than interchangeable.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Scope and Roadmap</h3>
+            <p>The build prioritised a vertical-slice prototype first. Future scope was framed around base building, multiplayer and multiple biomes, kept deliberately out of the initial prototype to protect focus.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">My Contribution</h3>
+            <p>Within the team I worked on planning and collaborative documentation, helping define the concept, roles and loop and keeping the shared design record coherent. FLANT is a collaborative work and credit is shared across the team.</p>
+          </section>
+        </div>
+      `
+    },
+    {
+      id: 7,
+      displayOrder: 7,
+      title: "Emerging Indian Esports Ecosystems",
+      description: "An evidence-led comparative study of Indian esports organisations against international peers, paired with an original operating model for a new organisation.",
+      impact: "Turns comparison into design: a proposed org structure on four principles, formal coaching and analytics, wellbeing, coordinated competition and content, and diversified roles and revenue.",
+      category: "Organisational System",
+      fullContent: `
+        <div class="space-y-14">
+          <section class="space-y-5">
+            <h3 class="project-heading">Overview</h3>
+            <p>A comparative study focused principally on Indian esports organisations, set against two to three international comparisons, developed as part of my MA Games Design work. Research drew on supplied books alongside social media and video sources.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Approach</h3>
+            <p>Rather than offer advice to existing organisations, the project designed a proposed operating structure for a new esports organisation, using organisations such as S8UL and Global Esports as reference points for what works and what tends to be missing.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">The Operating Model</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-2">
+              <div class="border-2 border-[#0D0D0D] bg-white p-6"><p class="font-heading font-bold mb-1">Coaching & VOD analysis</p><p class="text-sm text-[#0D0D0D]/75">A formal performance function, not an afterthought.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-white p-6"><p class="font-heading font-bold mb-1">Roles & workflows</p><p class="text-sm text-[#0D0D0D]/75">Clear role allocation, communication and internal workflows.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-white p-6"><p class="font-heading font-bold mb-1">Competition & content</p><p class="text-sm text-[#0D0D0D]/75">Coordinated competitive and content divisions working together.</p></div>
+              <div class="border-2 border-[#0D0D0D] bg-white p-6"><p class="font-heading font-bold mb-1">Wellbeing & revenue</p><p class="text-sm text-[#0D0D0D]/75">Player wellbeing designed in, with diversified revenue and resources.</p></div>
+            </div>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Four Principles</h3>
+            <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
+              <li>Formal coaching and analytics</li>
+              <li>Player wellbeing as a built-in function</li>
+              <li>Coordinated competition and content divisions</li>
+              <li>Diversified roles and revenue</li>
+            </ul>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Positioning Within the Work</h3>
+            <p>This sits on the organisational layer alongside my sustainability model. Where that study diagnoses why esports organisations become unstable, this one takes the next step and designs an organisation intended to avoid those failure modes from the start.</p>
+          </section>
+        </div>
+      `
+    },
+    {
+      id: 8,
+      displayOrder: 8,
+      title: "Esports × Music Festival",
+      description: "A cross-disciplinary event concept blending competitive esports and live music, where I led the esports side: format, production and team coordination.",
+      impact: "Designing a hybrid event that runs competition and performance as one production, built through cross-team collaboration.",
+      category: "Collaborative System",
+      fullContent: `
+        <div class="space-y-14">
+          <section class="space-y-5">
+            <h3 class="project-heading">Overview</h3>
+            <p>A cross-disciplinary event concept integrating esports and music, developed as a collaborative MA Games Design project. I acted as the esports lead, responsible for the competitive side of the event and how it fits within a live-music production.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">My Role</h3>
+            <p>As esports lead I owned the competitive format and its production planning, working with the wider team on how the esports and music elements share a stage, a schedule and an audience.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Event Design</h3>
+            <p>The core design problem was interleaving two very different rhythms, the structured timing of a tournament and the flow of a music event, into a single run of show that keeps an audience engaged across both.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Collaboration</h3>
+            <p>The work was built through cross-disciplinary collaboration: a shared pitch, planning and research across roles, with the esports function coordinated against the rest of the production.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">What It Demonstrates</h3>
+            <p>Cross-functional event leadership: taking responsibility for one specialist domain inside a larger production and making it work with everything around it.</p>
+          </section>
+        </div>
+      `
+    },
+    {
+      id: 9,
+      displayOrder: 9,
+      title: "Hackabury 2026",
+      description: "My second-trimester Collaborative Practice project: a 24-hour cross-disciplinary creative game jam and hackathon at CCCU, where I served as vice-president on operations and planning.",
+      impact: "Reported 140+ registrations and 107 attendees across five disciplines, run as one coordinated event.",
+      category: "Event Operations",
+      fullContent: `
+        <div class="space-y-14">
+          <section class="space-y-5">
+            <h3 class="project-heading">Overview</h3>
+            <p>Hackabury 2026 was my Collaborative Practice project in the second trimester of the MA: a 24-hour cross-disciplinary creative game jam and hackathon held on 1-2 June 2026 at Canterbury Christ Church University. I served as vice-president, working on the operations and planning side of the event rather than its design output.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Scale</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">140+</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">registrations (reported)</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">107</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">attendees (reported)</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4 bg-[#F0E040]"><span class="block font-heading font-black text-3xl leading-none">5</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">disciplines</span></div>
+            </div>
+            <p class="text-sm leading-relaxed text-[#0D0D0D]/70">The event brought together Games Design, Computing, Media, Music and PR.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">My Role</h3>
+            <p>As vice-president I worked on operations and planning: coordinating across the disciplines, logistics and the run of the event, keeping a 24-hour format moving across multiple teams. This was an operations and leadership role, distinct from the creative design work produced during the jam.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">What It Demonstrates</h3>
+            <p>Real-world event operations at scale and cross-disciplinary leadership: planning and running a time-boxed event where several very different teams have to work to one schedule.</p>
+          </section>
         </div>
       `
     }
