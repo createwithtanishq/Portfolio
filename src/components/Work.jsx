@@ -4,8 +4,8 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
 import Decode from './Decode';
 
-const Card = ({ item, index, onOpen }) => (
-  <div className="glass grain d3 flex h-full w-full flex-col overflow-hidden p-6 sm:p-7">
+const Card = ({ item, index, onOpen, active }) => (
+  <div className={`glass d3 flex h-full w-full flex-col overflow-hidden p-6 sm:p-7 ${active ? 'edge-accent' : ''}`}>
     <div className="flex items-start justify-between">
       <span className="font-display text-5xl font-extrabold text-ink/12 sm:text-6xl">
         {String(index + 1).padStart(2, '0')}
@@ -24,11 +24,7 @@ const Card = ({ item, index, onOpen }) => (
       <p className="mt-1.5 text-sm leading-snug text-ink/75">{item.impact}</p>
     </div>
 
-    <button
-      type="button"
-      onClick={onOpen}
-      className="btn-ghost mt-5 justify-between px-4 py-3 text-sm"
-    >
+    <button type="button" onClick={onOpen} className="btn-ghost mt-5 justify-between px-4 py-3 text-sm">
       <span className="font-medium">Open case study</span>
       <span aria-hidden="true">→</span>
     </button>
@@ -48,11 +44,10 @@ const Work = () => {
 
   const onDown = (e) => {
     dragging.current = false;
-    startX.current = e.clientX ?? e.touches?.[0]?.clientX ?? 0;
+    startX.current = e.clientX ?? 0;
   };
   const onUp = (e) => {
-    const end = e.clientX ?? e.changedTouches?.[0]?.clientX ?? 0;
-    const dx = end - startX.current;
+    const dx = (e.clientX ?? 0) - startX.current;
     if (Math.abs(dx) > 45) {
       dragging.current = true;
       go(dx < 0 ? 1 : -1);
@@ -67,11 +62,12 @@ const Work = () => {
   const transform = (offset) => {
     const abs = Math.abs(offset);
     return {
-      x: `${offset * 64}%`,
-      rotateY: Math.max(-48, Math.min(48, offset * -26)),
-      z: -abs * 240,
-      scale: Math.max(0.62, 1 - abs * 0.14),
-      opacity: abs > 2.3 ? 0 : 1 - abs * 0.18,
+      x: `${offset * 62}%`,
+      rotateY: Math.max(-46, Math.min(46, offset * -25)),
+      z: -abs * 230,
+      scale: Math.max(0.64, 1 - abs * 0.13),
+      opacity: abs > 2.3 ? 0 : 1 - abs * 0.16,
+      filter: `blur(${Math.min(abs * 3, 7)}px)`,
     };
   };
 
@@ -90,33 +86,16 @@ const Work = () => {
           </div>
           <div className="flex items-center gap-3">
             <span className="hud">{String(active + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}</span>
-            <button
-              type="button"
-              onClick={() => go(-1)}
-              disabled={active === 0}
-              aria-label="Previous project"
-              className="btn-ghost h-11 w-11 justify-center p-0 text-lg disabled:opacity-30"
-            >
-              ‹
-            </button>
-            <button
-              type="button"
-              onClick={() => go(1)}
-              disabled={active === items.length - 1}
-              aria-label="Next project"
-              className="btn-ghost h-11 w-11 justify-center p-0 text-lg disabled:opacity-30"
-            >
-              ›
-            </button>
+            <button type="button" onClick={() => go(-1)} disabled={active === 0} aria-label="Previous project" className="btn-ghost h-11 w-11 justify-center p-0 text-lg disabled:opacity-30">‹</button>
+            <button type="button" onClick={() => go(1)} disabled={active === items.length - 1} aria-label="Next project" className="btn-ghost h-11 w-11 justify-center p-0 text-lg disabled:opacity-30">›</button>
           </div>
         </div>
 
         {reduce ? (
-          // reduced-motion: flat horizontal snap row
           <div className="flex snap-x gap-5 overflow-x-auto pb-4 hide-scrollbar">
             {items.map((item, i) => (
               <div key={item.id} className="w-[86vw] max-w-[400px] shrink-0 snap-start" style={{ height: 480 }}>
-                <Card item={item} index={i} onOpen={() => openProject(item.id)} />
+                <Card item={item} index={i} onOpen={() => openProject(item.id)} active={false} />
               </div>
             ))}
           </div>
@@ -132,27 +111,26 @@ const Work = () => {
               onPointerDown={onDown}
               onPointerUp={onUp}
             >
+              {/* floor glow */}
+              <div className="pointer-events-none absolute bottom-6 left-1/2 h-16 w-[60%] -translate-x-1/2 rounded-[50%] bg-accent/20 blur-3xl" aria-hidden="true" />
+
               {items.map((item, i) => {
                 const offset = i - active;
-                const t = transform(offset);
                 return (
                   <motion.div
                     key={item.id}
                     className="absolute inset-x-0 top-0 bottom-0 m-auto h-[460px] w-[86vw] max-w-[400px] sm:h-[480px]"
                     style={{ zIndex: 50 - Math.abs(offset), transformStyle: 'preserve-3d' }}
-                    animate={t}
-                    transition={{ type: 'spring', stiffness: 220, damping: 32, mass: 0.9 }}
+                    animate={transform(offset)}
+                    transition={{ type: 'spring', stiffness: 210, damping: 32, mass: 0.9 }}
                     onClick={() => {
                       if (dragging.current) return;
                       if (i === active) openProject(item.id);
                       else setActive(i);
                     }}
                   >
-                    <div
-                      className="h-full w-full cursor-pointer"
-                      style={{ pointerEvents: Math.abs(offset) > 2 ? 'none' : 'auto' }}
-                    >
-                      <Card item={item} index={i} onOpen={() => openProject(item.id)} />
+                    <div className="h-full w-full cursor-pointer" style={{ pointerEvents: Math.abs(offset) > 2 ? 'none' : 'auto' }}>
+                      <Card item={item} index={i} onOpen={() => openProject(item.id)} active={offset === 0} />
                     </div>
                   </motion.div>
                 );
@@ -166,9 +144,7 @@ const Work = () => {
                   type="button"
                   aria-label={`Go to project ${i + 1}`}
                   onClick={() => setActive(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === active ? 'w-8 bg-accent' : 'w-1.5 bg-ink/25 hover:bg-ink/50'
-                  }`}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${i === active ? 'w-8 bg-accent' : 'w-1.5 bg-ink/25 hover:bg-ink/50'}`}
                 />
               ))}
             </div>
