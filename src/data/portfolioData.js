@@ -865,7 +865,7 @@
       featured: true,
       title: "Hackabury 2026",
       description: "My second-trimester Collaborative Practice project: a 24-hour cross-disciplinary creative game jam and hackathon at CCCU, where I served as vice-president on operations and planning.",
-      impact: "Reported 107 participants and 32 projects across five disciplines, run as one coordinated event.",
+      impact: "Reported 140+ signups and 107 students attending across five disciplines, run as one coordinated event.",
       category: "Event Operations",
       fullContent: `
         <div class="space-y-14">
@@ -877,8 +877,8 @@
           <section class="space-y-5">
             <h3 class="project-heading">Scale</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">32</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">projects (reported)</span></div>
-              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">107</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">participants (reported)</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">140+</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">signups (reported)</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">107</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">students attending (reported)</span></div>
               <div class="border-2 border-[#0D0D0D] px-5 py-4 bg-[#F0E040]"><span class="block font-heading font-black text-3xl leading-none">5</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">disciplines</span></div>
             </div>
             <p class="text-sm leading-relaxed text-[#0D0D0D]/70">The event brought together Games Design, Computing, Media, Music and PR.</p>
