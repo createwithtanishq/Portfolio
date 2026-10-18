@@ -1,30 +1,57 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
+
+const Paragraphs = ({ items }) =>
+  items.map((t, i) => (
+    <p key={i} className={`${i ? 'mt-4 ' : ''}leading-relaxed text-ink-2`}>{t}</p>
+  ));
 
 const ProjectDetails = () => {
   const { id } = useParams();
   const ordered = [...portfolioData.work].sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id));
-  const project = ordered.find((item) => item.id === Number.parseInt(id, 10));
-  const index = ordered.findIndex((item) => item.id === Number.parseInt(id, 10));
+  const numericId = Number.parseInt(id, 10);
+  const index = ordered.findIndex((item) => item.id === numericId);
+  const project = ordered[index];
+  const progressRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = project ? `${project.title} · Tanishq Aryan` : 'Case study · Tanishq Aryan';
+  }, [id, project]);
+
+  useEffect(() => {
+    let raf = 0;
+    const update = () => {
+      const el = progressRef.current;
+      if (!el) return;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      el.style.transform = `scaleX(${max > 0 ? Math.min(1, window.scrollY / max) : 0})`;
+    };
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      cancelAnimationFrame(raf);
+    };
   }, [id]);
 
   if (!project) {
     return (
-      <div className="flex min-h-[70vh] flex-col items-center justify-center px-6 pt-28 text-center">
-        <div className="glass grain p-10">
-          <h2 className="font-display text-4xl font-extrabold uppercase">Signal lost</h2>
-          <Link to="/" className="btn-signal mt-6 px-6 py-3 text-sm">Return to deck</Link>
-        </div>
+      <div className="flex min-h-[70vh] flex-col items-center justify-center px-6 pt-32 text-center">
+        <h1 className="font-display text-4xl font-semibold tracking-tight">Case study not found</h1>
+        <p className="mt-4 text-ink-2">The link may be out of date.</p>
+        <Link to="/#work" className="btn-signal mt-8 px-6 py-3 text-[15px]">Back to case studies</Link>
       </div>
     );
   }
 
-  const nextProject = ordered[(index + 1) % ordered.length];
+  const prev = ordered[(index - 1 + ordered.length) % ordered.length];
+  const next = ordered[(index + 1) % ordered.length];
 
   const devContext = project.devContext ?? [
     'This project was developed through iterative research, practical observation, and ongoing academic feedback.',
@@ -35,7 +62,7 @@ const ProjectDetails = () => {
     'Due to the limited availability of structured literature within esports, the approach emphasises pattern identification across sources, comparative analysis, and the development of system-level interpretations rather than reliance on a single established framework.',
   ];
   const positioning = project.positioning ?? {
-    label: 'Positioning Within a Systems Approach to Esports',
+    label: 'Positioning within a systems approach to esports',
     paragraphs: [
       'This project represents one layer of a broader systems-based approach to esports.',
       'Organisational systems define stability, operational systems define execution, and performance systems define consistency.',
@@ -44,76 +71,69 @@ const ProjectDetails = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="relative min-h-screen px-5 pt-28 pb-16 sm:px-8"
-    >
-      <div className="mx-auto max-w-5xl">
-        <motion.div
-          className="glass grain overflow-hidden p-6 sm:p-10"
-          initial={{ opacity: 0, y: 30, rotateX: -6 }}
-          animate={{ opacity: 1, y: 0, rotateX: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <Link to="/" className="btn-ghost mb-7 px-4 py-2 text-xs">← Back to deck</Link>
-          <div className="mb-5 flex flex-wrap items-center gap-2">
-            <span className="chip border-accent/40 text-accent">Case Study</span>
+    <>
+      <div
+        ref={progressRef}
+        className="fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-accent"
+        style={{ transform: 'scaleX(0)' }}
+        aria-hidden="true"
+      />
+
+      <article className="mx-auto max-w-4xl px-5 pt-32 pb-24 sm:px-8 sm:pt-40">
+        <nav aria-label="Breadcrumb" className="mb-10">
+          <Link to="/#work" className="btn-ghost px-4 py-2 text-[14px]">All case studies</Link>
+        </nav>
+
+        <header>
+          <div className="mb-6 flex flex-wrap items-center gap-2">
             <span className="chip">{project.category}</span>
-            <span className="chip">Mission 0{index + 1}</span>
+            <span className="hud tabular-nums">Case study {String(index + 1).padStart(2, '0')} of {ordered.length}</span>
           </div>
-          <h1 className="max-w-3xl font-display text-3xl font-extrabold uppercase leading-[0.95] tracking-[-0.02em] sm:text-5xl">
+          <h1 className="font-display text-4xl font-semibold leading-[1.05] tracking-[-0.03em] sm:text-6xl">
             {project.title}
           </h1>
-          <p className="mt-5 max-w-2xl text-base font-light leading-relaxed text-ink/65 sm:text-lg">
-            {project.description}
-          </p>
-        </motion.div>
+          <p className="mt-6 text-xl leading-relaxed text-ink-2 sm:text-2xl">{project.description}</p>
+        </header>
 
-        <div className="mt-6 grid gap-5 lg:grid-cols-2">
-          <div className="glass grain p-6 sm:p-8">
-            <p className="hud hud-accent mb-4">Development Context</p>
-            {devContext.map((t, i) => (
-              <p key={i} className={`${i ? 'mt-4 ' : ''}text-sm leading-relaxed text-ink/70 sm:text-base`}>{t}</p>
-            ))}
-          </div>
-          <div className="glass grain p-6 sm:p-8">
-            <p className="hud hud-accent mb-4">Development Approach</p>
-            {devApproach.map((t, i) => (
-              <p key={i} className={`${i ? 'mt-4 ' : ''}text-sm leading-relaxed text-ink/70 sm:text-base`}>{t}</p>
-            ))}
-          </div>
+        <div className="mt-14 grid gap-5 md:grid-cols-2">
+          <section className="glass p-7 sm:p-8" aria-labelledby="ctx">
+            <h2 id="ctx" className="hud mb-4 text-accent">Development context</h2>
+            <Paragraphs items={devContext} />
+          </section>
+          <section className="glass p-7 sm:p-8" aria-labelledby="appr">
+            <h2 id="appr" className="hud mb-4 text-accent">Development approach</h2>
+            <Paragraphs items={devApproach} />
+          </section>
         </div>
 
-        <div className="glass grain mt-6 overflow-hidden p-6 sm:p-10">
-          {project.fullContent ? (
-            <div className="project-content space-y-6" dangerouslySetInnerHTML={{ __html: project.fullContent }} />
-          ) : (
-            <p className="text-lg font-light text-ink/50">Detailed overview coming soon.</p>
-          )}
-        </div>
-
-        <div className="glass grain mt-6 p-6 sm:p-8">
-          <p className="hud hud-accent mb-4">{positioning.label}</p>
-          {positioning.paragraphs.map((t, i) => (
-            <p key={i} className={`${i ? 'mt-4 ' : ''}text-sm leading-relaxed text-ink/70 sm:text-base`}>{t}</p>
-          ))}
-        </div>
-
-        {nextProject && (
-          <Link to={`/project/${nextProject.id}`} className="glass grain mt-6 flex flex-col gap-5 p-6 transition-transform hover:-translate-y-1 sm:flex-row sm:items-end sm:justify-between sm:p-8">
-            <div>
-              <p className="hud mb-3">Next mission</p>
-              <h3 className="max-w-2xl font-display text-2xl font-bold uppercase leading-tight tracking-tight sm:text-4xl">
-                {nextProject.title}
-              </h3>
-            </div>
-            <span className="btn-signal shrink-0 px-6 py-3 text-sm">Launch →</span>
-          </Link>
+        {project.fullContent ? (
+          <div className="project-content mt-14 space-y-6" dangerouslySetInnerHTML={{ __html: project.fullContent }} />
+        ) : (
+          <p className="mt-14 text-lg text-ink-2">Detailed overview coming soon.</p>
         )}
-      </div>
-    </motion.div>
+
+        <section className="glass mt-14 p-7 sm:p-8" aria-labelledby="pos">
+          <h2 id="pos" className="hud mb-4 text-accent">{positioning.label}</h2>
+          <Paragraphs items={positioning.paragraphs} />
+        </section>
+
+        <nav aria-label="Other case studies" className="mt-16 grid gap-4 sm:grid-cols-2">
+          {[
+            { p: prev, label: 'Previous' },
+            { p: next, label: 'Next' },
+          ].map(({ p, label }) => (
+            <Link
+              key={label}
+              to={`/project/${p.id}`}
+              className="glass group flex flex-col gap-2 p-6 transition-shadow duration-300 hover:shadow-[var(--shadow-lift)]"
+            >
+              <span className="hud">{label}</span>
+              <span className="font-display text-xl font-semibold leading-snug tracking-tight">{p.title}</span>
+            </Link>
+          ))}
+        </nav>
+      </article>
+    </>
   );
 };
 

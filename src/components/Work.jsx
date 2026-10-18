@@ -1,155 +1,80 @@
-import React, { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion, useReducedMotion } from 'framer-motion';
+import React, { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolioData';
-import Decode from './Decode';
+import TiltCard from './TiltCard';
 
-const Card = ({ item, index, onOpen, active }) => (
-  <div className={`glass d3 flex h-full w-full flex-col overflow-hidden p-6 sm:p-7 ${active ? 'edge-accent' : ''}`}>
-    <div className="flex items-start justify-between">
-      <span className="font-display text-5xl font-extrabold text-ink/12 sm:text-6xl">
-        {String(index + 1).padStart(2, '0')}
+const ProjectCard = ({ item, index }) => (
+  <TiltCard className="h-full">
+    <Link
+      to={`/project/${item.id}`}
+      className="glass group flex h-full flex-col p-7 transition-shadow duration-300 hover:shadow-[var(--shadow-lift)]"
+    >
+      <div className="flex items-center justify-between gap-3">
+        <span className="hud tabular-nums">{String(index + 1).padStart(2, '0')}</span>
+        <span className="chip !px-2.5 !py-1 !text-[12px]">{item.category}</span>
+      </div>
+
+      <h3 className="mt-8 text-2xl font-semibold leading-tight tracking-tight">{item.title}</h3>
+      <p className="mt-3 flex-1 text-[15px] leading-relaxed text-ink-2">{item.description}</p>
+
+      <p className="mt-6 border-t border-hairline pt-5 text-[14px] leading-snug text-ink-2">{item.impact}</p>
+
+      <span className="mt-6 inline-flex items-center text-[15px] font-medium text-accent group-hover:underline underline-offset-4">
+        View case study
       </span>
-      <span className="chip">{item.category}</span>
-    </div>
-
-    <h3 className="mt-5 font-display text-xl font-bold leading-[1.05] tracking-tight sm:text-2xl">
-      {item.title}
-    </h3>
-
-    <p className="mt-4 flex-1 text-sm leading-relaxed text-ink/65">{item.description}</p>
-
-    <div className="mt-5 rounded-xl border border-ink/10 bg-ink/4 p-4">
-      <p className="hud hud-accent">Impact</p>
-      <p className="mt-1.5 text-sm leading-snug text-ink/75">{item.impact}</p>
-    </div>
-
-    <button type="button" onClick={onOpen} className="btn-ghost mt-5 justify-between px-4 py-3 text-sm">
-      <span className="font-medium">Open case study</span>
-      <span aria-hidden="true">→</span>
-    </button>
-  </div>
+    </Link>
+  </TiltCard>
 );
 
 const Work = () => {
-  const reduce = useReducedMotion();
-  const navigate = useNavigate();
-  const items = [...portfolioData.work].sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id));
-  const [active, setActive] = useState(0);
-  const startX = useRef(0);
-  const dragging = useRef(false);
-
-  const clamp = (n) => Math.max(0, Math.min(items.length - 1, n));
-  const go = (dir) => setActive((a) => clamp(a + dir));
-
-  const onDown = (e) => {
-    dragging.current = false;
-    startX.current = e.clientX ?? 0;
-  };
-  const onUp = (e) => {
-    const dx = (e.clientX ?? 0) - startX.current;
-    if (Math.abs(dx) > 45) {
-      dragging.current = true;
-      go(dx < 0 ? 1 : -1);
-    }
-  };
-  const onKey = (e) => {
-    if (e.key === 'ArrowLeft') go(-1);
-    if (e.key === 'ArrowRight') go(1);
-  };
-  const openProject = (id) => navigate(`/project/${id}`);
-
-  const transform = (offset) => {
-    const abs = Math.abs(offset);
-    return {
-      x: `${offset * 62}%`,
-      rotateY: Math.max(-46, Math.min(46, offset * -25)),
-      z: -abs * 230,
-      scale: Math.max(0.64, 1 - abs * 0.13),
-      opacity: abs > 2.3 ? 0 : 1 - abs * 0.16,
-      filter: `blur(${Math.min(abs * 3, 7)}px)`,
-    };
-  };
+  const items = useMemo(
+    () => [...portfolioData.work].sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id)),
+    []
+  );
+  const categories = useMemo(() => [...new Set(items.map((i) => i.category))], [items]);
+  const [active, setActive] = useState('All');
+  const visible = active === 'All' ? items : items.filter((i) => i.category === active);
 
   return (
-    <section id="work" className="relative px-5 py-24 sm:px-8 sm:py-28">
+    <section id="work" className="scroll-mt-14 px-5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-10 flex flex-col gap-6 sm:mb-14 md:flex-row md:items-end md:justify-between">
-          <div>
-            <Decode as="p" text="02 — Selected Work" className="hud hud-accent mb-3" />
-            <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.9] tracking-[-0.02em] sm:text-6xl">
-              The Missions
-            </h2>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink/60 sm:text-base">
-              {portfolioData.workIntro.supporting} {portfolioData.workIntro.additional}
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="hud">{String(active + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}</span>
-            <button type="button" onClick={() => go(-1)} disabled={active === 0} aria-label="Previous project" className="btn-ghost h-11 w-11 justify-center p-0 text-lg disabled:opacity-30">‹</button>
-            <button type="button" onClick={() => go(1)} disabled={active === items.length - 1} aria-label="Next project" className="btn-ghost h-11 w-11 justify-center p-0 text-lg disabled:opacity-30">›</button>
-          </div>
+        <header className="mb-10 max-w-3xl">
+          <p className="hud mb-3">Selected work</p>
+          <h2 className="font-display text-4xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-6xl">
+            Case studies
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-ink-2">
+            {portfolioData.workIntro.supporting} {portfolioData.workIntro.additional}
+          </p>
+        </header>
+
+        <div role="group" aria-label="Filter case studies by category" className="mb-10 flex flex-wrap gap-2">
+          {['All', ...categories].map((c) => {
+            const count = c === 'All' ? items.length : items.filter((i) => i.category === c).length;
+            const on = active === c;
+            return (
+              <button
+                key={c}
+                type="button"
+                aria-pressed={on}
+                onClick={() => setActive(c)}
+                className={`rounded-full border px-4 py-2 text-[14px] transition-colors ${
+                  on
+                    ? 'border-transparent bg-ink text-canvas'
+                    : 'border-hairline text-ink-2 hover:text-ink'
+                }`}
+              >
+                {c} <span className="tabular-nums opacity-60">{count}</span>
+              </button>
+            );
+          })}
         </div>
 
-        {reduce ? (
-          <div className="flex snap-x gap-5 overflow-x-auto pb-4 hide-scrollbar">
-            {items.map((item, i) => (
-              <div key={item.id} className="w-[86vw] max-w-[400px] shrink-0 snap-start" style={{ height: 480 }}>
-                <Card item={item} index={i} onOpen={() => openProject(item.id)} active={false} />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <>
-            <div
-              className="relative h-[500px] w-full select-none sm:h-[520px]"
-              style={{ perspective: 1500 }}
-              role="group"
-              aria-roledescription="carousel"
-              tabIndex={0}
-              onKeyDown={onKey}
-              onPointerDown={onDown}
-              onPointerUp={onUp}
-            >
-              {/* floor glow */}
-              <div className="pointer-events-none absolute bottom-6 left-1/2 h-16 w-[60%] -translate-x-1/2 rounded-[50%] bg-accent/20 blur-3xl" aria-hidden="true" />
-
-              {items.map((item, i) => {
-                const offset = i - active;
-                return (
-                  <motion.div
-                    key={item.id}
-                    className="absolute inset-x-0 top-0 bottom-0 m-auto h-[460px] w-[86vw] max-w-[400px] sm:h-[480px]"
-                    style={{ zIndex: 50 - Math.abs(offset), transformStyle: 'preserve-3d' }}
-                    animate={transform(offset)}
-                    transition={{ type: 'spring', stiffness: 210, damping: 32, mass: 0.9 }}
-                    onClick={() => {
-                      if (dragging.current) return;
-                      if (i === active) openProject(item.id);
-                      else setActive(i);
-                    }}
-                  >
-                    <div className="h-full w-full cursor-pointer" style={{ pointerEvents: Math.abs(offset) > 2 ? 'none' : 'auto' }}>
-                      <Card item={item} index={i} onOpen={() => openProject(item.id)} active={offset === 0} />
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            <div className="mt-8 flex justify-center gap-2">
-              {items.map((item, i) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  aria-label={`Go to project ${i + 1}`}
-                  onClick={() => setActive(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${i === active ? 'w-8 bg-accent' : 'w-1.5 bg-ink/25 hover:bg-ink/50'}`}
-                />
-              ))}
-            </div>
-          </>
-        )}
+        <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          {visible.map((item) => (
+            <ProjectCard key={item.id} item={item} index={items.indexOf(item)} />
+          ))}
+        </div>
       </div>
     </section>
   );
