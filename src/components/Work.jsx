@@ -11,7 +11,10 @@ const ProjectCard = ({ item, index }) => (
     >
       <div className="flex items-center justify-between gap-3">
         <span className="hud tabular-nums">{String(index + 1).padStart(2, '0')}</span>
-        <span className="chip !px-2.5 !py-1 !text-[12px]">{item.category}</span>
+        <span className="flex items-center gap-2">
+          {item.featured && <span className="chip !px-2.5 !py-1 !text-[12px] border-accent text-accent">Featured</span>}
+          <span className="chip !px-2.5 !py-1 !text-[12px]">{item.category}</span>
+        </span>
       </div>
 
       <h3 className="mt-8 text-2xl font-semibold leading-tight tracking-tight">{item.title}</h3>
