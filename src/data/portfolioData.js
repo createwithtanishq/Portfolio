@@ -767,100 +767,6 @@
       `
     },
     {
-      id: 5,
-      displayOrder: 5,
-      title: "Shared Order Ledger",
-      description: "A real-time progressive web app that kept a three-person operation accurate and accountable: every order, payment and delivery in one shared record.",
-      impact: "Ran live for its whole life with a confirmable trail on every order.",
-      category: "Product System",
-      devContext: [
-        "I built this app solo: product, design, engineering, backend and operations. It ran live between three people, not as a demo.",
-        "Decisions were made against real use. Every change shipped to phones already relying on it, so correctness and clear states mattered more than polish."
-      ],
-      devApproach: [
-        "The build stayed deliberately small. Vanilla JavaScript, hand-written CSS, one Supabase project, deployed as static files with no bundler.",
-        "Trust was the core design problem. Each order carries a confirmable trail and screenshot proof, so no one has to argue over who paid or which items arrived."
-      ],
-      positioning: {
-        label: "Positioning Within the Work",
-        paragraphs: [
-          "This app sits alongside the esports systems work as the hands-on engineering layer: a small product taken from idea to live operation and back to a clean retirement.",
-          "It applies the same systems thinking to software. Clear states, honest numbers, and a design that holds up under real, shared, day-to-day use."
-        ]
-      },
-      fullContent: `
-        <div class="space-y-14">
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Overview</h3>
-            <p class="text-sm sm:text-base leading-relaxed text-[#0D0D0D]/75">This is a real-time progressive web app that tracked a small operation shared between three people in two roles. I built, designed and ran it solo, with no framework and no build step.</p>
-            <p class="text-sm sm:text-base leading-relaxed text-[#0D0D0D]/75">Orders and deliveries moved in several directions at once, tracked over chat and screenshots. The ledger replaced that with one shared source of truth: every order has a confirmable lifecycle, balances stay current, and figures are calculated rather than guessed.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Stack</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Vanilla JavaScript</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Hand-written CSS</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">PWA</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Supabase Postgres</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Row Level Security</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Edge Functions</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Realtime</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Vercel</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Automatic alerts</span>
-            </div>
-            <p class="text-sm leading-relaxed text-[#0D0D0D]/70">No bundler, no framework. The client is static files served as-is; everything behind it is one Supabase project.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Architecture</h3>
-            <div class="space-y-3">
-              <div class="border-2 border-[#0D0D0D] bg-[#F0E040] p-5"><p class="font-heading font-bold text-lg mb-1">Installed PWA, one per person</p><p class="text-sm text-[#0D0D0D]/75">HTML shell plus four CSS and nine JS modules. Each person opens a one-time personal link and the device remembers them.</p></div>
-              <p class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/45 text-center">every request signed with a per-person key header</p>
-              <div class="border-2 border-[#0D0D0D] bg-white p-5"><p class="font-heading font-bold text-lg mb-1">Supabase Postgres with RLS</p><p class="text-sm text-[#0D0D0D]/75">Six tables, policies on all of them. Identity is resolved server-side from the key. No passwords, no public read.</p></div>
-              <p class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/45 text-center">on every write</p>
-              <div class="border-2 border-[#0D0D0D] bg-white p-5"><p class="font-heading font-bold text-lg mb-1">Edge Function and Realtime</p><p class="text-sm text-[#0D0D0D]/75">Handles screenshot upload and view, and fires automatic alerts. A database trigger broadcasts a changed ping so every open app refreshes instantly.</p></div>
-            </div>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">What it does</h3>
-            <div class="grid md:grid-cols-2 gap-3">
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Order lifecycle</p><p class="text-sm text-[#0D0D0D]/75">Buy, sell and settle-up flows with screenshot proof, a clear status at each stage, and dispute handling.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Needs-you queue</p><p class="text-sm text-[#0D0D0D]/75">Home shows only the next action this specific person owes, derived per order from role and status.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Live balance</p><p class="text-sm text-[#0D0D0D]/75">Who owes whom, always current, with what is still due on each order.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Insights</p><p class="text-sm text-[#0D0D0D]/75">Summary figures and an eight-week activity view.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Inventory</p><p class="text-sm text-[#0D0D0D]/75">Per-account stock, with a guard that blocks selling more than is actually on hand.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Search and export</p><p class="text-sm text-[#0D0D0D]/75">Filter orders by ID, note or status, and export the whole ledger to CSV.</p></div>
-            </div>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Engineering decisions</h3>
-            <ul class="list-disc list-outside pl-6 space-y-3 text-[#0D0D0D]/75">
-              <li><b>Real-time without weakening security.</b> Row-level realtime cannot see the custom auth header, so a Postgres trigger broadcasts a contentless changed ping on a public channel and each client re-fetches through its own secured connection. Instant updates, nothing sensitive on the wire.</li>
-              <li><b>Accurate reporting.</b> Early figures subtracted every purchase, so a big buy looked like a loss. Reports now match what was actually sold against what it cost, and unsold stock is shown separately.</li>
-              <li><b>Cannot sell what you do not have.</b> The sell form computes stock on hand per account and refuses to oversell, closing the most obvious way to corrupt the books.</li>
-              <li><b>Never-stale installed app.</b> A network-only service worker means every deploy appears on next open with no reinstall, the right trade for a shared live ledger.</li>
-              <li><b>Deploys verified by hash.</b> The site ships to Vercel over the API, and after each deploy the live file hashes are checked against local ones, so the running code is provably what was written.</li>
-            </ul>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">How the figures are calculated</h3>
-            <p class="text-sm leading-relaxed text-[#0D0D0D]/75">Every order is reduced to what actually happened, not what was promised. A payment counts only once it is marked, and items only once delivery is confirmed. One function rolls all live orders into the balance owed and what is still due. Reporting pairs each sale against a running average cost, and inventory is simply confirmed-received minus sold, per account. The same rules drive the app and the alerts, so the two never disagree.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Outcome</h3>
-            <p class="text-sm leading-relaxed text-[#0D0D0D]/75">The app ran the operation cleanly for its whole life, with no arguments about who paid. When the operation wound down, the app was retired to a simple placeholder, with the data archived and the project kept for whatever gets built on it next.</p>
-          </section>
-
-        </div>
-      `
-    },
-    {
       id: 6,
       displayOrder: 6,
       title: "FLANT — Co-op Sci-Fi Survival Concept",
@@ -949,42 +855,6 @@
           <section class="space-y-5">
             <h3 class="project-heading">Positioning Within the Work</h3>
             <p>This sits on the organisational layer alongside my sustainability model. Where that study diagnoses why esports organisations become unstable, this one takes the next step and designs an organisation intended to avoid those failure modes from the start.</p>
-          </section>
-        </div>
-      `
-    },
-    {
-      id: 8,
-      displayOrder: 8,
-      title: "Esports × Music Festival",
-      description: "A cross-disciplinary event concept blending competitive esports and live music, where I led the esports side: format, production and team coordination.",
-      impact: "Designing a hybrid event that runs competition and performance as one production, built through cross-team collaboration.",
-      category: "Collaborative System",
-      fullContent: `
-        <div class="space-y-14">
-          <section class="space-y-5">
-            <h3 class="project-heading">Overview</h3>
-            <p>A cross-disciplinary event concept integrating esports and music, developed as a collaborative MA Games Design project. I acted as the esports lead, responsible for the competitive side of the event and how it fits within a live-music production.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">My Role</h3>
-            <p>As esports lead I owned the competitive format and its production planning, working with the wider team on how the esports and music elements share a stage, a schedule and an audience.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Event Design</h3>
-            <p>The core design problem was interleaving two very different rhythms, the structured timing of a tournament and the flow of a music event, into a single run of show that keeps an audience engaged across both.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Collaboration</h3>
-            <p>The work was built through cross-disciplinary collaboration: a shared pitch, planning and research across roles, with the esports function coordinated against the rest of the production.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">What It Demonstrates</h3>
-            <p>Cross-functional event leadership: taking responsibility for one specialist domain inside a larger production and making it work with everything around it.</p>
           </section>
         </div>
       `
@@ -1139,15 +1009,6 @@
       year: "Current",
       roleUrl: "https://amberstudent.com/flex/tanishq-aryan-1768205165",
       description: "Supporting student community engagement and ambassador initiatives through Amber."
-    },
-    {
-      id: 4,
-      role: "Pilgrim Skincare Brand Ambassador",
-      company: "Pilgrim",
-      year: "Current",
-      roleUrl: "https://discoverpilgrim.com/discount/TAN2025?ref=tanishqaryan10847",
-      description: "Worked as a brand ambassador supporting Pilgrim skincare campaigns and promotional activity. Use code TAN2025.",
-      descriptionHtml: "Worked as a brand ambassador supporting Pilgrim skincare campaigns and promotional activity. Use code <a href=\"https://discoverpilgrim.com/discount/TAN2025?ref=tanishqaryan10847\" target=\"_blank\" rel=\"noopener noreferrer\">TAN2025</a>."
     },
     {
       id: 5,
