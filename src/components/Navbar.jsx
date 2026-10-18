@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
   { label: 'Work', href: '#work' },
@@ -15,75 +15,55 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNavClick = (event, href) => {
+  const go = (event, href) => {
     event.preventDefault();
     if (location.pathname !== '/') {
       navigate('/');
-      setTimeout(() => {
-        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-      }, 120);
+      setTimeout(() => document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' }), 120);
       return;
     }
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <motion.nav
-      className="fixed top-0 left-0 right-0 z-50"
-      initial={{ y: -80 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+    <header
+      className={`fixed inset-x-0 top-0 z-50 backdrop-blur-xl backdrop-saturate-150 transition-[border-color] duration-300 ${
+        scrolled ? 'border-b border-hairline' : 'border-b border-transparent'
+      }`}
+      style={{ background: 'var(--nav-bg)' }}
     >
-      <div className="border-b-[3px] border-[#111111] bg-[#F5EAD7]/95 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 min-h-18 py-3 flex items-center justify-between gap-3 md:gap-4">
-          <a
-            href="/"
-            className={`shrink-0 font-heading font-black text-base sm:text-lg md:text-xl uppercase tracking-[-0.06em] border-[3px] border-[#111111] px-3 sm:px-4 py-2 transition-all ${
-              scrolled ? 'bg-[#111111] text-[#FFF8EF] rotate-[-2deg]' : 'bg-[#FFD84D] text-[#111111] rotate-[1deg]'
-            }`}
-          >
-            TA
-          </a>
+      <nav aria-label="Primary" className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-5 sm:px-8">
+        <a href="/" className="font-display text-[15px] font-semibold tracking-tight text-ink" onClick={(e) => go(e, '#top')}>
+          Tanishq Aryan
+        </a>
 
-          <div className="hidden md:flex items-center gap-2">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={link.label}
-                href={link.href}
-                onClick={(event) => handleNavClick(event, link.href)}
-                className="border-[3px] border-[#111111] bg-[#FFF8EF] px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-[0.22em] hover:bg-[#F04E23] hover:text-[#FFF8EF] transition-colors"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: 0.12 + index * 0.06 }}
-              >
-                {link.label}
-              </motion.a>
-            ))}
-          </div>
-
-          <div className="md:hidden flex-1 min-w-0">
-            <div className="flex justify-end gap-1.5 overflow-x-auto hide-scrollbar pb-1">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <ul className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(event) => handleNavClick(event, link.href)}
-                className="shrink-0 border-2 border-[#111111] bg-[#FFF8EF] px-2.5 py-1.5 font-mono text-[9px] font-bold uppercase tracking-[0.14em]"
-              >
-                {link.label}
-              </a>
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  onClick={(e) => go(e, link.href)}
+                  className="rounded-full px-3 py-1.5 text-[13px] text-ink/75 transition-colors hover:text-ink"
+                >
+                  {link.label}
+                </a>
+              </li>
             ))}
-            </div>
-          </div>
+          </ul>
+          <ThemeToggle />
+          <a href="#contact" onClick={(e) => go(e, '#contact')} className="btn-signal px-4 py-1.5 text-[13px]">
+            Get in touch
+          </a>
         </div>
-      </div>
-      <div className="poster-divider" />
-    </motion.nav>
+      </nav>
+    </header>
   );
 };
 

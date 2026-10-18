@@ -4,17 +4,16 @@ import About from './About';
 import Contact from './Contact';
 import Work from './Work';
 import Experience from './Experience';
+import Reveal from './Reveal';
 
-const Home = () => {
-  return (
-    <main>
-      <Hero />
-      <About />
-      <Work />
-      <Experience />
-      <Contact />
-    </main>
-  );
-};
+const Home = () => (
+  <main>
+    <Hero />
+    <Reveal><Work /></Reveal>
+    <Reveal><About /></Reveal>
+    <Reveal><Experience /></Reveal>
+    <Reveal><Contact /></Reveal>
+  </main>
+);
 
 export default Home;
