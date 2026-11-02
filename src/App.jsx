@@ -1,36 +1,53 @@
 import React, { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { useReducedMotion } from 'framer-motion';
-import Lenis from 'lenis';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { PrefsProvider } from './lib/prefs';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import ProjectDetails from './components/ProjectDetails';
-import { portfolioData } from './data/portfolioData';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
 
-function App() {
-  const reduce = useReducedMotion();
-
+/*
+  Reveals each [data-reveal] element once as it enters. A safety sweep after scrolling stops also
+  reveals anything already passed (fast jumps, anchor links), so nothing is ever left hidden.
+  Without JavaScript nothing is hidden in the first place.
+*/
+function useReveal() {
+  const { pathname } = useLocation();
   useEffect(() => {
-    if (reduce) return;
-    const lenis = new Lenis({ duration: 1.1, smooth: true });
-    let raf;
-    const loop = (time) => {
-      lenis.raf(time);
-      raf = requestAnimationFrame(loop);
-    };
-    raf = requestAnimationFrame(loop);
-    return () => {
-      cancelAnimationFrame(raf);
-      lenis.destroy();
-    };
-  }, [reduce]);
+    const show = (el) => el.setAttribute('data-in', '');
+    const els = document.querySelectorAll('[data-reveal]:not([data-in])');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(show);
+      return undefined;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    els.forEach((el) => io.observe(el));
 
+    let timer = 0;
+    const sweep = () => {
+      document.querySelectorAll('[data-reveal]:not([data-in])').forEach((el) => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.9) { show(el); io.unobserve(el); }
+      });
+    };
+    const onScroll = () => { clearTimeout(timer); timer = setTimeout(sweep, 140); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => { io.disconnect(); clearTimeout(timer); window.removeEventListener('scroll', onScroll); };
+  }, [pathname]);
+}
+
+function Shell() {
+  useReveal();
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual';
+  }, []);
   return (
-    <div id="top" className="relative min-h-screen font-sans text-ink">
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-surface focus:px-4 focus:py-2 focus:text-sm"
-      >
+    <div id="top" className="relative min-h-svh">
+      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-[var(--ink)] focus:px-4 focus:py-2 focus:text-[var(--bg)]">
         Skip to content
       </a>
       <Navbar />
@@ -38,39 +55,19 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/:id" element={<ProjectDetails />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<ProjectDetails />} />
         </Routes>
       </div>
-
-      <footer className="mt-24 border-t border-hairline px-5 py-12 sm:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="space-y-2">
-            <p className="font-display text-2xl font-semibold tracking-tight">{portfolioData.footer.title}</p>
-            <p className="hud">{portfolioData.footer.subtitle}</p>
-          </div>
-          <div className="flex flex-col gap-4 md:items-end">
-            <div className="flex flex-wrap gap-2">
-              {portfolioData.socials.map((s) => (
-                <a
-                  key={s.platform}
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="chip transition-colors hover:text-ink"
-                >
-                  {s.platform}
-                </a>
-              ))}
-            </div>
-            <p className="hud">&copy; {new Date().getFullYear()} {portfolioData.footer.title}</p>
-            <p className="hud text-[12px]">
-              3D model: &ldquo;Boom Box&rdquo; by Microsoft, CC0, via{' '}
-              <a href="https://github.com/KhronosGroup/glTF-Sample-Assets" className="underline underline-offset-2" target="_blank" rel="noopener noreferrer">Khronos glTF Sample Assets</a>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
+
+const App = () => (
+  <PrefsProvider>
+    <Shell />
+  </PrefsProvider>
+);
 
 export default App;
