@@ -999,8 +999,8 @@
       id: 2,
       role: "Student Ambassador",
       company: "Canterbury Christ Church University",
-      year: "Current",
-      description: "Representing the university through student-facing engagement, events, and community support."
+      year: "Previous",
+      description: "Represented the university through student-facing engagement, events, and community support."
     },
     {
       id: 3,
