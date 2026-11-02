@@ -4,7 +4,7 @@
     paragraphs: [
       "This portfolio presents a structured exploration of esports systems across organisational, operational, and performance levels.",
       "Rather than treating projects as isolated outputs, the work reflects an iterative process of analysis, refinement, and application within esports environments.",
-      "These case studies collectively inform an ongoing research project focused on esports education and career pathways."
+      "These case studies collectively informed my MA Games Design dissertation on esports education and career pathways."
     ]
   },
   hero: {
@@ -990,10 +990,10 @@
   experience: [
     {
       id: 1,
-      role: "MA Games Design Student",
-      company: "Canterbury Christ Church University",
-      year: "Current",
-      description: "Currently pursuing an MA in Games Design at Canterbury Christ Church University."
+      role: "MA Games Design (Merit)",
+      company: "Canterbury Christ Church University, United Kingdom",
+      year: "2025–2026",
+      description: "Master of Arts, awarded 2 November 2026. UK Level 7 (180 credits), with a final dissertation on esports education and employability."
     },
     {
       id: 2,
