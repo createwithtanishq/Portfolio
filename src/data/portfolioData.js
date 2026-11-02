@@ -31,10 +31,10 @@
             <h3 class="project-heading">Development Process and Design Rationale</h3>
             <p>This project developed from my experience within esports environments, particularly in coaching and tournament operations. A recurring pattern I noticed was that teams and organisations could perform well in the short term but still struggle to sustain themselves over time. That raised a broader question about whether growth in esports actually reflects long-term stability.</p>
             <p>The project did not begin with a fixed model. Initially, I focused on sponsorship dependence as the main issue. This seemed reasonable because sponsorship remains one of the most visible and commonly discussed revenue streams in esports. However, after reviewing academic literature and comparing documented organisational cases, this explanation proved too narrow. This created a contradiction, as financial strength did not consistently translate into organisational stability, suggesting that the issue extended beyond revenue structure alone. Research shows that even in more structured ecosystems, esports organisations can struggle financially despite visibility and sponsorship involvement (de Moor et al., 2023).</p>
-            <p>At that point, the focus shifted. Instead of treating instability as a financial issue alone, it became clear that the problem was structural. Multiple factors interact, including publisher control, business model design, governance, community systems, and talent development. This aligns with NystrÃ¶m et al. (2022), who describe esports as an industry with incomplete structures and immature business logic.</p>
+            <p>At that point, the focus shifted. Instead of treating instability as a financial issue alone, it became clear that the problem was structural. Multiple factors interact, including publisher control, business model design, governance, community systems, and talent development. This aligns with Nyström et al. (2022), who describe esports as an industry with incomplete structures and immature business logic.</p>
             <p>Early versions of the model included three to four elements, mainly revenue, competition, and branding. This approach was limited. It captured visible pressures but did not explain why instability continued even when organisations improved in one or two of those areas. As a result, the model was expanded.</p>
             <p>Comparisons with traditional sports were useful at this stage. Football organisations operate within more stable governance structures, regulated competition systems, and long-term development pathways (de Moor et al., 2023). While esports cannot replicate these systems directly, the comparison highlights the absence of similar structural support, particularly in relation to governance and long-term planning capacity.</p>
-            <p>The Indian esports context was included deliberately. Structural weaknesses are more visible in emerging ecosystems due to infrastructure gaps, regulatory uncertainty, and resource constraints. Research on esports entrepreneurs in emerging markets highlights these conditions, particularly the need for adaptability and resilience under constrained environments (Allal-ChÃ©rif et al., 2024).</p>
+            <p>The Indian esports context was included deliberately. Structural weaknesses are more visible in emerging ecosystems due to infrastructure gaps, regulatory uncertainty, and resource constraints. Research on esports entrepreneurs in emerging markets highlights these conditions, particularly the need for adaptability and resilience under constrained environments (Allal-Chérif et al., 2024).</p>
             <p>One limitation throughout the process was the lack of transparent financial data. Most esports organisations do not disclose detailed financial information. As a result, this study relies on pattern recognition, comparative analysis, and existing literature rather than quantitative modelling. The final six-pillar model reflects this process. It is not presented as a fixed solution, but as a structured way to understand recurring pressures affecting sustainability.</p>
           </section>
 
@@ -48,16 +48,16 @@
           <section class="space-y-5">
             <h3 class="project-heading">1. Introduction</h3>
             <p>Esports continues to expand globally. IMARC Group (2024) estimates global esports revenue at US$2.08 billion in 2024, with projections reaching US$10.06 billion by 2033. India reflects similar growth, with the national esports market valued at approximately US$200.7 million and expected to grow steadily.</p>
-            <p>Despite this growth, organisational instability remains a consistent issue. Research suggests that esports operates within an incomplete industry structure with uncertain monetisation and limited institutional development (NystrÃ¶m et al., 2022). Publisher dominance fundamentally alters the structure of competition by centralising control over intellectual property, competition formats, and league systems (NovÃ¡k et al., 2025), limiting organisational autonomy and constraining the ability to develop independent long-term strategies.</p>
+            <p>Despite this growth, organisational instability remains a consistent issue. Research suggests that esports operates within an incomplete industry structure with uncertain monetisation and limited institutional development (Nyström et al., 2022). Publisher dominance fundamentally alters the structure of competition by centralising control over intellectual property, competition formats, and league systems (Novák et al., 2025), limiting organisational autonomy and constraining the ability to develop independent long-term strategies.</p>
             <p>In India, these challenges are more pronounced. Although policy developments have begun to recognise esports separately from other forms of online gaming, infrastructure and regulatory gaps remain (The Indian Express, 2025). At the same time, commercial interest and audience engagement continue to increase (BusinessWorld, 2025). This creates a clear tension: growth is visible, but stability is not guaranteed. This study addresses that gap by focusing on organisational sustainability rather than industry expansion.</p>
             <p>In this study, sustainability refers to the ability of esports organisations to maintain operational, financial, and competitive continuity over time within a changing ecosystem.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">2. Problem Statement</h3>
-            <p>Esports organisations face structural pressures that limit long-term survival. NystrÃ¶m et al. (2022) describe business models shaped by unstable revenue, short sponsorship cycles, and limited institutional support, restricting long-term planning and reducing the ability to build sustainable operating models.</p>
-            <p>At the organisational level, de Moor et al. (2023) show that many esports clubs operate with fragile financial structures, often lacking consistent profitability, suggesting instability is not limited to emerging markets. Publisher control introduces additional constraints. NovÃ¡k et al. (2025) highlight how publishers retain authority over competitions and formats, reducing organisational independence. Scholz and Stein (2019) describe esports as a business model network where organisations depend on external actors for core operations.</p>
-            <p>In India, these issues are further intensified by ecosystem conditions. Infrastructure limitations, regulatory uncertainty, and dependence on a limited number of titles increase strategic risk (The Indian Express, 2025). Research on emerging markets also highlights how organisations must rely on adaptive strategies under such constraints (Allal-ChÃ©rif et al., 2024). The problem is therefore structural, rooted in platform dependence, misaligned incentives, and immature business model design, rather than isolated operational inefficiencies.</p>
+            <p>Esports organisations face structural pressures that limit long-term survival. Nyström et al. (2022) describe business models shaped by unstable revenue, short sponsorship cycles, and limited institutional support, restricting long-term planning and reducing the ability to build sustainable operating models.</p>
+            <p>At the organisational level, de Moor et al. (2023) show that many esports clubs operate with fragile financial structures, often lacking consistent profitability, suggesting instability is not limited to emerging markets. Publisher control introduces additional constraints. Novák et al. (2025) highlight how publishers retain authority over competitions and formats, reducing organisational independence. Scholz and Stein (2019) describe esports as a business model network where organisations depend on external actors for core operations.</p>
+            <p>In India, these issues are further intensified by ecosystem conditions. Infrastructure limitations, regulatory uncertainty, and dependence on a limited number of titles increase strategic risk (The Indian Express, 2025). Research on emerging markets also highlights how organisations must rely on adaptive strategies under such constraints (Allal-Chérif et al., 2024). The problem is therefore structural, rooted in platform dependence, misaligned incentives, and immature business model design, rather than isolated operational inefficiencies.</p>
           </section>
 
           <section class="space-y-5">
@@ -65,19 +65,19 @@
             <p>This study uses qualitative research methods suited to an emerging field. The approach includes document analysis, comparative case reading, and cross-sector reference to traditional sports structures. Given the limited availability of reliable financial data and the fragmented nature of esports ecosystems, a qualitative and conceptual approach is more appropriate than quantitative modelling for identifying recurring structural patterns.</p>
             <p>The analysis draws on key sources:</p>
             <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
-              <li>Esports sustainability research (NystrÃ¶m et al., 2022)</li>
+              <li>Esports sustainability research (Nyström et al., 2022)</li>
               <li>Business model network analysis (Scholz and Stein, 2019)</li>
               <li>Club economics and regulation (de Moor et al., 2023)</li>
-              <li>Emerging market entrepreneurship (Allal-ChÃ©rif et al., 2024)</li>
+              <li>Emerging market entrepreneurship (Allal-Chérif et al., 2024)</li>
               <li>Regulatory context in India (The Indian Express, 2025)</li>
             </ul>
-            <p>These sources are used comparatively rather than as direct equivalents. My experience in esports environments also informed interpretation â€” observing teams in competitive settings provided practical insight into how organisational weaknesses appear under pressure. The main limitation is reliance on secondary data, which may mean some organisational dynamics are underrepresented or simplified.</p>
+            <p>These sources are used comparatively rather than as direct equivalents. My experience in esports environments also informed interpretation — observing teams in competitive settings provided practical insight into how organisational weaknesses appear under pressure. The main limitation is reliance on secondary data, which may mean some organisational dynamics are underrepresented or simplified.</p>
           </section>
 
           <section class="space-y-5">
             <h3 class="project-heading">4. Findings</h3>
             <p>Several patterns emerge consistently across research and observed cases.</p>
-            <p>Sponsorship-heavy models lack revenue predictability, which limits long-term investment planning and creates short strategic horizons (NystrÃ¶m et al., 2022; de Moor et al., 2023). Publisher dominance restricts planning by placing control over key competitive structures outside organisational influence (NovÃ¡k et al., 2025). Community identity plays a stabilising role by strengthening long-term audience engagement (Kim, 2025). Emerging markets require adaptive strategies due to resource constraints and infrastructure gaps (Allal-ChÃ©rif et al., 2024). Governance functions as a coordinating mechanism that aligns decision-making, resource allocation, and long-term strategy â€” weak governance reduces organisational efficiency and limits scalability.</p>
+            <p>Sponsorship-heavy models lack revenue predictability, which limits long-term investment planning and creates short strategic horizons (Nyström et al., 2022; de Moor et al., 2023). Publisher dominance restricts planning by placing control over key competitive structures outside organisational influence (Novák et al., 2025). Community identity plays a stabilising role by strengthening long-term audience engagement (Kim, 2025). Emerging markets require adaptive strategies due to resource constraints and infrastructure gaps (Allal-Chérif et al., 2024). Governance functions as a coordinating mechanism that aligns decision-making, resource allocation, and long-term strategy — weak governance reduces organisational efficiency and limits scalability.</p>
             <p>These structural weaknesses do not operate independently, but reinforce each other, increasing overall organisational vulnerability. The table below summarises the key structural pressures identified.</p>
 
             <div class="overflow-x-auto my-8">
@@ -94,13 +94,13 @@
                   <tr class="bg-white hover:bg-[#F0E040] transition-colors duration-150">
                     <td class="border-2 border-[#0D0D0D] px-5 py-4 font-bold">Revenue Concentration</td>
                     <td class="border-2 border-[#0D0D0D] px-5 py-4">Dependence on limited income sources</td>
-                    <td class="border-2 border-[#0D0D0D] px-5 py-4 font-mono text-xs">NystrÃ¶m et al. (2022)</td>
+                    <td class="border-2 border-[#0D0D0D] px-5 py-4 font-mono text-xs">Nyström et al. (2022)</td>
                     <td class="border-2 border-[#0D0D0D] px-5 py-4">Financial instability</td>
                   </tr>
                   <tr class="bg-[#F4EFE6] hover:bg-[#F0E040] transition-colors duration-150">
                     <td class="border-2 border-[#0D0D0D] px-5 py-4 font-bold">Publisher Control</td>
                     <td class="border-2 border-[#0D0D0D] px-5 py-4">External ownership of ecosystem</td>
-                    <td class="border-2 border-[#0D0D0D] px-5 py-4 font-mono text-xs">NovÃ¡k et al. (2025)</td>
+                    <td class="border-2 border-[#0D0D0D] px-5 py-4 font-mono text-xs">Novák et al. (2025)</td>
                     <td class="border-2 border-[#0D0D0D] px-5 py-4">Limited autonomy</td>
                   </tr>
                   <tr class="bg-white hover:bg-[#F0E040] transition-colors duration-150">
@@ -118,7 +118,7 @@
                   <tr class="bg-white hover:bg-[#F0E040] transition-colors duration-150">
                     <td class="border-2 border-[#0D0D0D] px-5 py-4 font-bold">Infrastructure Gaps</td>
                     <td class="border-2 border-[#0D0D0D] px-5 py-4">Limited ecosystem support</td>
-                    <td class="border-2 border-[#0D0D0D] px-5 py-4 font-mono text-xs">Allal-ChÃ©rif et al. (2024)</td>
+                    <td class="border-2 border-[#0D0D0D] px-5 py-4 font-mono text-xs">Allal-Chérif et al. (2024)</td>
                     <td class="border-2 border-[#0D0D0D] px-5 py-4">Slower growth</td>
                   </tr>
                   <tr class="bg-[#F4EFE6] hover:bg-[#F0E040] transition-colors duration-150">
@@ -136,12 +136,12 @@
             <h3 class="project-heading">5. Conceptual Model</h3>
             <p>The model consists of six pillars, each addressing a specific structural pressure:</p>
             <ul class="list-disc list-outside pl-6 space-y-2 text-[#0D0D0D]/75">
-              <li><strong>Revenue Diversification</strong> â€” reduces exposure to single-source volatility.</li>
-              <li><strong>Competitive Portfolio</strong> â€” reduces dependency on a single title, limiting publisher risk.</li>
-              <li><strong>Brand and Content Systems</strong> â€” maintains engagement beyond competitive performance.</li>
-              <li><strong>Community Identity</strong> â€” builds long-term audience loyalty.</li>
-              <li><strong>Governance and Internal Control</strong> â€” improves decision-making and strategic alignment.</li>
-              <li><strong>Talent Development and Wellbeing</strong> â€” supports long-term performance and retention.</li>
+              <li><strong>Revenue Diversification</strong> — reduces exposure to single-source volatility.</li>
+              <li><strong>Competitive Portfolio</strong> — reduces dependency on a single title, limiting publisher risk.</li>
+              <li><strong>Brand and Content Systems</strong> — maintains engagement beyond competitive performance.</li>
+              <li><strong>Community Identity</strong> — builds long-term audience loyalty.</li>
+              <li><strong>Governance and Internal Control</strong> — improves decision-making and strategic alignment.</li>
+              <li><strong>Talent Development and Wellbeing</strong> — supports long-term performance and retention.</li>
             </ul>
             <p>This suggests organisations should prioritise structural stability before expansion, particularly in emerging ecosystems.</p>
 
@@ -222,12 +222,12 @@
           <section class="space-y-5 pt-10 mt-12 border-t-2 border-[#0D0D0D]">
             <h3 class="font-mono font-bold text-sm uppercase tracking-widest text-[#0D0D0D]/50 mb-6">Bibliography</h3>
             <ul class="text-sm space-y-4 leading-relaxed text-[#0D0D0D]/70">
-              <li>Allal-ChÃ©rif, O., Guaita-MartÃ­nez, J.M. and Montesinos Sansaloni, E. (2024) 'Sustainable esports entrepreneurs in emerging countries', <em>Journal of Business Research</em>, 171.</li>
+              <li>Allal-Chérif, O., Guaita-Martínez, J.M. and Montesinos Sansaloni, E. (2024) 'Sustainable esports entrepreneurs in emerging countries', <em>Journal of Business Research</em>, 171.</li>
               <li>de Moor, W. et al. (2023) 'The current situation of the French professional esports industry', <em>European Sport Management Quarterly</em>, 23(6).</li>
-              <li>IMARC Group (2024) <em>Esports Market Report 2024â€“2033</em>.</li>
+              <li>IMARC Group (2024) <em>Esports Market Report 2024–2033</em>.</li>
               <li>Kim, S.J. (2025) 'Sustainability in esports teams', <em>Team Performance Management</em>.</li>
-              <li>NovÃ¡k, P. et al. (2025) 'The legal and economic aspects of esports', <em>Frontiers in Sports and Active Living</em>.</li>
-              <li>NystrÃ¶m, A.-G. et al. (2022) 'Current issues of sustainability in esports', <em>International Journal of Esports</em>.</li>
+              <li>Novák, P. et al. (2025) 'The legal and economic aspects of esports', <em>Frontiers in Sports and Active Living</em>.</li>
+              <li>Nyström, A.-G. et al. (2022) 'Current issues of sustainability in esports', <em>International Journal of Esports</em>.</li>
               <li>Scholz, T.M. and Stein, V. (2019) 'The business model network of esports', <em>DiGRA Proceedings</em>.</li>
               <li>The Indian Express (2025) 'Online Gaming Act: esports challenges'.</li>
               <li>BusinessWorld (2025) 'Growth of esports in India'.</li>
@@ -271,11 +271,11 @@
               <p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-4">Player Capacity</p>
               <ul class="space-y-3 text-base">
                 <li class="flex items-center gap-4 border-b border-[#0D0D0D]/10 pb-3"><span class="font-mono font-bold text-xs text-[#0D0D0D]/40 w-32 shrink-0">Minimum</span> 8 players</li>
-                <li class="flex items-center gap-4 border-b border-[#0D0D0D]/10 pb-3"><span class="font-mono font-bold text-xs text-[#0D0D0D]/40 w-32 shrink-0">Optimal</span> 12â€“16 players</li>
-                <li class="flex items-center gap-4"><span class="font-mono font-bold text-xs text-[#0D0D0D]/40 w-32 shrink-0">Upper Limit</span> ~16â€“20 players</li>
+                <li class="flex items-center gap-4 border-b border-[#0D0D0D]/10 pb-3"><span class="font-mono font-bold text-xs text-[#0D0D0D]/40 w-32 shrink-0">Optimal</span> 12–16 players</li>
+                <li class="flex items-center gap-4"><span class="font-mono font-bold text-xs text-[#0D0D0D]/40 w-32 shrink-0">Upper Limit</span> ~16–20 players</li>
               </ul>
             </div>
-            <p>The 12â€“16 player range is optimal as it allows for a complete double-elimination bracket within a manageable timeframe while fitting comfortably within a standard classroom venue, ensuring both operational efficiency and spectator engagement. If registration exceeds this capacity, the tournament structure remains unchanged and can be transferred to a larger venue without requiring redesign.</p>
+            <p>The 12–16 player range is optimal as it allows for a complete double-elimination bracket within a manageable timeframe while fitting comfortably within a standard classroom venue, ensuring both operational efficiency and spectator engagement. If registration exceeds this capacity, the tournament structure remains unchanged and can be transferred to a larger venue without requiring redesign.</p>
           </section>
 
           <section class="space-y-5">
@@ -302,7 +302,7 @@
 
           <section class="space-y-5">
             <h3 class="project-heading">Organiser Control and Player Responsibility</h3>
-            <p>All operational aspects of the tournament are managed centrally by the organiser. Players are required to register in advance, arrive on time, and participate in matches when called. Players do not manage bracket updates, scheduling, or rule enforcement â€” these responsibilities are handled entirely by the organiser. This approach reduces administrative burden, minimises errors, and ensures consistency in tournament flow.</p>
+            <p>All operational aspects of the tournament are managed centrally by the organiser. Players are required to register in advance, arrive on time, and participate in matches when called. Players do not manage bracket updates, scheduling, or rule enforcement — these responsibilities are handled entirely by the organiser. This approach reduces administrative burden, minimises errors, and ensures consistency in tournament flow.</p>
           </section>
 
           <section class="space-y-5">
@@ -358,14 +358,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="border-2 border-[#0D0D0D] bg-white p-5">
                 <p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-3">Match Duration Estimates</p>
-                <p class="text-sm text-[#0D0D0D]/75">Bo3: approximately 6â€“10 minutes</p>
-                <p class="text-sm text-[#0D0D0D]/75">Bo5: approximately 12â€“18 minutes</p>
+                <p class="text-sm text-[#0D0D0D]/75">Bo3: approximately 6–10 minutes</p>
+                <p class="text-sm text-[#0D0D0D]/75">Bo5: approximately 12–18 minutes</p>
               </div>
               <div class="border-2 border-[#0D0D0D] bg-white p-5">
                 <p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-3">Estimated Total Runtime</p>
-                <p class="text-sm text-[#0D0D0D]/75">8â€“12 players: 1.5â€“2 hours</p>
-                <p class="text-sm text-[#0D0D0D]/75">12â€“16 players: ~2.5 hours</p>
-                <p class="text-sm text-[#0D0D0D]/75">16â€“24 players: 3â€“3.5 hours</p>
+                <p class="text-sm text-[#0D0D0D]/75">8–12 players: 1.5–2 hours</p>
+                <p class="text-sm text-[#0D0D0D]/75">12–16 players: ~2.5 hours</p>
+                <p class="text-sm text-[#0D0D0D]/75">16–24 players: 3–3.5 hours</p>
               </div>
             </div>
           </section>
@@ -419,14 +419,14 @@
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">13. Reflection</h3>
+            <h3 class="project-heading">Reflection</h3>
             <p>A central realisation in this project was that tournament success is often attributed to format, when in practice it depends more heavily on execution. Early attempts to replicate standard tournament structures revealed how quickly systems break down under constraint. What appears efficient at scale does not translate directly to smaller environments.</p>
             <p>The shift toward system design allowed these issues to be addressed more directly. By focusing on control, flow, and predictability, the tournament becomes easier to manage without compromising competitive integrity.</p>
             <p>Given that this project was developed within a limited timeframe during the first trimester, the focus remained on structural clarity rather than empirical validation. This supports the broader argument that execution stability in esports is determined by system design rather than format replication.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">14. Limitations</h3>
+            <h3 class="project-heading">Limitations</h3>
             <p>This project has several limitations:</p>
             <ul class="space-y-2 text-base text-[#0D0D0D]/70 list-disc list-outside pl-6">
               <li>no live event testing</li>
@@ -439,19 +439,19 @@
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">15. Positioning Within a Systems Approach to Esports</h3>
+            <h3 class="project-heading">Positioning Within a Systems Approach to Esports</h3>
             <p>This project forms part of a broader systems-based approach to esports, where performance, operations, and organisational sustainability are treated as interconnected components.</p>
             <p>At the organisational level, sustainability depends on structural design. At the operational level, tournaments require scalable and repeatable systems. At the performance level, mental conditions must be structured rather than left to individuals.</p>
             <p>Together, these layers suggest that consistency in esports is achieved through systems rather than isolated success.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">16. Practical Takeaway</h3>
+            <h3 class="project-heading">Practical Takeaway</h3>
             <p>This model is designed for low-cost, repeatable execution across collegiate and grassroots esports environments.</p>
           </section>
 
           <section class="space-y-5">
-            <h3 class="project-heading">17. Summary</h3>
+            <h3 class="project-heading">Summary</h3>
             <p>This project presents a scalable tournament system tailored for university esports environments. Its effectiveness lies in structured design, repeatability, low operational cost, and adaptability across venues.</p>
             <p>Rather than focusing on individual events, the model provides a framework for consistent tournament delivery under constrained conditions. This suggests that traditional tournament design approaches are often misaligned with environments where resources, coordination, and control are limited.</p>
           </section>
@@ -767,112 +767,6 @@
       `
     },
     {
-      id: 5,
-      displayOrder: 5,
-      title: "Shared Order Ledger",
-      description: "A real-time progressive web app that kept a three-person operation accurate and accountable: every order, payment and delivery in one shared record.",
-      impact: "Ran live for its whole life with a confirmable trail on every order.",
-      category: "Product System",
-      devContext: [
-        "I built this app solo: product, design, engineering, backend and operations. It ran live between three real people, not as a demo.",
-        "Decisions were made against real use. Every change shipped to phones already relying on it, so correctness and clear states mattered more than polish."
-      ],
-      devApproach: [
-        "The build stayed deliberately small. Vanilla JavaScript, hand-written CSS, one Supabase project, deployed as static files with no bundler.",
-        "Trust was the core design problem. Each order carries a confirmable trail and screenshot proof, so no one has to argue over who paid or which items arrived."
-      ],
-      positioning: {
-        label: "Positioning Within the Work",
-        paragraphs: [
-          "This app sits alongside the esports systems work as the hands-on engineering layer: a small product taken from idea to live operation and back to a clean retirement.",
-          "It applies the same systems thinking to software. Clear states, honest numbers, and a design that holds up under real, shared, day-to-day use."
-        ]
-      },
-      fullContent: `
-        <div class="space-y-14">
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Overview</h3>
-            <p class="text-sm sm:text-base leading-relaxed text-[#0D0D0D]/75">This is a real-time progressive web app that tracked a small operation between three people: two buyers and one seller, working across shared accounts. I built, designed and ran it solo, with no framework and no build step.</p>
-            <p class="text-sm sm:text-base leading-relaxed text-[#0D0D0D]/75">Payments and deliveries moved in several directions at once, tracked over chat and screenshots. The ledger replaced that with one shared source of truth: every order has a confirmable lifecycle, balances stay current in several currencies, and figures are calculated rather than guessed.</p>
-          </section>
-
-          <section class="space-y-5">
-            <p class="font-mono font-bold text-xs uppercase tracking-widest text-[#0D0D0D]/50 mb-4">By the numbers</p>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">22</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">orders tracked</span></div>
-              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">3</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">people, 2 roles</span></div>
-              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">3</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">people, 2 roles</span></div>
-              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">0</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">frameworks used</span></div>
-              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">12</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">days live</span></div>
-              <div class="border-2 border-[#0D0D0D] px-5 py-4 bg-[#F0E040]"><span class="block font-heading font-black text-3xl leading-none">0</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">frameworks used</span></div>
-            </div>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Stack</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Vanilla JavaScript</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Hand-written CSS</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">PWA</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Supabase Postgres</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Row Level Security</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Edge Functions</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Realtime</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Vercel</span>
-              <span class="border-2 border-[#0D0D0D] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Messaging alerts</span>
-            </div>
-            <p class="text-sm leading-relaxed text-[#0D0D0D]/70">No bundler, no framework. The client is static files served as-is; everything behind it is one Supabase project.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Architecture</h3>
-            <div class="space-y-3">
-              <div class="border-2 border-[#0D0D0D] bg-[#F0E040] p-5"><p class="font-heading font-bold text-lg mb-1">Installed PWA, one per person</p><p class="text-sm text-[#0D0D0D]/75">HTML shell plus four CSS and nine JS modules. Each person opens a one-time personal link and the device remembers them.</p></div>
-              <p class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/45 text-center">every request signed with a per-person key header</p>
-              <div class="border-2 border-[#0D0D0D] bg-white p-5"><p class="font-heading font-bold text-lg mb-1">Supabase Postgres with RLS</p><p class="text-sm text-[#0D0D0D]/75">Six tables, policies on all of them. Identity is resolved server-side from the key. No passwords, no public read.</p></div>
-              <p class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/45 text-center">on every write</p>
-              <div class="border-2 border-[#0D0D0D] bg-white p-5"><p class="font-heading font-bold text-lg mb-1">Edge Function and Realtime</p><p class="text-sm text-[#0D0D0D]/75">Handles screenshot upload and view, and fires messaging alerts. A database trigger broadcasts a changed ping so every open app refreshes instantly.</p></div>
-            </div>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">What it does</h3>
-            <div class="grid md:grid-cols-2 gap-3">
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Order lifecycle</p><p class="text-sm text-[#0D0D0D]/75">Buy, sell and settle-up flows with screenshot proof and not-paid to paid to confirmed states, plus dispute handling.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Needs-you queue</p><p class="text-sm text-[#0D0D0D]/75">Home shows only the next action this specific person owes, derived per order from role and status.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Live balance</p><p class="text-sm text-[#0D0D0D]/75">Who owes whom, always current, shown in several currencies with live conversion.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Insights</p><p class="text-sm text-[#0D0D0D]/75">Summary figures and an eight-week cash-flow view.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Inventory</p><p class="text-sm text-[#0D0D0D]/75">Per-account stock, with a guard that blocks selling more than is actually on hand.</p></div>
-              <div class="border-2 border-[#0D0D0D] bg-white hover:bg-[#F0E040] transition-colors duration-150 p-5"><p class="font-heading font-bold mb-1">Search and export</p><p class="text-sm text-[#0D0D0D]/75">Filter orders by amount, ID, note or status, and export the whole ledger to CSV.</p></div>
-            </div>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Engineering decisions</h3>
-            <ul class="list-disc list-outside pl-6 space-y-3 text-[#0D0D0D]/75">
-              <li><b>Real-time without weakening security.</b> Row-level realtime cannot see the custom auth header, so a Postgres trigger broadcasts a contentless changed ping on a public channel and each client re-fetches through its own secured connection. Instant updates, nothing sensitive on the wire.</li>
-              <li><b>Accurate reporting.</b> Early figures subtracted every purchase, so a big buy looked like a loss. Reports now match what was actually sold against what it cost, and unsold stock is shown separately.</li>
-              <li><b>Cannot sell what you do not have.</b> The sell form computes stock on hand per account and refuses to oversell, closing the most obvious way to corrupt the books.</li>
-              <li><b>Never-stale installed app.</b> A network-only service worker means every deploy appears on next open with no reinstall, the right trade for a shared live ledger.</li>
-              <li><b>Deploys verified by hash.</b> The site ships to Vercel over the API, and after each deploy the live file hashes are checked against local ones, so the running code is provably what was written.</li>
-            </ul>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">How the money math works</h3>
-            <p class="text-sm leading-relaxed text-[#0D0D0D]/75">Every order is reduced to what actually happened, not what was promised. A payment counts only once it is marked, and items only once delivery is confirmed. One function rolls all live orders into the balance with the seller, what is still due, and cash in and out. Reporting pairs each sale against a running average cost, and inventory is simply confirmed-received minus sold, per account. The same rules drive the app and the alerts, so the two never disagree.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Outcome</h3>
-            <p class="text-sm leading-relaxed text-[#0D0D0D]/75">The app ran the operation cleanly for its whole life, with no arguments about who paid. When the operation wound down, the app was retired to a simple placeholder, with the data archived and the project kept for whatever gets built on it next.</p>
-          </section>
-
-        </div>
-      `
-    },
-    {
       id: 6,
       displayOrder: 6,
       title: "FLANT — Co-op Sci-Fi Survival Concept",
@@ -966,48 +860,12 @@
       `
     },
     {
-      id: 8,
-      displayOrder: 8,
-      title: "Esports × Music Festival",
-      description: "A cross-disciplinary event concept blending competitive esports and live music, where I led the esports side: format, production and team coordination.",
-      impact: "Designing a hybrid event that runs competition and performance as one production, built through cross-team collaboration.",
-      category: "Collaborative System",
-      fullContent: `
-        <div class="space-y-14">
-          <section class="space-y-5">
-            <h3 class="project-heading">Overview</h3>
-            <p>A cross-disciplinary event concept integrating esports and music, developed as a collaborative MA Games Design project. I acted as the esports lead, responsible for the competitive side of the event and how it fits within a live-music production.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">My Role</h3>
-            <p>As esports lead I owned the competitive format and its production planning, working with the wider team on how the esports and music elements share a stage, a schedule and an audience.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Event Design</h3>
-            <p>The core design problem was interleaving two very different rhythms, the structured timing of a tournament and the flow of a music event, into a single run of show that keeps an audience engaged across both.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">Collaboration</h3>
-            <p>The work was built through cross-disciplinary collaboration: a shared pitch, planning and research across roles, with the esports function coordinated against the rest of the production.</p>
-          </section>
-
-          <section class="space-y-5">
-            <h3 class="project-heading">What It Demonstrates</h3>
-            <p>Cross-functional event leadership: taking responsibility for one specialist domain inside a larger production and making it work with everything around it.</p>
-          </section>
-        </div>
-      `
-    },
-    {
       id: 9,
       displayOrder: 9,
       featured: true,
       title: "Hackabury 2026",
       description: "My second-trimester Collaborative Practice project: a 24-hour cross-disciplinary creative game jam and hackathon at CCCU, where I served as vice-president on operations and planning.",
-      impact: "Reported 140+ registrations and 107 attendees across five disciplines, run as one coordinated event.",
+      impact: "CCCU reports 107 students across 29 teams and 32 projects, run as one coordinated event.",
       category: "Event Operations",
       fullContent: `
         <div class="space-y-14">
@@ -1019,11 +877,11 @@
           <section class="space-y-5">
             <h3 class="project-heading">Scale</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">140+</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">registrations (reported)</span></div>
-              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">107</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">attendees (reported)</span></div>
-              <div class="border-2 border-[#0D0D0D] px-5 py-4 bg-[#F0E040]"><span class="block font-heading font-black text-3xl leading-none">5</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">disciplines</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">107</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">students (CCCU)</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">32</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">projects (CCCU)</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4 bg-[#F0E040]"><span class="block font-heading font-black text-3xl leading-none">22</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">industry judges (CCCU)</span></div>
             </div>
-            <p class="text-sm leading-relaxed text-[#0D0D0D]/70">The event brought together Games Design, Computing, Media, Music and PR.</p>
+            <p class="text-sm leading-relaxed text-[#0D0D0D]/70">Students from computing, graphic design and games design, working on live briefs from industry sponsors.</p>
           </section>
 
           <section class="space-y-5">
@@ -1151,15 +1009,6 @@
       year: "Current",
       roleUrl: "https://amberstudent.com/flex/tanishq-aryan-1768205165",
       description: "Supporting student community engagement and ambassador initiatives through Amber."
-    },
-    {
-      id: 4,
-      role: "Pilgrim Skincare Brand Ambassador",
-      company: "Pilgrim",
-      year: "Current",
-      roleUrl: "https://discoverpilgrim.com/discount/TAN2025?ref=tanishqaryan10847",
-      description: "Worked as a brand ambassador supporting Pilgrim skincare campaigns and promotional activity. Use code TAN2025.",
-      descriptionHtml: "Worked as a brand ambassador supporting Pilgrim skincare campaigns and promotional activity. Use code <a href=\"https://discoverpilgrim.com/discount/TAN2025?ref=tanishqaryan10847\" target=\"_blank\" rel=\"noopener noreferrer\">TAN2025</a>."
     },
     {
       id: 5,
