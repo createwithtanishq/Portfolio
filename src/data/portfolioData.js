@@ -7,19 +7,10 @@
       "These case studies collectively informed my MA Games Design dissertation on esports education and career pathways."
     ]
   },
-  hero: {
-    eyebrow: "Portfolio - Systems, Esports, Performance",
-    title: "Tanishq Aryan",
-    subtitle: "I develop structured approaches to esports performance, tournament systems, and competitive environments",
-    supporting: "From event operations to performance frameworks, this work focuses on systems that remain effective under real competitive conditions",
-    focus: "Focus: Esports Systems and Event Operations",
-    microStrip: "7+ Years Experience | Esports Systems | Tournament Design | Performance Frameworks",
-    cta: "Contact / Collaborate"
-  },
   work: [
     {
       id: 1,
-      displayOrder: 3,
+      displayOrder: 4,
       title: "Conceptual Model for Sustainable Esports Organisations with Reference to India",
       description: "Research-driven framework analysing structural risks in esports organisations.",
       impact: "Identifies structural risks affecting long-term esports organisation stability.",
@@ -471,7 +462,7 @@
     },
     {
       id: 3,
-      displayOrder: 4,
+      displayOrder: 6,
       title: "Mental Performance Operating Standard for Esports",
       description: "Operational framework defining mental performance as a system-level requirement in esports environments.",
       impact: "Applies system thinking to improve performance consistency and reduce burnout risk.",
@@ -705,7 +696,7 @@
     },
     {
       id: 4,
-      displayOrder: 1,
+      displayOrder: 3,
       title: "Esports Education and Employment Pathways",
       description: "My MA Games Design final dissertation (12,000 words): how UK undergraduate esports education constructs employability in relation to the real structure of the esports job market.",
       impact: "A reflexive thematic analysis across a census of 22 undergraduate programmes, surfacing how education frames careers versus how the industry is actually structured.",
@@ -768,7 +759,7 @@
     },
     {
       id: 6,
-      displayOrder: 6,
+      displayOrder: 7,
       title: "FLANT — Co-op Sci-Fi Survival Concept",
       description: "A third-person cooperative sci-fi survival game set on the bioluminescent world of Aura-7, developed as a collaborative MA Games Design project.",
       impact: "A specialist-role co-op loop built around exploration, research and base-building inside an alien ecosystem that adapts to the player.",
@@ -815,7 +806,7 @@
     },
     {
       id: 7,
-      displayOrder: 7,
+      displayOrder: 5,
       title: "Emerging Indian Esports Ecosystems",
       description: "An evidence-led comparative study of Indian esports organisations against international peers, paired with an original operating model for a new organisation.",
       impact: "Turns comparison into design: a proposed org structure on four principles, formal coaching and analytics, wellbeing, coordinated competition and content, and diversified roles and revenue.",
@@ -861,7 +852,7 @@
     },
     {
       id: 9,
-      displayOrder: 9,
+      displayOrder: 1,
       featured: true,
       title: "Hackabury 2026",
       description: "My second-trimester Collaborative Practice project: a 24-hour cross-disciplinary creative game jam and hackathon at CCCU, where I served as vice-president on operations and planning.",
@@ -986,45 +977,6 @@
     "Designed structured tournament systems for controlled competitive play",
     "Developed research-informed models addressing sustainability and performance",
     "Refined broad esports concepts into system-level analytical frameworks"
-  ],
-  experience: [
-    {
-      id: 1,
-      role: "MA Games Design (Merit)",
-      company: "Canterbury Christ Church University, United Kingdom",
-      year: "2025–2026",
-      description: "Master of Arts, awarded 2 November 2026. UK Level 7 (180 credits), with a final dissertation on esports education and employability."
-    },
-    {
-      id: 2,
-      role: "Student Ambassador",
-      company: "Canterbury Christ Church University",
-      year: "Previous",
-      description: "Represented the university through student-facing engagement, events, and community support."
-    },
-    {
-      id: 3,
-      role: "Amber Student Ambassador",
-      company: "Amber",
-      year: "Current",
-      roleUrl: "https://amberstudent.com/flex/tanishq-aryan-1768205165",
-      description: "Supporting student community engagement and ambassador initiatives through Amber."
-    },
-    {
-      id: 5,
-      role: "Top 10 Finalist",
-      company: "iQOO Chief Gaming Officer Hunt India",
-      year: "2023",
-      description: "Selected as a top 10 finalist out of 60,000+ applicants for the Chief Gaming Officer position in India."
-    },
-    {
-      id: 6,
-      role: "Featured Brand Collaboration",
-      company: "Various Brands",
-      year: "Previous",
-      description: "Partnered with major brands including Samsung Galaxy, Intel Gamer Days, Amazon miniTV x StreamO, and TVS Raider.",
-      descriptionHtml: "Partnered with major brands including <a href=\"https://www.instagram.com/p/Cw0fFkGxpdV/?igsh=MTJkZDhqMmw1NnowNw==\" target=\"_blank\" rel=\"noopener noreferrer\">Samsung Galaxy</a>, <a href=\"https://www.instagram.com/p/C48iKkJITJc/?igsh=M253NzVhc3o5M2ky\" target=\"_blank\" rel=\"noopener noreferrer\">Intel Gamer Days</a>, <a href=\"https://www.instagram.com/p/CzLLg8DviWi/?igsh=YXJjcjIzMjE5anFr\" target=\"_blank\" rel=\"noopener noreferrer\">Amazon miniTV x StreamO</a>, and <a href=\"https://www.instagram.com/reel/DMS18wrzQ5h/?igsh=MXJxZWRpeHVtdXFlZQ==\" target=\"_blank\" rel=\"noopener noreferrer\">TVS Raider</a>."
-    }
   ],
   socials: [
     { platform: "LinkedIn", url: "https://www.linkedin.com/in/tanishq-aryan-463009399" },

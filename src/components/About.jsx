@@ -1,81 +1,41 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { portfolioData } from '../data/portfolioData';
-import Decode from './Decode';
+import { profile } from '../data/profile';
 
-const rise = {
-  hidden: { opacity: 0, y: 40, rotateX: -10 },
-  show: (i) => ({
-    opacity: 1,
-    y: 0,
-    rotateX: 0,
-    transition: { delay: i * 0.08, duration: 0.7, ease: [0.16, 1, 0.3, 1] },
-  }),
-};
-
-const About = () => {
-  const { about } = portfolioData;
-
-  return (
-    <section id="about" className="scene relative px-5 py-24 sm:px-8 sm:py-28">
-      <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-          <div>
-            <Decode as="p" text="03 — Operator Profile" className="hud hud-accent mb-3" />
-            <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.9] tracking-[-0.02em] sm:text-6xl">
-              Built to <span className="text-accent">hold</span> under pressure
-            </h2>
-            <p className="mt-6 max-w-md text-sm leading-relaxed text-ink/65 sm:text-base">{about.pitch}</p>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/50">{about.developmentApproach}</p>
+/* Side facts, wide paragraph: the short version for a recruiter, then the record. */
+const About = () => (
+  <section id="about" className="about page-x" aria-labelledby="about-title">
+    <h2 id="about-title" className="head mb-14" data-reveal>About</h2>
+    <div className="about-row">
+      <dl className="about-facts m-0" data-reveal style={{ '--i': 1 }}>
+        {profile.facts.map((f) => (
+          <div key={f.label}>
+            <dt>{f.label}</dt>
+            <dd>{f.value}</dd>
           </div>
-
-          <div className="d3 space-y-4">
-            {about.whatIDo.map((item, i) => (
-              <motion.div
-                key={item.title}
-                className="glass grain d3 p-5 sm:p-6"
-                custom={i}
-                variants={rise}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, margin: '-60px' }}
-                whileHover={{ y: -4, rotateY: 2 }}
-                style={{ transformStyle: 'preserve-3d' }}
-              >
-                <div className="flex items-baseline gap-4">
-                  <span className="font-display text-lg font-bold text-accent">{String(i + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3 className="font-display text-lg font-bold tracking-tight">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink/60">{item.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        ))}
+      </dl>
+      <p className="about-bio" data-reveal style={{ '--i': 2 }}>{profile.bio}</p>
+    </div>
+    <div className="about-row">
+      <p className="small muted" data-reveal>The record</p>
+      <div className="about-lists">
+        <div data-reveal style={{ '--i': 1 }}>
+          <h3>What I bring</h3>
+          <ul>
+            {profile.capabilities.map((c) => <li key={c}>{c}</li>)}
+          </ul>
         </div>
-
-        <div className="mt-14">
-          <p className="hud mb-5">Capabilities loadout</p>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {about.skills.map((skill, i) => (
-              <motion.div
-                key={skill.title}
-                className="glass-weak grain p-5"
-                custom={i}
-                variants={rise}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, margin: '-40px' }}
-              >
-                <h4 className="font-display text-sm font-bold tracking-tight text-ink">{skill.title}</h4>
-                <p className="mt-2 text-sm leading-relaxed text-ink/55">{skill.description}</p>
-              </motion.div>
+        <div data-reveal style={{ '--i': 2 }}>
+          <h3>Recognition</h3>
+          <ul>
+            {profile.recognition.map((r) => (
+              <li key={r.name}><span>{r.name}</span><span className="muted tabular">{r.year}</span></li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default About;
