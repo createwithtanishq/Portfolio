@@ -3,6 +3,7 @@ import { useLocation, useNavigationType } from 'react-router-dom';
 import { usePrefs } from '../lib/prefs-context';
 import Hero from './Hero';
 import ProofBand from './ProofBand';
+import Services from './Services';
 import Work from './Work';
 import LineUp from './LineUp';
 import About from './About';
@@ -40,6 +41,7 @@ const Home = () => {
     <main>
       <Hero />
       <ProofBand />
+      <Services />
       <Work />
       <LineUp />
       <About />

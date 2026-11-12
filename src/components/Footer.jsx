@@ -18,6 +18,7 @@ const Footer = () => (
         ))}
       </ul>
       <div className="footer-cols">
+        <TLink className="link link-quiet" to="/services">Services</TLink>
         <TLink className="link link-quiet" to="/#work">Work</TLink>
         <TLink className="link link-quiet" to="/resume">Résumé</TLink>
         <TLink className="link link-quiet" to="/#experience">Experience</TLink>

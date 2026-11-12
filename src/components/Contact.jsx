@@ -47,7 +47,7 @@ const Contact = () => {
           </label>
           <label>
             Message
-            <textarea name="message" rows="4" required value={form.message} onChange={change} placeholder="The role, the team, the timeline" className="resize-none" />
+            <textarea name="message" rows="4" required value={form.message} onChange={change} placeholder="The role or project, the team, the timeline" className="resize-none" />
           </label>
           {status.text && (
             <p role="status" className="mt-4 small">{status.text}</p>

@@ -3,13 +3,14 @@ import TLink from './TLink';
 import MotionToggle from './MotionToggle';
 
 const links = [
+  { label: 'Services', to: '/services' },
   { label: 'Work', to: '/#work' },
   { label: 'Experience', to: '/#experience' },
   { label: 'About', to: '/#about' },
   { label: 'Résumé', to: '/resume' },
 ];
 
-/* A plain bar: the name, four links, the motion switch and one action. */
+/* A plain bar: the name, five links, the motion switch and one action. */
 const Navbar = () => (
   <header className="nav">
     <nav aria-label="Primary" className="nav-inner page-x">

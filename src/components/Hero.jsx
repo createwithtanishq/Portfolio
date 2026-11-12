@@ -62,6 +62,7 @@ const Hero = () => {
             <p className="hero-avail small muted" data-load style={{ '--d': '400ms' }}>{profile.availability}</p>
             <div className="hero-actions" data-load style={{ '--d': '460ms' }}>
               <a className="btn" href={profile.mailto}>Email me <span className="arrow" aria-hidden="true">→</span></a>
+              <TLink to="/services" className="link">See services</TLink>
               <TLink to="/resume" className="link">Read the résumé</TLink>
             </div>
           </div>

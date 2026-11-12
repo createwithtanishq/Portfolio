@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import ProjectDetails from './components/ProjectDetails';
 import Resume from './components/Resume';
+import ServicesPage from './components/ServicesPage';
+import SamplePage from './components/SamplePage';
 import Footer from './components/Footer';
 
 /*
@@ -56,6 +58,8 @@ function Shell() {
           <Route path="/" element={<Home />} />
           <Route path="/project/:id" element={<ProjectDetails />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/samples/:id" element={<SamplePage />} />
           <Route path="*" element={<ProjectDetails />} />
         </Routes>
       </div>
