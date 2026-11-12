@@ -10,12 +10,14 @@
   Plate Postcard (food creator), Vizag Founders Meetup (start-up community).
 */
 
+import { leadMagnetSample, storyboardSample, visualSamples } from './samples-visual.js';
+
 const TEKKEN = { label: 'Tekken 8 collegiate tournament system', to: '/project/2' };
 const ORGS = { label: 'Conceptual Model for Sustainable Esports Organisations', to: '/project/1' };
 const PATHWAYS = { label: 'Esports Education and Employment Pathways (MA dissertation)', to: '/project/4' };
 const INDIA = { label: 'Emerging Indian Esports Ecosystems', to: '/project/7' };
 
-export const samples = [
+const docs = [
   /* ================= Events and tournaments ================= */
   {
     id: 'tournament-ruleset',
@@ -629,6 +631,16 @@ export const samples = [
       { t: 'stats', items: [['2 hours', 'typical reply time, down from a day'], ['100%', 'of replies checked by a person']] },
     ],
   },
+];
+
+const after = (list, id, item) => {
+  const i = list.findIndex((s) => s.id === id);
+  return [...list.slice(0, i + 1), item, ...list.slice(i + 1)];
+};
+
+export const samples = [
+  ...after(after(docs, 'reel-script', storyboardSample), 'monthly-report', leadMagnetSample),
+  ...visualSamples,
 ];
 
 export const samplesFor = (serviceId) => samples.filter((s) => s.service === serviceId);
