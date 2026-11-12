@@ -68,6 +68,7 @@ const ServicesPage = () => {
               <h2 id={`${s.id}-title`}>{s.title}</h2>
               <p className="lead mt-5">{s.line}</p>
               <p className="small muted mt-5">Good for: {s.for}</p>
+              <TLink to={`/?service=${s.id}#contact`} className="link small mt-5 inline-block">Ask about {s.title.toLowerCase()}</TLink>
             </div>
             <div className="svc-cols">
               <div>

@@ -253,19 +253,25 @@
 }
 
 /* ---------- contact: an ivory card on the world ---------- */
-.contact { position: relative; margin-top: var(--section); height: 100svh; min-height: 720px; }
+.contact { position: relative; margin-top: var(--section); height: 100svh; min-height: 940px; }
 .contact-world { position: absolute; inset: 0; background: var(--bg); }
 .contact-card {
   position: absolute; top: calc(var(--nav-h) + 40px); right: var(--margin); width: min(440px, calc(100% - 2 * var(--margin)));
   background: var(--field); color: var(--field-ink); border-radius: 2px; padding: 36px; z-index: 1;
 }
 .contact-card label { display: block; font-size: var(--step-small); margin-top: 18px; font-weight: 450; }
-.contact-card input, .contact-card textarea {
+.contact-card input, .contact-card textarea, .contact-card select {
   display: block; width: 100%; margin-top: 6px; border: 0; border-radius: 2px;
   background: color-mix(in srgb, var(--onyx) 7%, var(--ivory)); color: var(--onyx); font: inherit; font-size: var(--step-body); padding: 13px 14px;
 }
 .contact-card input::placeholder, .contact-card textarea::placeholder { color: var(--field-muted); }
 .contact-card :focus-visible { outline-color: var(--onyx); }
+.contact-card select { appearance: none; padding-right: 36px; color-scheme: light; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--onyx) 50%), linear-gradient(135deg, var(--onyx) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
+.contact-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0 12px; }
+.contact-sample { margin-top: 10px; }
+.contact-sample .link { color: inherit; font-size: inherit; margin-left: 6px; }
 .contact-card .btn { background: var(--onyx); color: var(--ivory); width: 100%; }
 @media (hover: hover) and (pointer: fine) { .contact-card .btn:hover { background: var(--accent); color: var(--onyx); } }
 .contact-caption { position: absolute; left: var(--margin); bottom: 32px; z-index: 1; font-size: var(--step-small); color: var(--muted); }

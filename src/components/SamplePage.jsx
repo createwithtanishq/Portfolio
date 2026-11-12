@@ -49,7 +49,7 @@ const SamplePage = () => {
             </p>
           )}
         </div>
-        <TLink to="/#contact" className="btn">Start a project like this</TLink>
+        <TLink to={`/?service=${sample.service}&sample=${sample.id}#contact`} className="btn">Start a project like this</TLink>
       </div>
 
       <nav aria-label={`More ${service.title.toLowerCase()} samples`} className="case-next no-print">
