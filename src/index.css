@@ -820,3 +820,17 @@
   .resume section { break-inside: auto; }
   a { text-decoration: none; }
 }
+
+/* Document covers */
+.art-cover { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: stretch; gap: 8px; padding: clamp(20px, 3.2vw, 36px); border-radius: 2px; min-height: 260px; overflow: hidden; }
+.acv-text { display: flex; flex-direction: column; min-width: 0; }
+.acv-client { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
+.acv-kind { margin-top: auto; padding-top: 28px; font-size: 13px; font-weight: 600; }
+.acv-title { font-family: var(--serif); font-size: clamp(2.3rem, 4.6vw, 3.6rem); line-height: 0.98; letter-spacing: -0.02em; margin-top: 6px; text-wrap: balance; }
+.acv-line { margin-top: 14px; font-size: 14px; opacity: 0.82; max-width: 34ch; }
+.acv-art { width: 100%; height: 100%; max-height: 300px; align-self: center; }
+@media (max-width: 640px) {
+  .art-cover { grid-template-columns: minmax(0, 1fr); }
+  .acv-art { max-height: 200px; order: -1; }
+  .acv-kind { padding-top: 12px; }
+}

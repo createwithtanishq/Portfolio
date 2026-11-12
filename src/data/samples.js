@@ -11,6 +11,7 @@
 */
 
 import { leadMagnetSample, storyboardSample, visualSamples } from './samples-visual.js';
+import { covers } from './covers.js';
 
 const TEKKEN = { label: 'Tekken 8 collegiate tournament system', to: '/project/2' };
 const ORGS = { label: 'Conceptual Model for Sustainable Esports Organisations', to: '/project/1' };
@@ -638,8 +639,10 @@ const after = (list, id, item) => {
   return [...list.slice(0, i + 1), item, ...list.slice(i + 1)];
 };
 
+const withCovers = docs.map((d) => (covers[d.id] ? { ...d, blocks: [{ t: 'art', kind: 'cover', props: covers[d.id] }, ...d.blocks] } : d));
+
 export const samples = [
-  ...after(after(docs, 'reel-script', storyboardSample), 'monthly-report', leadMagnetSample),
+  ...after(after(withCovers, 'reel-script', storyboardSample), 'monthly-report', leadMagnetSample),
   ...visualSamples,
 ];
 
