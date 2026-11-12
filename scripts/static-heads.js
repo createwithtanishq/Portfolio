@@ -71,9 +71,10 @@ export default function staticHeads() {
         pages.push({ route: '/resume', title: 'Résumé · Tanishq Aryan', description: 'Esports and creator operations: tournaments, live events and brand campaigns. MA Games Design, Merit.' });
 
         for (const p of pages) {
-          const dir = path.join(outDir, p.route);
-          fs.mkdirSync(dir, { recursive: true });
-          fs.writeFileSync(path.join(dir, 'index.html'), headFor(html, { ...p, url: `${SITE}${p.route}` }));
+          /* services.html rather than services/index.html: Netlify serves /services from it without adding a trailing-slash redirect. */
+          const file = path.join(outDir, `${p.route}.html`);
+          fs.mkdirSync(path.dirname(file), { recursive: true });
+          fs.writeFileSync(file, headFor(html, { ...p, url: `${SITE}${p.route}` }));
         }
 
         const urls = ['/', ...pages.map((p) => p.route)];
