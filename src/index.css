@@ -166,7 +166,7 @@
 .hero-stats li { display: grid; gap: 5px; align-content: start; padding-top: 12px; border-top: 1px solid var(--line); }
 .hero-stat-v { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 1.3rem + 1.3vw, 2.6rem); line-height: 1; letter-spacing: -0.01em; color: var(--accent); font-variant-numeric: tabular-nums; }
 .hero-stat-l { font-size: var(--step-small); line-height: 1.35; color: var(--muted); }
-.hero-name { font-size: var(--step-display); }
+.hero-name { font-size: min(var(--step-display), 17svh); }
 .hero-lead { margin-top: clamp(20px, 2.6svh, 36px); max-width: 30ch; }
 .hero-actions { margin-top: clamp(22px, 3.2svh, 36px); display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
 .hero-reel { grid-area: reel; justify-self: end; text-align: right; max-width: 26rem; }

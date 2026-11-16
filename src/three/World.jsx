@@ -37,7 +37,7 @@ const VIEW = {
 /* Where the subject sits inside the view (fractions of width and height) and how far back the camera stands. */
 const COMPOSE = {
   center: () => [0.5, 0.5, 0.6],
-  hero: (aspect) => (aspect >= 1 ? [0.73, 0.3, 1.82] : [0.5, 0.25, 1.0]),
+  hero: (aspect) => (aspect >= 1.95 ? [0.76, 0.27, 2.3] : aspect >= 1 ? [0.73, 0.3, 1.82] : [0.5, 0.25, 1.0]),
   card: (aspect) => (aspect >= 1.15 ? [0.36, 0.5, 1.05] : [0.5, 0.42, 0.8]),
 };
 
