@@ -1,83 +1,87 @@
-import React, { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { portfolioData } from '../data/portfolioData';
-import TiltCard from './TiltCard';
+import React, { useEffect, useRef, useState } from 'react';
+import { lenses } from '../data/profile';
+import { WORK } from '../data/work';
+import { fits, usePrefs } from '../lib/prefs-context';
+import SpatialFrame from './SpatialFrame';
+import TLink from './TLink';
 
-const ProjectCard = ({ item, index }) => (
-  <TiltCard className="h-full">
-    <Link
-      to={`/project/${item.id}`}
-      className="glass group flex h-full flex-col p-7 transition-shadow duration-300 hover:shadow-[var(--shadow-lift)]"
-    >
-      <div className="flex items-center justify-between gap-3">
-        <span className="hud tabular-nums">{String(index + 1).padStart(2, '0')}</span>
-        <span className="flex items-center gap-2">
-          {item.featured && <span className="chip !px-2.5 !py-1 !text-[12px] border-accent text-accent">Featured</span>}
-          <span className="chip !px-2.5 !py-1 !text-[12px]">{item.category}</span>
-        </span>
-      </div>
-
-      <h3 className="mt-8 text-2xl font-semibold leading-tight tracking-tight">{item.title}</h3>
-      <p className="mt-3 flex-1 text-[15px] leading-relaxed text-ink-2">{item.description}</p>
-
-      <p className="mt-6 border-t border-hairline pt-5 text-[14px] leading-snug text-ink-2">{item.impact}</p>
-
-      <span className="mt-6 inline-flex items-center text-[15px] font-medium text-accent group-hover:underline underline-offset-4">
-        View case study
-      </span>
-    </Link>
-  </TiltCard>
-);
-
+/*
+  An index of case studies beside a held square. Each row says what the work was and what it
+  achieved; on wide screens a window into the 3D world stays in view and shows the row crossing
+  the middle of the screen. "Hiring for" dims the rows that don't fit the role a recruiter is filling.
+*/
 const Work = () => {
-  const items = useMemo(
-    () => [...portfolioData.work].sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id)),
-    []
-  );
-  const categories = useMemo(() => [...new Set(items.map((i) => i.category))], [items]);
-  const [active, setActive] = useState('All');
-  const visible = active === 'All' ? items : items.filter((i) => i.category === active);
+  const { lens, setLens } = usePrefs();
+  const items = WORK;
+  const [current, setCurrent] = useState(items[0].id);
+  const listRef = useRef(null);
+
+  useEffect(() => {
+    const rows = listRef.current?.querySelectorAll('[data-id]') ?? [];
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) setCurrent(Number(e.target.dataset.id)); });
+    }, { rootMargin: '-46% 0px -46% 0px' });
+    rows.forEach((r) => io.observe(r));
+    return () => io.disconnect();
+  }, []);
+
+  const cur = items.find((i) => i.id === current) ?? items[0];
+  const lensLabel = lenses.find((l) => l.id === lens)?.label;
+  const count = items.filter((i) => fits(lens, i.meta.lenses)).length;
 
   return (
-    <section id="work" className="scroll-mt-14 px-5 py-24 sm:px-8 sm:py-32">
-      <div className="mx-auto max-w-6xl">
-        <header className="mb-10 max-w-3xl">
-          <p className="hud mb-3">Selected work</p>
-          <h2 className="font-display text-4xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-6xl">
-            Case studies
-          </h2>
-          <p className="mt-5 text-lg leading-relaxed text-ink-2">
-            {portfolioData.workIntro.supporting} {portfolioData.workIntro.additional}
+    <section id="work" className="work page-x" aria-labelledby="work-title">
+      <div className="work-head">
+        <h2 id="work-title" className="head" data-reveal>Case studies</h2>
+        <p className="lead muted work-intro" data-reveal style={{ '--i': 1 }}>
+          Events, tournament systems, research and a game, most relevant first.
+        </p>
+      </div>
+
+      <div className="work-lens" role="group" aria-labelledby="lens-label" data-reveal style={{ '--i': 2 }}>
+        <p id="lens-label" className="work-lens-label">Hiring for</p>
+        {lenses.map((l) => (
+          <button key={l.id} type="button" className="chip" aria-pressed={lens === l.id} onClick={() => setLens(l.id)}>
+            {l.label}
+          </button>
+        ))}
+        <p className="small muted work-lens-note" aria-live="polite">
+          {lens === 'all' ? `${items.length} case studies.` : `${count} of ${items.length} fit ${lensLabel.toLowerCase()} roles. Share this view: the link now opens with it.`}
+        </p>
+      </div>
+
+      <div className="work-grid">
+        <div className="work-held" aria-hidden="true">
+          <SpatialFrame station={cur.meta.station} className="work-held-frame" />
+          <p className="work-held-cap small">
+            <span key={cur.id} className="swap-in inline-block">{cur.meta.short} <span className="muted">· {cur.meta.format}</span></span>
           </p>
-        </header>
+        </div>
 
-        <div role="group" aria-label="Filter case studies by category" className="mb-10 flex flex-wrap gap-2">
-          {['All', ...categories].map((c) => {
-            const count = c === 'All' ? items.length : items.filter((i) => i.category === c).length;
-            const on = active === c;
-            return (
-              <button
-                key={c}
-                type="button"
-                aria-pressed={on}
-                onClick={() => setActive(c)}
-                className={`rounded-full border px-4 py-2 text-[14px] transition-colors ${
-                  on
-                    ? 'border-transparent bg-ink text-canvas'
-                    : 'border-hairline text-ink-2 hover:text-ink'
-                }`}
+        <ol ref={listRef} className="work-list">
+          {items.map((it, i) => (
+            <li
+              key={it.id}
+              data-id={it.id}
+              className={`work-row ${fits(lens, it.meta.lenses) ? '' : 'is-out'} ${it.id === current ? 'is-current' : ''}`}
+            >
+              <TLink
+                to={`/project/${it.id}`}
+                className="work-link"
+                onClick={(e) => {
+                  const t = e.currentTarget.querySelector('.work-title');
+                  if (t) t.style.viewTransitionName = 'case-title';
+                }}
               >
-                {c} <span className="tabular-nums opacity-60">{count}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {visible.map((item) => (
-            <ProjectCard key={item.id} item={item} index={items.indexOf(item)} />
+                <span className="work-num">{String(i + 1).padStart(2, '0')}</span>
+                <span className="work-title">{it.meta.short}</span>
+                <span className="work-kind">{it.meta.kind}{it.meta.role ? ` · ${it.meta.role}` : ''}</span>
+                {it.impact && <span className="work-impact">{it.impact}</span>}
+                <span className="work-go" aria-hidden="true">→</span>
+              </TLink>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );
