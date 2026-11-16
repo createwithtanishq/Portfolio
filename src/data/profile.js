@@ -30,7 +30,7 @@ export const profile = {
     { label: 'Education', value: 'MA Games Design, Merit (2026)' },
   ],
   bio:
-    "I started out making comedy sketches on YouTube, then moved into esports in 2019, running scrims and lobbies for Quiditch Scrims. Since then I've coached esports teams, managed a gaming creator's brand work and spent four years in operations at IFESM. In 2025–26 I studied for an MA in Games Design at Canterbury Christ Church University and helped run Hackabury, a 24-hour game jam. I'm at my best where a plan meets real people: schedules, brackets, creators and crowds.",
+    "I started out making comedy sketches on YouTube, then moved into esports in 2019, running scrims and lobbies for Quiditch Scrims. Since then I've coached esports teams, streamed on Rooter, managed a gaming creator's brand work and spent four years in operations at IFESM. In 2025–26 I studied for an MA in Games Design at Canterbury Christ Church University and helped run Hackabury, a 24-hour game jam. I'm at my best where a plan meets real people: schedules, brackets, creators and crowds.",
   capabilities: [
     'Esports event and tournament operations',
     'Tournament formats, rulesets and brackets',
@@ -50,10 +50,11 @@ export const profile = {
     'Amazon miniTV × StreamO',
     'TVS Raider × DreamHack',
     'iQOO Chief Gaming Officer Hunt',
+    'Rooter',
     'Hackabury 2026',
   ],
   proofNote:
-    'Brands I have collaborated with, a national competition where I made the top 10 of 60,000+, and an event I helped run.',
+    'Brands I have collaborated with, the platform I streamed on, a national competition where I made the top 10 of 60,000+, and an event I helped run.',
 };
 
 /* Stations of the 3D world shown in the hero frame, in scroll order. */
@@ -106,6 +107,7 @@ export const career = [
       { role: 'Collaborator', org: 'StreamO × Amazon miniTV', detail: 'miniTV Playground', when: '2024', lenses: ['creators'], link: 'https://www.instagram.com/p/CzLLg8DviWi/?igsh=YXJjcjIzMjE5anFr' },
       { role: 'Content creator', org: 'Intel Gamer Days', detail: 'Campaign content', when: '2023', lenses: ['creators'], link: 'https://www.instagram.com/p/C48iKkJITJc/?igsh=M253NzVhc3o5M2ky' },
       { role: 'Brand collaboration', org: 'Samsung Galaxy', detail: 'Brand partnership', when: '', lenses: ['creators'], link: 'https://www.instagram.com/p/Cw0fFkGxpdV/?igsh=MTJkZDhqMmw1NnowNw==' },
+      { role: 'Professional streamer', org: 'Rooter', detail: 'Live gaming streams', when: '', lenses: ['creators', 'community'] },
       { role: 'Co-founder, writer and director', org: 'Comedy Day and Night (YouTube)', detail: '10K+ subscribers', when: '2016–17', lenses: ['creators'], home: false },
     ],
   },
