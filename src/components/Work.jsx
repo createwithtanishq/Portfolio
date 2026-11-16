@@ -6,27 +6,21 @@ import SpatialFrame from './SpatialFrame';
 import TLink from './TLink';
 
 /*
-  Names passing a held square: the case-study names scroll up through the centre of the screen
-  while a square window into the 3D world holds behind them and shows the one crossing the middle.
-  "Hiring for" dims the names that don't fit the role a recruiter is filling.
+  An index of case studies beside a held square. Each row says what the work was and what it
+  achieved; on wide screens a window into the 3D world stays in view and shows the row crossing
+  the middle of the screen. "Hiring for" dims the rows that don't fit the role a recruiter is filling.
 */
 const Work = () => {
   const { lens, setLens } = usePrefs();
   const items = WORK;
   const [current, setCurrent] = useState(items[0].id);
-  const [settled, setSettled] = useState(false);
   const listRef = useRef(null);
 
   useEffect(() => {
     const rows = listRef.current?.querySelectorAll('[data-id]') ?? [];
-    const inBand = new Set();
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        const id = Number(e.target.dataset.id);
-        if (e.isIntersecting) { inBand.add(id); setCurrent(id); } else inBand.delete(id);
-      });
-      setSettled(inBand.size > 0);
-    }, { rootMargin: '-44% 0px -44% 0px' });
+      entries.forEach((e) => { if (e.isIntersecting) setCurrent(Number(e.target.dataset.id)); });
+    }, { rootMargin: '-46% 0px -46% 0px' });
     rows.forEach((r) => io.observe(r));
     return () => io.disconnect();
   }, []);
@@ -36,37 +30,54 @@ const Work = () => {
   const count = items.filter((i) => fits(lens, i.meta.lenses)).length;
 
   return (
-    <section id="work" className="work" aria-labelledby="work-title">
-      <h2 id="work-title" className="work-name work-heading page-x block text-center" data-reveal>Case studies</h2>
+    <section id="work" className="work page-x" aria-labelledby="work-title">
+      <div className="work-head">
+        <h2 id="work-title" className="head" data-reveal>Case studies</h2>
+        <p className="lead muted work-intro" data-reveal style={{ '--i': 1 }}>
+          Events, tournament systems, research and a game, most relevant first.
+        </p>
+      </div>
 
-      <div className="work-lens" role="group" aria-labelledby="lens-label" data-reveal style={{ '--i': 1 }}>
+      <div className="work-lens" role="group" aria-labelledby="lens-label" data-reveal style={{ '--i': 2 }}>
         <p id="lens-label" className="work-lens-label">Hiring for</p>
         {lenses.map((l) => (
           <button key={l.id} type="button" className="chip" aria-pressed={lens === l.id} onClick={() => setLens(l.id)}>
             {l.label}
           </button>
         ))}
-        <p className="small muted w-full text-center" aria-live="polite">
-          {lens === 'all' ? `${items.length} case studies, most relevant first.` : `${count} of ${items.length} fit ${lensLabel.toLowerCase()} roles. Share this view: the link now opens with it.`}
+        <p className="small muted work-lens-note" aria-live="polite">
+          {lens === 'all' ? `${items.length} case studies.` : `${count} of ${items.length} fit ${lensLabel.toLowerCase()} roles. Share this view: the link now opens with it.`}
         </p>
       </div>
 
-      <div className="work-stage">
-        <div className="work-held">
+      <div className="work-grid">
+        <div className="work-held" aria-hidden="true">
           <SpatialFrame station={cur.meta.station} className="work-held-frame" />
-          <p className={`work-facts ${settled ? '' : 'is-hidden'}`} aria-hidden="true"><span key={cur.id} className="swap-in inline-block">{cur.meta.kind} <span className="muted">· {cur.meta.format}</span></span></p>
+          <p className="work-held-cap small">
+            <span key={cur.id} className="swap-in inline-block">{cur.meta.short} <span className="muted">· {cur.meta.format}</span></span>
+          </p>
         </div>
 
-        <ol ref={listRef} className="work-names">
-          {items.map((it) => (
-            <li key={it.id} data-id={it.id}>
+        <ol ref={listRef} className="work-list">
+          {items.map((it, i) => (
+            <li
+              key={it.id}
+              data-id={it.id}
+              className={`work-row ${fits(lens, it.meta.lenses) ? '' : 'is-out'} ${it.id === current ? 'is-current' : ''}`}
+            >
               <TLink
                 to={`/project/${it.id}`}
-                className={`work-name ${fits(lens, it.meta.lenses) ? '' : 'is-out'}`}
-                onClick={(e) => { e.currentTarget.style.viewTransitionName = 'case-title'; }}
+                className="work-link"
+                onClick={(e) => {
+                  const t = e.currentTarget.querySelector('.work-title');
+                  if (t) t.style.viewTransitionName = 'case-title';
+                }}
               >
-                {it.meta.short}
-                <span className="sr-only">: {it.meta.kind}, {it.meta.format}</span>
+                <span className="work-num">{String(i + 1).padStart(2, '0')}</span>
+                <span className="work-title">{it.meta.short}</span>
+                <span className="work-kind">{it.meta.kind}{it.meta.role ? ` · ${it.meta.role}` : ''}</span>
+                {it.impact && <span className="work-impact">{it.impact}</span>}
+                <span className="work-go" aria-hidden="true">→</span>
               </TLink>
             </li>
           ))}

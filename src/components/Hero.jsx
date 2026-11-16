@@ -47,19 +47,23 @@ const Hero = () => {
   const cur = heroReel[step];
 
   return (
-    <section ref={wrap} className="hero" aria-labelledby="hero-title" style={pinned ? { height: '240svh' } : undefined}>
+    <section ref={wrap} className="hero" aria-labelledby="hero-title" style={pinned ? { height: '210svh' } : undefined}>
       <div className="hero-stage" style={pinned ? { position: 'sticky', top: 0 } : undefined}>
         <div className="hero-world" data-open>
           <SpatialFrame station={cur.station} compose="hero" className="absolute inset-0" />
         </div>
 
         <div className="hero-copy">
-          <div>
+          <div className="hero-main">
+            <p className="hero-status small" data-load style={{ '--d': '200ms' }}>
+              <span className="hero-dot" aria-hidden="true" />
+              <span>{profile.status}</span>
+              <span className="muted">{profile.statusWhere}</span>
+            </p>
             <h1 id="hero-title" className="hero-name display">
               <span className="line"><span data-line>{profile.name}</span></span>
             </h1>
             <p className="hero-lead lead" data-load style={{ '--d': '340ms' }}>{profile.lead}</p>
-            <p className="hero-avail small muted" data-load style={{ '--d': '400ms' }}>{profile.availability}</p>
             <div className="hero-actions" data-load style={{ '--d': '460ms' }}>
               <a className="btn" href={profile.mailto}>Email me <span className="arrow" aria-hidden="true">→</span></a>
               <TLink to="/services" className="link">See services</TLink>
@@ -67,9 +71,20 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="hero-reel" data-load style={{ '--d': '540ms' }}>
+          <ul className="hero-stats" aria-label="In numbers" data-load style={{ '--d': '520ms' }}>
+            {profile.stats.map((s) => (
+              <li key={s.value}>
+                <strong className="hero-stat-v">{s.value}</strong>
+                <span className="hero-stat-l">{s.label}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="hero-reel" data-load style={{ '--d': '600ms' }}>
             <p className="hero-caption small" aria-live="polite">
-              <span key={step} className="swap-in inline-block"><strong>{cur.title}</strong> {cur.caption}</span>
+              <span key={step} className="swap-in inline-block">
+                <strong className="tabular">{String(step + 1).padStart(2, '0')} / {String(n).padStart(2, '0')}</strong> {cur.caption}
+              </span>
             </p>
             <ul className="hero-steps" aria-label="Chapters">
               {heroReel.map((r, i) => (

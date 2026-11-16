@@ -14,6 +14,15 @@ export const profile = {
   lead: 'Esports and creator operations: I plan and run tournaments, live events and brand campaigns.',
   availability: 'Seven years in esports · MA Games Design, Merit · Open to roles and projects, in Gurugram or remote',
   open: 'Open to roles in Gurugram or remote, and to freelance projects.',
+  status: 'Available now',
+  statusWhere: 'Remote in any time zone · Gurugram from December',
+  /* Four numbers for the first screen, each one from his CV. */
+  stats: [
+    { value: '200K+', label: 'creator audience grown on Rooter' },
+    { value: '107', label: 'students at Hackabury 2026' },
+    { value: 'Top 10', label: 'of 60,000+ in iQOO’s national hunt' },
+    { value: '4 yrs', label: 'running daily operations at IFESM' },
+  ],
   mailto: `mailto:${EMAIL}?subject=${encodeURIComponent('A role or project for Tanishq')}`,
   facts: [
     { label: 'Open to', value: 'Roles and freelance projects, Gurugram or remote' },
@@ -85,7 +94,7 @@ export const career = [
     group: 'Events and tournaments',
     rows: [
       { role: 'Vice-president, operations and planning', org: 'Hackabury Society, CCCU', detail: '24-hour game jam', when: '2025–26', lenses: ['events', 'operations', 'community'] },
-      { role: 'Tournament system design (MA project)', org: 'Tekken 8 collegiate prototype', detail: 'Format, ruleset, venue', when: '2025', lenses: ['events', 'operations'] },
+      { role: 'Tournament system design (MA project)', org: 'Tekken 8 collegiate prototype', detail: 'Format, ruleset, venue', when: '2025', lenses: ['events', 'operations'], home: false },
       { role: 'Co-owner, manager and host', org: 'Zainishq TDM Tournament', detail: 'Logistics and hosting', when: '2023', lenses: ['events', 'community'] },
       { role: 'Collaborator', org: 'TVS Raider × DreamHack Hyderabad', detail: 'Brand collaboration', when: '2023', lenses: ['events', 'creators'], link: 'https://www.instagram.com/reel/DMS18wrzQ5h/?igsh=MXJxZWRpeHVtdXFlZQ==' },
       { role: 'Manager and host', org: 'Quiditch Scrims and Lockdown League', detail: 'Online tournaments', when: '2019–22', lenses: ['events', 'community', 'operations'] },
@@ -99,16 +108,17 @@ export const career = [
       { role: 'Content creator', org: 'Intel Gamer Days', detail: 'Campaign content', when: '2023', lenses: ['creators'], link: 'https://www.instagram.com/p/C48iKkJITJc/?igsh=M253NzVhc3o5M2ky' },
       { role: 'Brand collaboration', org: 'Samsung Galaxy', detail: 'Brand partnership', when: '', lenses: ['creators'], link: 'https://www.instagram.com/p/Cw0fFkGxpdV/?igsh=MTJkZDhqMmw1NnowNw==' },
       { role: 'Professional streamer', org: 'Rooter', detail: 'Live gaming streams', when: '', lenses: ['creators', 'community'] },
-      { role: 'Co-founder, writer and director', org: 'Comedy Day and Night (YouTube)', detail: '10K+ subscribers', when: '2016–17', lenses: ['creators'] },
+      { role: 'Co-founder, writer and director', org: 'Comedy Day and Night (YouTube)', detail: '10K+ subscribers', when: '2016–17', lenses: ['creators'], home: false },
     ],
   },
   {
     group: 'Coaching',
+    homeNote: 'Earlier: Tanzex eSports, The Soul Reapers and OPS Regen, 2022–23.',
     rows: [
       { role: 'Coach and mentor', org: 'Raze eSports', detail: 'Strategy and preparation', when: 'From 2023', lenses: ['community', 'operations'] },
-      { role: 'Coach', org: 'Tanzex eSports', detail: 'Team coaching', when: '2023', lenses: ['community'] },
-      { role: 'Coach', org: 'The Soul Reapers', detail: 'Team coaching', when: '2022–23', lenses: ['community'] },
-      { role: 'Coach', org: 'OPS Regen', detail: 'BGMI / PUBG Mobile', when: '2022', lenses: ['community'] },
+      { role: 'Coach', org: 'Tanzex eSports', detail: 'Team coaching', when: '2023', lenses: ['community'], home: false },
+      { role: 'Coach', org: 'The Soul Reapers', detail: 'Team coaching', when: '2022–23', lenses: ['community'], home: false },
+      { role: 'Coach', org: 'OPS Regen', detail: 'BGMI / PUBG Mobile', when: '2022', lenses: ['community'], home: false },
     ],
   },
   {
@@ -124,7 +134,7 @@ export const career = [
     group: 'Education',
     rows: [
       { role: 'MA Games Design, Merit', org: 'Canterbury Christ Church University, UK', detail: 'UK Level 7, 180 credits', when: '2025–26', lenses: ['research'] },
-      { role: 'Certificate in Data Science', org: 'Board Infinity', detail: 'Online certificate', when: '2023', lenses: ['research'] },
+      { role: 'Certificate in Data Science', org: 'Board Infinity', detail: 'Online certificate', when: '2023', lenses: ['research'], home: false },
       { role: 'BBA', org: 'Vikram Deb Autonomous College, Odisha', detail: 'Undergraduate degree', when: '2017–20', lenses: ['operations'] },
     ],
   },
