@@ -17,8 +17,10 @@ const Services = () => (
           <li key={s.id} className="svc-row" data-reveal style={{ '--i': i % 4 }}>
             <TLink to={`/services#${s.id}`} className="svc-link">
               <span className="svc-title">{s.title}</span>
-              <span className="svc-line">{s.line}</span>
-              {count > 0 && <span className="svc-count">{count} samples</span>}
+              <span className="svc-line">
+                {s.line}
+                {count > 0 && <span className="svc-count"> {count} samples</span>}
+              </span>
             </TLink>
           </li>
         );

@@ -886,6 +886,62 @@
           </section>
         </div>
       `
+    },
+    {
+      id: 10,
+      displayOrder: 2.5,
+      title: "T-MCU Nexus",
+      description: "A live, unofficial Marvel fan archive I designed, built and run. You unlock the timeline by passing recall checks, post theories, vote in weekly polls and see where to stream each title.",
+      impact: "Live since September 2026: 15 pages, 53 titles in the timeline and a public theory codex, with every database table locked down by row-level security.",
+      category: "Web Product",
+      fullContent: `
+        <div class="space-y-14">
+          <section class="space-y-5">
+            <h3 class="project-heading">Overview</h3>
+            <p>T-MCU Nexus is a fan archive for the Marvel Cinematic Universe. I wanted one place where fans could follow the watch order, test what they remember and share theories, so I built it as a working product rather than a mock-up. It has been live and public since September 2026.</p>
+            <p><a href="https://tmcu-nexus.vercel.app" target="_blank" rel="noopener noreferrer">Visit the live site</a></p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Scale</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">15</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">pages</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4"><span class="block font-heading font-black text-3xl leading-none">53</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">titles in the timeline</span></div>
+              <div class="border-2 border-[#0D0D0D] px-5 py-4 bg-[#F0E040]"><span class="block font-heading font-black text-3xl leading-none">20</span><span class="font-mono text-[11px] uppercase tracking-widest text-[#0D0D0D]/55">tables behind row-level security</span></div>
+            </div>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">What It Does</h3>
+            <ul>
+              <li>A sequential timeline: each entry unlocks once you pass a short recall check on it.</li>
+              <li>A theory codex where anyone can post, upvote and report theories, each marked spoiler-safe or full spoilers.</li>
+              <li>Weekly polls, a live leaderboard and a countdown to the next big release.</li>
+              <li>A where-to-watch panel on every title. It detects the visitor's country, lists every episode of a series and links only to official services.</li>
+              <li>Character, variant, team and roster pages, a quiz, a battle page, a multiverse codex and a comics archive.</li>
+            </ul>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">My Role</h3>
+            <p>I was the product owner, designer and builder. I set the scope, designed each feature and its rules, and shipped it with AI coding tools on Next.js, Supabase and Vercel. I also run it: content, polls and keeping the free-tier database awake.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">Keeping It Safe</h3>
+            <p>Anyone can post without an account, so the rules live in the database rather than the browser. Each vote is stored against the voter, so it counts once. Posting is rate-limited, with a site-wide cap that stops floods, and the server sets every counter, date and status, so a tampered request can't fake upvotes or pin a post to the top.</p>
+          </section>
+
+          <section class="space-y-5">
+            <h3 class="project-heading">What's Missing</h3>
+            <ul>
+              <li>No custom domain yet.</li>
+              <li>It hasn't been promoted, so the codex is still quiet.</li>
+              <li>It runs on free tiers, so a scheduled check keeps the database from sleeping.</li>
+            </ul>
+          </section>
+        </div>
+      `
     }
   ],
   about: {

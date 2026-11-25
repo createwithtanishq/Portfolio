@@ -34,7 +34,7 @@ const Work = () => {
       <div className="work-head">
         <h2 id="work-title" className="head" data-reveal>Case studies</h2>
         <p className="lead muted work-intro" data-reveal style={{ '--i': 1 }}>
-          Events, tournament systems, research and a game, most relevant first.
+          Events, tournament systems, a live web product, research and a game, most relevant first.
         </p>
       </div>
 
@@ -46,7 +46,7 @@ const Work = () => {
           </button>
         ))}
         <p className="small muted work-lens-note" aria-live="polite">
-          {lens === 'all' ? `${items.length} case studies.` : `${count} of ${items.length} fit ${lensLabel.toLowerCase()} roles. Share this view: the link now opens with it.`}
+          {lens === 'all' ? '' : `${count} of ${items.length} fit ${lensLabel.toLowerCase()} roles. Share this view: the link now opens with it.`}
         </p>
       </div>
 
@@ -73,7 +73,6 @@ const Work = () => {
                   if (t) t.style.viewTransitionName = 'case-title';
                 }}
               >
-                <span className="work-num">{String(i + 1).padStart(2, '0')}</span>
                 <span className="work-title">{it.meta.short}</span>
                 <span className="work-kind">{it.meta.kind}{it.meta.role ? ` · ${it.meta.role}` : ''}</span>
                 {it.impact && <span className="work-impact">{it.impact}</span>}
