@@ -25,3 +25,7 @@ dist-ssr
 
 # design skill working files
 .taste-skill/
+
+# local tool settings and dev logs
+.claude/settings.local.json
+*.err

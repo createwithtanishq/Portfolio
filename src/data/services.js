@@ -67,7 +67,10 @@ export const services = [
     title: 'Websites and digital',
     line: 'Landing pages, link pages and simple sites that load fast and make the next step obvious.',
     includes: ['Page design and copy', 'Mobile-first layouts', 'Contact, booking and sign-up forms', 'Launch and small updates'],
-    proof: [{ label: 'This website', to: '/' }],
+    proof: [
+      { label: 'This website', to: '/' },
+      { label: 'T-MCU Nexus, a live fan archive I built', to: '/project/10' },
+    ],
     for: 'Freelancers, cafés, small brands, events and start-ups.',
   },
   {

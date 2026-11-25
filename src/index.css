@@ -1,19 +1,22 @@
 @import "tailwindcss";
-@import "@fontsource/instrument-serif";
-@import "@fontsource-variable/geist";
+@import "@fontsource/barlow/400.css";
+@import "@fontsource/barlow/500.css";
+@import "@fontsource/barlow/600.css";
+@import "@fontsource/barlow-condensed/600.css";
 
 /*
   Three colours, nothing else:
-    onyx       #0D0C0B  the ground (a warm black, never pure #000)
-    ivory      #ECE7DF  the ink and the one bright field (a bone white, never pure #fff)
-    champagne  #C8A46A  the accent: actions, the metal in the 3D world, a few numerals
-  Every other tone is one of these mixed with another (secondary text, surfaces).
-  Proportions: about 70% onyx, 25% ivory, 5% champagne.
+    onyx       #0E0F11  the ground: a neutral graphite with a faint cool cast, so the yellow reads at full strength
+    ivory      #EEEEEA  the ink and the paper of sample sheets: a low-chroma off-white, not cream
+    champagne  #F0E040  the accent, signal yellow: actions, the bracket and trophy in the 3D world, the bright bands
+  Why yellow on graphite: it is the highest-contrast pair available (about 15:1), it is the colour of
+  event signage and broadcast tickers, and warm accent on a cool-neutral ground keeps one clear focal colour.
+  Proportions: about 70% onyx, 25% ivory, 5% yellow; the yellow becomes a whole field only in the bright bands.
 */
 :root {
-  --onyx: #0d0c0b;
-  --ivory: #ece7df;
-  --champagne: #c8a46a;
+  --onyx: #0e0f11;
+  --ivory: #eeeeea;
+  --champagne: #f0e040;
 
   --bg: var(--onyx);
   --ink: var(--ivory);
@@ -28,8 +31,8 @@
   --field-muted: color-mix(in srgb, var(--onyx) 62%, var(--ivory));
   color-scheme: dark;
 
-  --serif: "Instrument Serif", "Iowan Old Style", "Times New Roman", Georgia, serif;
-  --sans: "Geist Variable", "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --sans: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   /* five sizes: small, body, lead, head, display */
   --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
@@ -158,12 +161,11 @@
 .hero-main { grid-area: main; }
 .hero-status {
   display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
-  margin: 0 0 clamp(14px, 2.2svh, 24px); padding: 8px 14px 8px 12px; border-radius: 2px;
-  background: color-mix(in srgb, var(--onyx) 62%, transparent); box-shadow: inset 0 0 0 1px var(--line);
+  margin: 0 0 clamp(14px, 2.2svh, 24px);
 }
-.hero-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.hero-dot { display: none; }
 .hero-stats { grid-area: stats; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; }
-.hero-stats li { display: grid; gap: 5px; align-content: start; padding-top: 12px; border-top: 1px solid var(--line); }
+.hero-stats li { display: grid; gap: 5px; align-content: start; }
 .hero-stat-v { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 1.3rem + 1.3vw, 2.6rem); line-height: 1; letter-spacing: -0.01em; color: var(--accent); font-variant-numeric: tabular-nums; }
 .hero-stat-l { font-size: var(--step-small); line-height: 1.35; color: var(--muted); }
 .hero-name { font-size: min(var(--step-display), 17svh); }
@@ -212,14 +214,14 @@
 .work-held-frame { width: 100%; aspect-ratio: 1; overflow: clip; background: var(--surface); position: relative; }
 .work-held-frame::after { content: ''; position: absolute; inset: 0; background: var(--onyx); opacity: 0.3; pointer-events: none; }
 .work-held-cap { margin-top: 14px; }
-.work-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.work-row { border-bottom: 1px solid var(--line); }
+.work-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.work-row { background: var(--surface); }
+.work-row:hover, .work-row:focus-within { background: var(--surface-2); }
 .work-link {
-  display: grid; grid-template-columns: 2.6rem minmax(0, 1fr) auto;
-  grid-template-areas: "num title go" ". kind go" ". impact go";
-  gap: 8px 16px; align-content: center; min-height: 19svh; padding-block: clamp(24px, 3vw, 40px); text-decoration: none;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "title go" "kind go" "impact go";
+  gap: 8px 16px; align-content: center; min-height: 19svh; padding: clamp(24px, 3vw, 40px) clamp(18px, 2.4vw, 32px); text-decoration: none;
 }
-.work-num { grid-area: num; padding-top: 0.55em; color: var(--accent); font-size: var(--step-small); font-variant-numeric: tabular-nums; }
 .work-title { grid-area: title; font-family: var(--serif); font-size: clamp(2.3rem, 1.5rem + 2.6vw, 4.4rem); line-height: 0.95; letter-spacing: -0.02em; transition: color var(--t-hover) ease; }
 .work-kind { grid-area: kind; margin-top: 6px; font-size: var(--step-small); color: var(--accent); }
 .work-impact {
@@ -239,7 +241,7 @@
 @media (max-width: 860px) {
   .work-grid { grid-template-columns: minmax(0, 1fr); }
   .work-held { display: none; }
-  .work-link { min-height: 0; grid-template-columns: 2.2rem minmax(0, 1fr) auto; }
+  .work-link { min-height: 0; grid-template-columns: minmax(0, 1fr) auto; }
   .work-title { font-size: clamp(2.1rem, 9vw, 2.8rem); }
 }
 
@@ -251,10 +253,11 @@
   font-family: var(--serif); font-size: var(--step-lead); letter-spacing: -0.005em; line-height: 1.25;
   color: var(--accent); padding-block: 14px 22px; margin: 0;
 }
+.lineup-row:nth-child(odd) { background: var(--surface); }
 .lineup-row {
   display: grid; grid-template-columns: minmax(0, 35%) minmax(0, 29%) minmax(0, 1fr) max-content; gap: 0 20px; align-items: baseline;
   font-size: clamp(1.0625rem, 0.96rem + 0.4vw, 1.3125rem); font-weight: 360; line-height: 1.4; letter-spacing: -0.008em;
-  padding-block: 0.6em; border-bottom: 1px solid var(--line);
+  padding-block: 0.6em; padding-inline: 12px; margin-inline: -12px;
   transition: color var(--t-ui) ease;
 }
 .lineup-note { margin-top: 12px; }
@@ -336,10 +339,10 @@
 /* ---------- services: a two-column index on the home page ---------- */
 .svc { padding-top: var(--section); }
 .svc-list {
-  list-style: none; margin: 56px 0 0; padding: 0; border-top: 1px solid var(--line);
+  list-style: none; margin: 56px 0 0; padding: 0;
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(32px, 5vw, 80px);
 }
-.svc-row { border-bottom: 1px solid var(--line); }
+.svc-row { }
 .svc-link { display: grid; gap: 8px; align-content: start; height: 100%; padding-block: 26px 28px; text-decoration: none; }
 .svc-title { font-family: var(--serif); font-size: var(--step-lead); line-height: 1.15; letter-spacing: -0.005em; transition: color var(--t-hover) ease; }
 .svc-line { color: var(--muted); max-width: 46ch; }
@@ -358,7 +361,7 @@
 .svc-jump .chip { text-decoration: none; }
 .svc-block {
   display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 36px 72px;
-  padding-block: clamp(56px, 7vw, 96px); border-top: 1px solid var(--line);
+  padding-block: clamp(56px, 7vw, 96px);
 }
 .svc-page header + .svc-block { margin-top: clamp(64px, 8vw, 120px); }
 .svc-block h2 { font-size: clamp(2.4rem, 1.6rem + 2.6vw, 4rem); }
@@ -378,8 +381,7 @@
   .svc-sample:hover .svc-thumb { outline-color: var(--accent); }
   .svc-sample:hover .svc-sample-title { color: var(--accent); }
 }
-.svc-num { color: var(--accent); font-size: var(--step-small); font-variant-numeric: tabular-nums; }
-.svc-how { padding-top: clamp(64px, 8vw, 120px); border-top: 1px solid var(--line); }
+.svc-how { padding-top: clamp(64px, 8vw, 120px); }
 .svc-steps { list-style: none; margin: 48px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .svc-steps li { background: var(--surface); padding: 28px; }
 .svc-step-title { display: block; margin-top: 12px; font-family: var(--serif); font-size: var(--step-lead); line-height: 1.15; }
@@ -883,3 +885,6 @@
   .acv-art { max-height: 200px; order: -1; }
   .acv-kind { padding-top: 12px; }
 }
+
+/* Case-study fact labels: nothing under 13px. */
+.project-content [class*="text-[10px]"], .project-content [class*="text-[11px]"], .project-content [class*="text-[12px]"] { font-size: 0.8125rem !important; }

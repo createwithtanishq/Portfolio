@@ -82,6 +82,7 @@ export const workMeta = {
   1: { short: 'Sustainable orgs', kind: 'Organisational model', format: 'Six pillars, India focus', station: 'pillars', lenses: ['research', 'operations'] },
   7: { short: 'Indian ecosystems', kind: 'Comparative study', format: 'Four principles for a new org', station: 'principles', lenses: ['research', 'operations'] },
   3: { short: 'Mental performance', kind: 'Performance framework', format: 'Three core conditions', station: 'conditions', lenses: ['research', 'operations'] },
+  10: { short: 'T-MCU Nexus', kind: 'Web product', format: 'Live site, 15 pages', station: 'creators', lenses: ['community', 'creators', 'operations'], role: 'Product owner and builder' },
   6: { short: 'FLANT', kind: 'Game concept', format: 'Co-op sci-fi survival', station: 'flant', lenses: ['research'], role: 'Planning and collaborative documentation' },
 };
 

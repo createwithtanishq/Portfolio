@@ -6,7 +6,6 @@ import { samplesFor } from '../data/samples';
 import { usePrefs } from '../lib/prefs-context';
 import TLink from './TLink';
 
-const pad = (n) => String(n).padStart(2, '0');
 
 /* Scroll so the element's top sits under the bar, using layout position (ignores reveal transforms). */
 const scrollToEl = (el, smooth) => {
@@ -124,7 +123,6 @@ const ServicesPage = () => {
         <ol className="svc-steps">
           {steps.map((st, i) => (
             <li key={st.title} data-reveal style={{ '--i': i }}>
-              <span className="svc-num">{pad(i + 1)}</span>
               <span className="svc-step-title">{st.title}</span>
               <p className="mt-3 muted">{st.text}</p>
             </li>

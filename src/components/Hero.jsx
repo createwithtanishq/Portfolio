@@ -83,7 +83,7 @@ const Hero = () => {
           <div className="hero-reel" data-load style={{ '--d': '600ms' }}>
             <p className="hero-caption small" aria-live="polite">
               <span key={step} className="swap-in inline-block">
-                <strong className="tabular">{String(step + 1).padStart(2, '0')} / {String(n).padStart(2, '0')}</strong> {cur.caption}
+                {cur.caption}
               </span>
             </p>
             <ul className="hero-steps" aria-label="Chapters">
